@@ -1,7 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+
 @keyframes center-top-icon {
   0%{
     top: 20px;
@@ -20,7 +17,6 @@
     top: 20px;
     width: 42px;
     left: -20px;
-
   }
 }
 @keyframes center-right-icon {
@@ -50,7 +46,6 @@
   right: 30px;
   height: 42px;
   width: 42px;
-  background-color: green;
   cursor: pointer;
 }
 .icon-1, .icon-3 {
