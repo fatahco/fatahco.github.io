@@ -1,0 +1,91 @@
+@import "animation/menu-anim";
+
+.menu-bar{
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+}
+.bar-1, .bar-3 {
+  width: 42px;
+  height: 2px;
+  background: black;
+  position: absolute;
+}
+.bar-left-1{
+  background: black;
+  position: absolute;
+  transform: rotate(90deg);
+  top: 1px;
+  width: 0px;
+  height: 2px;
+  left: -0.5px;
+  transition: all .5s;
+}
+ .menu-bar:hover .bar-left-1{
+  animation: center-left-bar 1s;
+  width: 42px;
+  left: -20px;
+  top: 20px;
+}
+ .menu-bar:hover .bar-right-3{
+  animation: center-right-bar 1s;
+  width: 42px;
+  left: 20px;
+  bottom: 20px;
+}
+.bar-right-3{
+  background: black;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 0px;
+  height: 2px;
+  bottom: 1px;
+  left: 39.5px;
+  transition: all .5s;
+}
+.bar-3{
+  position: absolute;
+  top: 40px;
+}
+.bar-2, .bar-bottom-2, .bar-top-2{
+  width: 20px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  transition: all .5s;
+}
+.menu-bar:hover .bar-top-2{
+  animation: center-top-bar .5s;
+  top: 10px;
+}
+.menu-bar:hover .bar-bottom-2{
+  animation: center-bottom-bar .5s;
+  top: 30px;
+}
+.change .bar-top-2 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 5px);
+    top: 10px;
+}
+.change .bar-right-3{
+  bottom: 20px;
+  width: 42px;
+  left: 20px;
+}
+.change .bar-left-1{
+  top: 20px;
+  width: 42px;
+  left: -20px;
+}
+.change .bar-2 {opacity: 0;}
+
+.change .bar-bottom-2 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+    top: 30px;
+}
