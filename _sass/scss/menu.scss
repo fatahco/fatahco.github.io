@@ -7,6 +7,7 @@
   height: 42px;
   width: 42px;
   cursor: pointer;
+  z-index: 10;
 }
 .bar-1, .bar-3 {
   width: 42px;
@@ -89,3 +90,30 @@
     transform: rotate(45deg) translate(-8px, -7px);
     top: 30px;
 }
+/////////////////////////////////////// menu ////////////////////
+.toggle-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0vh;
+  background-color: blue;
+  transition: all .5s;
+  a{
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .menu-item{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+  }
+}
+// .change .toggle-menu{
+//   top: 0;
+//   right: 0;
+//   height: 100vh;
+//   width: 50%;
+//   transition: all .5s;
+// }
