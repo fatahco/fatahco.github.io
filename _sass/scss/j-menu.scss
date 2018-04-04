@@ -7,13 +7,13 @@
   width: 42px;
   cursor: pointer;
   z-index: 10;
-  .bar-1, .bar-3 {
+  .box-line-top, .box-line-bottom {
     width: 42px;
     height: 2px;
     background: black;
     position: absolute;
   }
-  .bar-left-1{
+  .box-line-left{
     background: black;
     position: absolute;
     transform: rotate(90deg);
@@ -23,7 +23,7 @@
     left: 0.5px;
     transition: all .5s;
   }
-  .bar-right-3{
+  .box-line-right{
     background: black;
     position: absolute;
     transform: rotate(90deg);
@@ -33,11 +33,11 @@
     left: 40.5px;
     transition: all .5s;
   }
-  .bar-3{
+  .box-line-bottom{
     position: absolute;
     top: 40px;
   }
-  .bar-2, .bar-bottom-2, .bar-top-2{
+  .bar-middle, .bar-bottom, .bar-top{
     width: 30px;
     height: 2px;
     background: black;
@@ -67,5 +67,29 @@
     width: 42px;
     left: 20px;
   }
-
+  .top-x{
+    -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 7px);
+    top: 10px;
+  }
+  .bottom-x{
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-6px, -7px);
+    top: 30px;
+  }
+  .left{
+    top: 20px;
+    width: 42px;
+    left: -20px;
+  }
+  .right{
+    bottom: 20px;
+    width: 42px;
+    left: 20px;
+  }
+}
+.toggle-menu{
+  height: 100vh;
+  width: 50%;
+  background-color: blue;
 }

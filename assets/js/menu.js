@@ -1,6 +1,6 @@
-function myFunction(x) {
-    x.classList.toggle("change");
-}
+// function myFunction(x) {
+//     x.classList.toggle("change");
+// }
 $(document).ready(function(){
   //   $('.menu, nav').click(function(){
   //   if ($('.menu').hasClass('active')) {
@@ -32,24 +32,46 @@ $(document).ready(function(){
   //     $('.menu-bar').addClass('back');
   //   }
   // });
-  if($('.bar-top-2').hasClass('top-hover')){
+  // $('.menu-bar').click(function(){
+  //   if ($('.top-bar-middle').hasClass('top-x')) {
+  //       $('.top-bar-middle').removeClass('top-hover');
+  //   } else {
+  //     $('.top-bar-middle').addClass('top-x');
+  //   }
+  // });
 
-  }else {
-    $('.bar-top-2').addClass('top-hover');
-  }
-  if($('.bar-bottom-2').hasClass('bottom-hover')){
+  $(".menu-bar").click(function(){
+      if ( $('.bar-top').hasClass('top-x') ) {
+        $('.bar-top').removeClass('top-x');
+        $('.bar-bottom').removeClass('bottom-x');
+        setTimeout(function () {
+          // $('.box-line-right').removeClass('right');
+          // $('.box-line-left').removeClass('left');
+          $('.bar-top').addClass('top-hover');
+          $('.bar-bottom').addClass('bottom-hover');
 
-  }else {
-    $('.bar-bottom-2').addClass('bottom-hover');
-  }
-  if($('.bar-left-1').hasClass('left-hover')){
+        }, 500);
+        $(".menu-bar").one("mouseleave", function(){
+              $('.box-line-right').removeClass('right');
+              $('.box-line-left').removeClass('left');
+              $('.box-line-left').addClass('left-hover');
+              $('.box-line-right').addClass('right-hover');
+        });
+        $('.bar-middle').css({ 'opacity' : '1'});
+        $('.toggle-menu').addClass('menu-open');
 
-  }else {
-    $('.bar-left-1').addClass('left-hover');
-  }
-  if($('.bar-right-3').hasClass('right-hover')){
 
-  }else {
-    $('.bar-right-3').addClass('right-hover');
-  }
+      } else {
+        $('.bar-middle').css({ 'opacity' : '0'});
+        $('.bar-top').addClass('top-x');
+        $('.bar-bottom').addClass('bottom-x');
+        $('.bar-top').removeClass('top-hover');
+        $('.bar-bottom').removeClass('bottom-hover');
+        $('.box-line-left').removeClass('left-hover');
+        $('.box-line-left').addClass('left');
+        $('.box-line-right').addClass('right');
+        $('.box-line-right').removeClass('right-hover');
+
+      }
+});
 });
