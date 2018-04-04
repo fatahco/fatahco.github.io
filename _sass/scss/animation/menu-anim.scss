@@ -38,3 +38,35 @@
     top: 30px;
   }
 }
+@keyframes menu-open {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 50%;
+  }
+}
+@keyframes menu-close {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 0;
+  }
+}
+@keyframes menu-transition-open {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes menu-trangition-close {
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
