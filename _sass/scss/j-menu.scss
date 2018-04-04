@@ -1,0 +1,71 @@
+@import "animation/menu-anim";
+.menu-bar{
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+  z-index: 10;
+  .bar-1, .bar-3 {
+    width: 42px;
+    height: 2px;
+    background: black;
+    position: absolute;
+  }
+  .bar-left-1{
+    background: black;
+    position: absolute;
+    transform: rotate(90deg);
+    top: -0.5px;
+    width: 1px;
+    height: 2px;
+    left: 0.5px;
+    transition: all .5s;
+  }
+  .bar-right-3{
+    background: black;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 1px;
+    height: 2px;
+    bottom: -0.5px;
+    left: 40.5px;
+    transition: all .5s;
+  }
+  .bar-3{
+    position: absolute;
+    top: 40px;
+  }
+  .bar-2, .bar-bottom-2, .bar-top-2{
+    width: 30px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 20px;
+    left: 15%;
+    transition: all .5s;
+  }
+
+  &:hover .top-hover{
+    animation: center-top-bar 1s;
+    top: 10px;
+  }
+  &:hover .bottom-hover{
+    animation: center-bottom-bar 1s;
+    top: 30px;
+  }
+  &:hover .left-hover{
+    animation: center-left-bar 1s;
+    top: 20px;
+    width: 42px;
+    left: -20px;
+  }
+  &:hover .right-hover{
+    animation: center-right-bar 1s;
+    bottom: 20px;
+    width: 42px;
+    left: 20px;
+  }
+
+}
