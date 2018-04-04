@@ -1,44 +1,5 @@
-// function myFunction(x) {
-//     x.classList.toggle("change");
-// }
+
 $(document).ready(function(){
-  //   $('.menu, nav').click(function(){
-  //   if ($('.menu').hasClass('active')) {
-  //     $('nav ul').removeClass('active');
-  //     $('nav').delay(800).fadeOut('slow');
-  //     setTimeout(function() {
-  //       $('.menu').removeClass('active');
-  //       $('.section-wrap').removeClass('active');
-  //      }, 800);
-  //   } else {
-  //     $('.menu').addClass('active');
-  //     $('nav').fadeIn('slow');
-  //     $('nav').addClass('active');
-  //     $('nav ul').addClass('active');
-  //     $('.section-wrap').addClass('active');
-  //   }
-  // });
-  // $('.menu-bar').click(function(){
-  //   // $('.toggle-menu').css({
-  //   //   'top' : '0',
-  //   //   'right' : '0',
-  //   //   'height' : '100vh',
-  //   //   'transition' : 'all 0.5s'
-  //   // });
-  //   // $('.menu-bar').css({"background":"green"});
-  //   if($('.menu-bar').hasClass('back')){
-  //     $('.menu-bar').css({"background" : "black"});
-  //   } else{
-  //     $('.menu-bar').addClass('back');
-  //   }
-  // });
-  // $('.menu-bar').click(function(){
-  //   if ($('.top-bar-middle').hasClass('top-x')) {
-  //       $('.top-bar-middle').removeClass('top-hover');
-  //   } else {
-  //     $('.top-bar-middle').addClass('top-x');
-  //   }
-  // });
 
   $(".menu-bar").click(function(){
 
@@ -67,14 +28,19 @@ $(document).ready(function(){
         $('.menu-trangition').removeClass('menu-trangition-open');
 
 
+        $('.menu-item').addClass('menu-item-hide');
+        $('.menu-item').removeClass('menu-item-saw');
+
+
 
       }
       else {
         $('.toggle-menu').addClass('menu-open');
+        $('.menu-item').addClass('menu-item-saw');
+        $('.menu-item').removeClass('menu-item-hide');
         $('.menu-trangition').addClass('menu-trangition-open');
         $('.menu-trangition').removeClass('menu-trangition-close');
         $('.toggle-menu').removeClass('menu-close');
-
         $('.bar-middle').css({ 'opacity' : '0'});
         $('.bar-top').addClass('top-x');
         $('.bar-bottom').addClass('bottom-x');
@@ -86,5 +52,5 @@ $(document).ready(function(){
         $('.box-line-right').removeClass('right-hover');
 
       }
-});
+  });
 });

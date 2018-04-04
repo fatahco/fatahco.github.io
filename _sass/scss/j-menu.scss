@@ -1,5 +1,8 @@
 @import "animation/menu-anim";
 /// brand icon
+div{
+  max-width: 100%;
+}
 .brand-icon{
   position: fixed;
   top: -40px;
@@ -113,12 +116,7 @@
   right: 0;
   transition: all .5s;
   z-index: 15;
-  .menu-item{
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    font-size: 3rem;
-  }
+
   a{
     color: red;
     line-height: 1.3;
@@ -154,4 +152,26 @@ background-color: #C56172;
   animation: menu-trangition-close .6s;
   width: 0;
   transition: all .6s;
+}
+.menu-item{
+
+  position: absolute;
+  font-size: 3rem;
+}
+.menu-item-hide{
+  animation: menu-item-hide .7s;
+  top: 20%;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+
+}
+.menu-item-saw{
+  animation: menu-item-saw .7s;
+  top: 20%;
+  right: 55%;
+  visibility: visible;
+  opacity: 1;
+  transition: all .7s;
 }
