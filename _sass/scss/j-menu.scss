@@ -12,9 +12,9 @@ div{
 }
 .open-menu-brand-icon{
   animation: open-menu-brand-logo .5s;
-  width: 500px;
-  top: 150px;
-  left: 150px;
+  width: 35%;
+  top: 20%;
+  left: 15%;
 }
 .close-menu-brand-icon{
   animation: close-menu-brand-logo .5s;
@@ -150,7 +150,7 @@ div{
     span{
       width: 0;
       height: 5px;
-      background: black;
+      background: $menu-link-hov-col;
       position: absolute;
       top: 3px;
       transition: all .5s;

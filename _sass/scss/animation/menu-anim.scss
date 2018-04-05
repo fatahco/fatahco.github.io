@@ -5,16 +5,16 @@
     left: 45px;
   }
   100%{
-    width: 500px;
-    top: 150px;
-    left: 150px;
+    width: 35%;
+    top: 20%;
+    left: 15%;
   }
 }
 @keyframes close-menu-brand-logo {
   0%{
-    width: 500px;
-    top: 150px;
-    left: 150px;
+    width: 35%;
+    top: 20%;
+    left: 15%;
   }
   100%{
     width: 175px;
@@ -114,5 +114,16 @@
   }
   100%{
     right: 0;
+  }
+}
+//// page-loader
+@keyframes page-loader {
+  0%{
+    width: 50px;
+    height: 2px;
+  }
+  100%{
+    width: 100%;
+    height: 100vh;
   }
 }
