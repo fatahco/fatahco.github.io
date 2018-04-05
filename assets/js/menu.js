@@ -27,6 +27,9 @@ function menuBarClick() {
     $('.menu-trangition').removeClass('menu-trangition-open');
     $('.menu-item').addClass('menu-item-hide');
     $('.menu-item').removeClass('menu-item-saw');
+    $('.brand-icon').addClass('close-menu-brand-icon');
+    $('.brand-icon').removeClass('open-menu-brand-icon');
+
   }
   else {
     $('.toggle-menu').addClass('menu-open');
@@ -44,7 +47,8 @@ function menuBarClick() {
     $('.box-line-left').addClass('left');
     $('.box-line-right').addClass('right');
     $('.box-line-right').removeClass('right-hover');
-    $('.brand-icon').addClass('move-brand');
+    $('.brand-icon').addClass('open-menu-brand-icon');
+    $('.brand-icon').removeClass('close-menu-brand-icon');
   }
 }
 

@@ -6,9 +6,21 @@ div{
 .brand-icon{
   position: fixed;
   z-index: 16;
-  width: 200px;
+  width: 175px;
   left: 45px;
   top: 10px;
+}
+.open-menu-brand-icon{
+  animation: open-menu-brand-logo .5s;
+  width: 500px;
+  top: 150px;
+  left: 150px;
+}
+.close-menu-brand-icon{
+  animation: close-menu-brand-logo .5s;
+  width: 175px;
+  top: 15px;
+  left: 45px;
 }
 ////// menu icon
 .menu-bar{
