@@ -1,4 +1,8 @@
 
+
+
+
+
 function menuBarClick() {
   // $(".menu-bar").css("pointer-events", "none");
   // $(".menu-bar").off("click");
@@ -18,10 +22,12 @@ function menuBarClick() {
       $('.bar-bottom').addClass('bottom-hover');
     }, 500);
     $(".menu-bar").one("mouseleave", function(){
-      $('.box-line-right').removeClass('right');
-      $('.box-line-left').removeClass('left');
-      $('.box-line-left').addClass('left-hover');
-      $('.box-line-right').addClass('right-hover');
+      if ( !$('.toggle-menu').hasClass('menu-open') ) {
+        $('.box-line-right').removeClass('right');
+        $('.box-line-left').removeClass('left');
+        $('.box-line-left').addClass('left-hover');
+        $('.box-line-right').addClass('right-hover');
+      }
     });
     $('.bar-middle').css({ 'opacity' : '1'});
     $('.menu-trangition').addClass('menu-trangition-close');
@@ -52,6 +58,8 @@ function menuBarClick() {
     $('.brand-icon').addClass('open-menu-brand-icon');
     $('.brand-icon').removeClass('close-menu-brand-icon');
   }
+  console.log($(".box-line-left").attr("class").toString());
+
 }
 // function loader() {
 //   if ($ ('page-loader').hasClass('open-transition')) {
@@ -66,13 +74,15 @@ function menuBarClick() {
 
 
 $(document).ready(function(){
-
-  // var start = new Date();
-  // jQuery.ready();
-  // var end = new Date();
-  // var difference = (endTime - startTime) / 1000;
-  // // var loaderStartTime =
-  // alert("document.ready time: " + difference + " seconds");
+  // $(window).load(function() {
+  //   $('.page-loader').addClass('page-loader-start');
+  // });
+  $(window).on('load', function() { // makes sure the whole site is loaded
+    $('#status').fadeOut(); // will first fade out the loading animation
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $('body').delay(350).css({'overflow':'visible'});
+  })
+/////////////////////
   $(".menu-bar").bind( "click", menuBarClick );
   // $(".link").bind( "click", loader );
   $('li a').click(function(){
