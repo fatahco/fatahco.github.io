@@ -44,21 +44,19 @@ div{
   .box-line-left{
     background: black;
     position: absolute;
-    transform: rotate(90deg);
     top: 0;
-    width: 1px;
-    height: 2px;
-    left: 0.5px;
+    width: 2px;
+    height: 0px;
+
     transition: all .5s;
   }
   .box-line-right{
     background: black;
     position: absolute;
-    transform: rotate(90deg);
-    width: 1px;
-    height: 2px;
-    bottom: 0px;
-    left: 40.5px;
+    width: 2px;
+    height: 0px;
+    top: 42px;
+    left: 40px;
     transition: all .5s;
   }
   .box-line-bottom{
@@ -74,9 +72,6 @@ div{
     left: 15%;
     transition: all .5s;
   }
-  .bar-bottom, .bar-top{
-  height: 3px;
-  }
   &:hover .top-hover{
     animation: center-top-bar 1s;
     top: 10px;
@@ -87,15 +82,14 @@ div{
   }
   &:hover .left-hover{
     animation: center-left-bar 1s;
-    top: 20px;
-    width: 42px;
-    left: -20px;
+    height: 42px;
   }
   &:hover .right-hover{
     animation: center-right-bar 1s;
-    bottom: 20px;
-    width: 42px;
-    left: 20px;
+    top: 0;
+    height: 42px;
+    left: 40px;
+    transition: all .5s;
   }
   .top-x{
     -webkit-transform: rotate(-45deg) translate(-8px, 5px);
@@ -108,14 +102,15 @@ div{
     top: 30px;
   }
   .left{
-    top: 20px;
-    width: 42px;
-    left: -20px;
+    top: 0;
+    height: 42px;
   }
   .right{
-    bottom: 20px;
-    width: 42px;
-    left: 20px;
+    top: 0px;
+    height: 42px;
+    left: 40px;
+    transition: all .5s;
+
   }
 }
 .menu-open{
