@@ -1,24 +1,17 @@
 
-
-// $(window).on('load', function() { // makes sure the whole site is loaded
-//   $('#status').fadeOut(); // will first fade out the loading animation
-//   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-//   $('body').delay(350).css({'overflow':'visible'});
-// })
-
-
 $('document').ready(function(){
- $('body a').click(function(e) {
-  var offset = $(this).offset();
-  var x = $(this).offset().left;// distance from left of the document
-        var y = $(this).offset().top; // distance from top of the document
-        $('.page-loader').css({
-          'left' : y + 'px',
-          'top' : x + 'px'
-        });
-  // $('#x_axis').html(x);
-  // $('#y_axis').html(y);
- });
+  $( document ).on( "mousemove", function( event ) {
+  var x = event.pageX;
+  var y = event.pageY;
+  $( 'body a').click(function(){
+    $( "#log" ).text( "pageX: " + x+ ", pageY: " + y );
+    $('.page-loader').css({
+           'left' : x + 'px',
+           'top' : y + 'px',
+           'position' : 'fixed'
+         });
+  });
+});
 
   // var transEffect = Barba.BaseTransition.extend({
   //     start: function(){
@@ -83,11 +76,11 @@ $('document').ready(function(){
     });
     setTimeout(function(){
       $('.page-loader').removeClass('page-loader-start');
-    }, 1000);
+    }, 500);
 
     setTimeout(function () {
 
-      $el.animate({ opacity: 1 }, 1000, function() {
+      $el.animate({ opacity: 1 }, 500, function() {
         /**
         * Do not forget to call .done() as soon your transition is finished!
         * .done() will automatically remove from the DOM the old Container

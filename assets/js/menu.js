@@ -77,12 +77,16 @@ $(document).ready(function(){
   // $(window).load(function() {
   //   $('.page-loader').addClass('page-loader-start');
   // });
-  $(window).on('load', function() { // makes sure the whole site is loaded
-    $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(350).css({'overflow':'visible'});
-  })
-/////////////////////
+  // $(window).on('load', function() { // makes sure the whole site is loaded
+  //   $('#status').fadeOut(); // will first fade out the loading animation
+  //   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  //   $('body').delay(350).css({'overflow':'visible'});
+  // })
+//   $( 'ul.menu-item li' ).on( 'click', function() {
+//       $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+//       $( this ).addClass( 'active' );
+// });
+// /////////////////////
   $(".menu-bar").bind( "click", menuBarClick );
   // $(".link").bind( "click", loader );
   $('li a').click(function(){
