@@ -110,16 +110,21 @@ $(document).ready(function(){
     }
   });
   $(function () {
-              $('li a').click(function (e) {
+              $('a').click(function (e) {
                   e.preventDefault();
                   $('a').removeClass('active');
                   $(this).addClass('active');
               });
           });
-
-  $(function() {
-      if ((location.pathname.split("/")[1]) !== ""){
-          $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-      }
-  });
+          $(window).on('hashchange', function(e){
+            console.log(location.pathname);
+          });
+          $(function() {
+            if ((location.pathname.split("/")[1]) !== ""){
+              $('a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+            }
+            else {
+              $('a').removeClass('active');
+            }
+          });
 });

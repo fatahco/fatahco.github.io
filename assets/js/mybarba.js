@@ -85,7 +85,7 @@ $('document').ready(function(){
         * Do not forget to call .done() as soon your transition is finished!
         * .done() will automatically remove from the DOM the old Container
         */
-
+        console.log(window.location);
         _this.done();
       });
     // }, 1500);

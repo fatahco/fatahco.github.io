@@ -12,22 +12,42 @@ div{
   z-index: 16;
   width: 175px;
   left: 45px;
-  top: 10px;
+  top: 15px;
 }
 .open-menu-brand-icon{
   animation: open-menu-brand-logo .5s;
   width: 450px;
   top: 50%;
-  left: 15%;
+  right: calc(50% + 40px);
+  left: unset;
   transform: translateY(-50%);
 }
 .close-menu-brand-icon{
   animation: close-menu-brand-logo .5s;
   width: 175px;
-  top: 10px;
+  top: 15px;
+  right: unset;
   left: 45px;
 }////// mobile
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 991px){
+  .open-menu-brand-icon{
+    animation: tab-open-menu-brand-logo .5s;
+    width: 300px;
+    top: 50%;
+    right: calc(50% + 40px);
+    left: unset;
+    transform: translateY(-50%);
+  }
+  .close-menu-brand-icon{
+    animation: tab-close-menu-brand-logo .5s;
+    width: 175px;
+    top: 15px;
+    right: unset;
+    left: 45px;
+  }
+}
+
+@media only screen and (max-width: 767px){
   .brand-icon{
     position: fixed;
     z-index: 16;
@@ -170,7 +190,7 @@ div{
     transition: all .5s;
     position: relative;
     font-family: $menu-link-font;
-
+    font-weight: 700;
     &:hover, &:active{
       color: $menu-link-hov-col;
       transition: all .5s;
@@ -237,7 +257,12 @@ div{
   transition: all .8s;
   transition-delay: .3s;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 991px){
+  .menu-item{
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 767px){
   .menu-item{
     position: fixed;
     font-size: 32px;
@@ -271,7 +296,7 @@ div{
   }
 }
 .active{
-  pointer-events: none;
+  pointer-events: unset;
 }
 a.active span{
   width: 100%;

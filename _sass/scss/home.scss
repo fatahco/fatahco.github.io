@@ -1,0 +1,20 @@
+.home-hero{
+  .tag-line{
+    font-size: 80px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: black;
+
+    &__link, &__link:hover{
+      color: $tag-line-link-col;
+    }
+    &__hover-line{
+      height: 10px;
+      width: 100%;
+      background: black;
+      display: table;
+    }
+  }
+}
