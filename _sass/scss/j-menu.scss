@@ -191,31 +191,31 @@ div{
   }
 }
 ////////// menu menu-trangition
-.menu-trangition{
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0vh;
-  width: 0;
-background:
-linear-gradient(135deg, #FFFFFF 25%, transparent 25%) -50px 0,
-linear-gradient(225deg, #FFFFFF 25%, transparent 25%) -50px 0,
-linear-gradient(315deg, #FFFFFF 25%, transparent 25%),
-linear-gradient(45deg, #FFFFFF 25%, transparent 25%);
-background-size: 10px 10px;
-background-color: #C56172;
-}
-.menu-trangition-open{
-  animation: menu-trangition-open .5s;
-  width: 100%;
-  height: 100vh;
-  transition: all .5s;
-}
-.menu-trangition-close{
-  animation: menu-trangition-close .35s;
-  width: 0;
-  transition: all .4s;
-}
+// .menu-trangition{
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   height: 0vh;
+//   width: 0;
+// background:
+// linear-gradient(135deg, #FFFFFF 25%, transparent 25%) -50px 0,
+// linear-gradient(225deg, #FFFFFF 25%, transparent 25%) -50px 0,
+// linear-gradient(315deg, #FFFFFF 25%, transparent 25%),
+// linear-gradient(45deg, #FFFFFF 25%, transparent 25%);
+// background-size: 10px 10px;
+// background-color: #C56172;
+// }
+// .menu-trangition-open{
+//   animation: menu-trangition-open .5s;
+//   width: 100%;
+//   height: 100vh;
+//   transition: all .5s;
+// }
+// .menu-trangition-close{
+//   animation: menu-trangition-close .35s;
+//   width: 0;
+//   transition: all .4s;
+// }
 .menu-item{
   position: fixed;
   font-size: 48px;
@@ -269,4 +269,10 @@ background-color: #C56172;
     border: solid 0px black;
     transition: all .5s;
   }
+}
+.active{
+  pointer-events: none;
+}
+a.active span{
+  width: 100%;
 }
