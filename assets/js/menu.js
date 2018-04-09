@@ -119,7 +119,6 @@ $(document).ready(function(){
         }, 500);
         setTimeout(function () {
           $('page-loader').removeClass('close-loader');
-
         }, 500);
       }, 500);
     }
@@ -150,5 +149,59 @@ $(document).ready(function(){
     }
 
   });
+  // (function() {
+  //     var nav = document.getElementById('nav'),
+  //         anchor = nav.getElementsByTagName('a'),
+  //         current = window.location.pathname.split('/')[1];
+  //         for (var i = 0; i < anchor.length; i++) {
+  //         if(anchor[i].href == current) {
+  //             anchor[i].className = "active";
+  //         }
+  //     }
+  // })();
+//   $(function() {
+//   $('.nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+// });
+// if ($ ('.nav a').hasClass('active')) {
+//   $('.active').addClass('disable');
+// }
+// $(function(){
+//
+//     var url = window.location.pathname,
+//         urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
+//         // now grab every link from the navigation
+//         $('.link').each(function(){
+//             // and test its normalized href against the url pathname regexp
+//             if(urlRegExp.test(this.href.replace(/\/$/,''))){
+//                 $(this).addClass('active');
+//             }
+//         });
+//
+// });
+// $('ul li a').click(function(){
+//     $('li a').removeClass("active");
+//     $('li a').removeClass("disable");
+//     $(this).addClass("active");
+//     $(this).addClass("disable");
+// });
 
+
+
+$(function () {
+            $('li a').click(function (e) {
+                e.preventDefault();
+                $('a').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+$(function() {
+    if ((location.pathname.split("/")[1]) !== ""){
+        $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        // $('.active').off("click");
+    }
+    if ($ ('body a').hasClass('active')) {
+      $(this).unbind('click');
+    }
+});
 });

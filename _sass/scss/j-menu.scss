@@ -16,15 +16,39 @@ div{
 }
 .open-menu-brand-icon{
   animation: open-menu-brand-logo .5s;
-  width: 35%;
-  top: 20%;
+  width: 450px;
+  top: 50%;
   left: 15%;
+  transform: translateY(-50%);
 }
 .close-menu-brand-icon{
   animation: close-menu-brand-logo .5s;
   width: 175px;
   top: 10px;
   left: 45px;
+}////// mobile
+@media only screen and (max-width: 768px){
+  .brand-icon{
+    position: fixed;
+    z-index: 16;
+    width: 125px;
+    left: 25px;
+    top: 15px;
+  }
+  .open-menu-brand-icon{
+    width: 125px;
+    top: 15px;
+    left: 25px;
+    animation: open-menu-brand-logo;
+
+  }
+  .close-menu-brand-icon{
+    width: 125px;
+    top: 15px;
+    left: 25px;
+    animation: close-menu-brand-logo;
+
+  }
 }
 ////// menu icon
 .menu-bar{
@@ -117,11 +141,19 @@ div{
   animation: menu-open .5s;
   width: 100%;
   height: 100vh;
+  // border: solid 10px black;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+
 }
 .menu-close{
   animation: menu-close .5s;
   width: 0;
   height: 0vh;
+  border-style: solid;
+  border-width: 0;
+  border-color: black;
 }
 .toggle-menu{
   height: 100vh;
@@ -131,6 +163,7 @@ div{
   right: 0;
   transition: all .5s;
   z-index: 15;
+
   a{
     color: $menu-link-col;
     line-height: 1.3;
@@ -151,7 +184,7 @@ div{
       height: 5px;
       background: $menu-link-hov-col;
       position: absolute;
-      top: 3px;
+      top: 6px;
       transition: all .5s;
     }
 
@@ -185,30 +218,55 @@ background-color: #C56172;
 }
 .menu-item{
   position: fixed;
-  font-size: 3rem;
-  top: 21%;
+  font-size: 48px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 55%;
   opacity: 0;
   visibility: hidden;
+  text-transform: uppercase;
 }
 .menu-item-hide{
-  // animation: menu-item-hide .7s;
-  // top: 20%;
-  // right: 0;
-  // visibility: hidden;
   opacity: 0;
   visibility: hidden;
-
+  transition: all .25s;
 }
 .menu-item-saw{
-  // animation: menu-item-saw .7s;
-  // top: 20%;
-  // right: 35%;
   visibility: visible;
   opacity: 1;
   transition: all .8s;
   transition-delay: .3s;
 }
-.move-brand .logo{
-  width: 100%;
+@media only screen and (max-width: 768px){
+  .menu-item{
+    position: fixed;
+    font-size: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .menu-item-hide{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .menu-item-saw{
+    visibility: visible;
+    opacity: 1;
+    transition: all .8s;
+  }
+  .menu-open{
+    animation: mob-menu-open .5s;
+    width: 100%;
+    height: 100vh;
+    border: solid 5px black;
+  }
+  .menu-close{
+    animation: mob-menu-close .5s;
+    width: 0;
+    height: 0vh;
+    border: solid 0px black;
+    transition: all .5s;
+  }
 }

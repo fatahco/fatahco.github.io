@@ -74,11 +74,11 @@ $('document').ready(function(){
       visibility : 'visible',
       opacity : 0
     });
-    setTimeout(function(){
-      $('.page-loader').removeClass('page-loader-start');
-    }, 500);
+    // setTimeout(function(){
+    //   $('.page-loader').removeClass('page-loader-start');
+    // }, 500);
 
-    setTimeout(function () {
+    // setTimeout(function () {
 
       $el.animate({ opacity: 1 }, 500, function() {
         /**
@@ -88,7 +88,7 @@ $('document').ready(function(){
 
         _this.done();
       });
-    }, 1500);
+    // }, 1500);
   }
 });
 
