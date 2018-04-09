@@ -191,6 +191,7 @@ div{
     position: relative;
     font-family: $menu-link-font;
     font-weight: 700;
+    display: black;
     &:hover, &:active{
       color: $menu-link-hov-col;
       transition: all .5s;
