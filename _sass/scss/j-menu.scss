@@ -26,7 +26,30 @@ div{
   right: unset;
   left: 45px;
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1845px){
+  .brand-icon{
+    position: fixed;
+    top: 15px;
+    right: 1800px;
+    left: unset;
+  }
+  .open-menu-brand-icon{
+    animation: four-k-open-menu-brand-logo .5s;
+    width: 450px;
+    top: 50%;
+    right: calc(50% + 40px);
+    left: unset;
+    transform: translateY(-50%);
+  }
+  .close-menu-brand-icon{
+    animation: four-k-close-menu-brand-logo .5s;
+    width: 175px;
+    top: 15px;
+    right: 1800px;
+    
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1800px){
   .open-menu-brand-icon {
     animation: open-menu-brand-logo .5s;
     transform: translateY(-50%);

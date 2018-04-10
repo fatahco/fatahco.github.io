@@ -25,6 +25,34 @@
     left: 45px;
   }
 }
+@keyframes four-k-open-menu-brand-logo {
+  0%{
+    width: 175px;
+    top: 15px;
+    right: 1800px;
+    transform: translate(0);
+  }
+  100%{
+    width: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc( 50% + 40px );
+  }
+}
+@keyframes four-k-close-menu-brand-logo {
+  0%{
+    width: 450px;
+    top: 50%;
+    right: calc( 50% + 40px );
+    transform: translateY(-50%);
+  }
+  100%{
+    width: 175px;
+    top: 15px;
+    right: 1800px;
+    transform: translate(0);
+  }
+}
 @keyframes tab-open-menu-brand-logo {
   0%{
     width: 175px;
@@ -35,7 +63,7 @@
     width: 300px;
     top: 50%;
     transform: translateY(-50%);
-    left: calc( 50% - 340px );
+    left: calc( 50% - 490px );
   }
 }
 @keyframes tab-close-menu-brand-logo {
