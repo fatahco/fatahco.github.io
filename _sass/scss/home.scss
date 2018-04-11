@@ -1,25 +1,31 @@
 .home-hero{
   .tag-line{
     font-size: 65px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'clarenbd', sans-serif;
     line-height: 1.5;
     letter-spacing: 5px;
     text-transform: capitalize;
     color: black;
     text-align: center;
     transition: all .5s;
-    &__link, &__link:hover{
-      color: $tag-line-link-col;
-      transition: all .5s;
 
+    &__link, &__link:hover{
+      transition: all .5s;
+      position: relative;
+      color: $menu-link-hov-col;
     }
-    &__hover-line{
-      height: 10px;
+    &__hover{
       width: 100%;
-      background: black;
-      display: table;
+      height: 5px;
+      background: $menu-link-hov-col;
+      position: absolute;
+      bottom: 0;
+      transition: all .5s;
     }
   }
+}
+.tag-line__link:hover .tag-line__hover{
+  bottom: 70%;
 }
 .underline--magical {
   background-image: linear-gradient(120deg, #000 0%, #000 100%);
@@ -28,7 +34,7 @@
   background-position: 0 100%;
   transition: background-size 0.25s ease-in;
   transition: all .5s;
-  
+
 }
 .underline--magical:hover {
   background-size: 100% 100%;

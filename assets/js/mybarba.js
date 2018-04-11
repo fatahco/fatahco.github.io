@@ -1,17 +1,25 @@
+function currentUrl() {
 
+  if ((location.pathname.split("/")[1]) !== ""){
+    $('.barba-container a[href^="/' + location.pathname.split("/")[1] + '"]').click(function (e) {
+      e.preventDefault();
+      console.log(location.pathname);
+    });
+  }
+}
 $('document').ready(function(){
-  $( document ).on( "mousemove", function( event ) {
-  var x = event.pageX;
-  var y = event.pageY;
-  $( 'body a').click(function(){
-    $( "#log" ).text( "pageX: " + x+ ", pageY: " + y );
-    $('.page-loader').css({
-           'left' : x + 'px',
-           'top' : y + 'px',
-           'position' : 'fixed'
-         });
-  });
-});
+  // $( document ).on( "mousemove", function( event ) {
+  //   var x = event.pageX;
+  //   var y = event.pageY;
+  //   $( 'body a').click(function(){
+  //     $( "#log" ).text( "pageX: " + x+ ", pageY: " + y );
+  //     $('.page-loader').css({
+  //            'left' : x + 'px',
+  //            'top' : y + 'px',
+  //            'position' : 'fixed'
+  //          });
+  //   });
+  // });
 
   // var transEffect = Barba.BaseTransition.extend({
   //     start: function(){
@@ -43,7 +51,6 @@ $('document').ready(function(){
      * this.newContainerLoading is a Promise for the loading of the new container
      * (Barba.js also comes with an handy Promise polyfill!)
      */
-
     // As soon the loading is finished and the old page is faded out, let's fade the new page
     Promise
       .all([this.newContainerLoading, this.fadeOut()])
@@ -55,7 +62,7 @@ $('document').ready(function(){
      * this.oldContainer is the HTMLElement of the old Container
      */
      $('.page-loader').addClass('page-loader-start');
-    return $(this.oldContainer).animate({ opacity: 0 }).promise();
+    return $(this.oldContainer).animate().promise();
   },
 
   fadeIn: function() {
@@ -67,6 +74,9 @@ $('document').ready(function(){
 
     var _this = this;
     var $el = $(this.newContainer);
+
+    $(".fatah-line").attr("width", "0");
+    $(".fatah-line").css("transition", "all 0s");
 
     $(this.oldContainer).hide();
 
@@ -80,12 +90,16 @@ $('document').ready(function(){
 
     // setTimeout(function () {
 
-      $el.animate({ opacity: 1 }, 500, function() {
+      $el.animate({ opacity: 1 }, 0, function() {
+        setTimeout(function () {
+          $(".fatah-line").attr("width", "677.609");
+          $(".fatah-line").css("transition", "all .5s");
+        }, 500);
         /**
         * Do not forget to call .done() as soon your transition is finished!
         * .done() will automatically remove from the DOM the old Container
         */
-        console.log(window.location);
+        currentUrl();
         _this.done();
       });
     // }, 1500);
