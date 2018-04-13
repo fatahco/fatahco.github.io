@@ -15,8 +15,10 @@ div{
   position: fixed;
   z-index: 16;
   width: 175px;
+  top: 0;
   left: 45px;
-  top: 15px;
+  background-color: #fff;
+  padding-top: 15px;
 }
 .open-menu-brand-icon{
   width: 450px;
@@ -26,8 +28,9 @@ div{
 }
 .close-menu-brand-icon{
   width: 175px;
-  top: 15px;
+  padding-top: 15px;
   right: unset;
+  top: 0;
   left: 45px;
 }
 @media only screen and (min-width: 992px) {
@@ -51,8 +54,9 @@ div{
   .close-menu-brand-icon{
     animation: tab-close-menu-brand-logo .5s;
     width: 175px;
-    top: 15px;
+    padding-top: 15px;
     right: unset;
+    top: 0;
     left: 45px;
   }
 }
@@ -63,16 +67,19 @@ div{
     z-index: 16;
     width: 125px;
     left: 25px;
-    top: 15px;
+    top: 0;
+    padding-top: 15px;
   }
   .open-menu-brand-icon{
     width: 125px;
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 25px;
   }
   .close-menu-brand-icon{
     width: 125px;
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 25px;
   }
 }

@@ -1,4 +1,7 @@
 .home-hero{
+  .sapce-wrape{
+    white-space: nowrap;
+  }
   .tag-line{
     font-size: 65px;
     font-family: 'clarenbd', sans-serif;
@@ -6,9 +9,8 @@
     letter-spacing: 5px;
     text-transform: capitalize;
     color: black;
-    text-align: center;
+    text-align: left;
     transition: all .5s;
-
     &__link, &__link:hover{
       transition: all .5s;
       position: relative;
@@ -44,12 +46,18 @@
   transition: all .5s;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px){
+  .home-hero{
+
+    .tag-line{
+      font-size: 40px;
+    }
+  }
 }
 @media only screen and (max-width: 767px){
   .home-hero{
 
     .tag-line{
-      font-size: 40px;
+      font-size: 30px;
     }
   }
 

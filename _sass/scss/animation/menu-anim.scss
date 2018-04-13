@@ -2,7 +2,8 @@
   0%{
     width: 175px;
     transform: translateY(0%);
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 45px;
   }
   100%{
@@ -21,7 +22,8 @@
   }
   100%{
     width: 175px;
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 45px;
   }
 }
@@ -29,7 +31,8 @@
 @keyframes tab-open-menu-brand-logo {
   0%{
     width: 175px;
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 45px;
   }
   100%{
@@ -48,7 +51,8 @@
   }
   100%{
     width: 175px;
-    top: 15px;
+    padding-top: 15px;
+    top: 0;
     left: 45px;
   }
 }
