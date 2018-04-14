@@ -18,6 +18,12 @@
       width: auto;
 
     }
+    @media only screen and (max-width: 576px) {
+         &__link {
+          padding: 5px;
+          font-size: 18px;
+        }
+    }
     &__link:hover, &__link:active{
       color: $black;
 
@@ -68,6 +74,7 @@
 }
 .input{
   border: none;
+  width: 100%;
   border-bottom: solid 1px black;
   height: 30px;
   padding-bottom: 0px;
