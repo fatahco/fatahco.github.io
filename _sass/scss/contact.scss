@@ -41,7 +41,15 @@
   &__social{
     .link{
       font-size: 18px !important;
+      // transition: all .5s;
+      // transform: scale(1);
+      // &:hover{
+      //   transform: scale(1.2);
+      //   transition: all .5s;
+      //   color: red;
+      // }
     }
+
   }
   &__img{
     box-sizing: border-box;
@@ -119,4 +127,7 @@ background-color: white;
 border-width: 2px;
 cursor: pointer;
 
+}
+.error{
+  color: red;
 }
