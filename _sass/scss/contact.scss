@@ -1,0 +1,122 @@
+.contact{
+  margin-top: 50px;
+
+  &__left-side{
+    margin-top: 25px;
+  }
+  &__right-side{
+    margin-top: 25px;
+  }
+  .contact-type{
+    text-align: center;
+
+    &__link{
+      color: $black;
+      font-size: 20px;
+      border: solid 1px black;
+      padding: 5px 15px;
+      width: auto;
+
+    }
+    &__link:hover, &__link:active{
+      color: $black;
+
+    }
+  }
+  .contact-details{
+    font-size: 20px;
+  }
+  .h1{
+    text-align: center;
+    .link{
+      font-size: 30px;
+    }
+  }
+  .contact-info li{
+    margin-bottom: 15px;
+  }
+  .contact-info li:first-child{
+    margin-top: 15px;
+  }
+  &__social{
+    .link{
+      font-size: 18px !important;
+    }
+  }
+  &__img{
+    box-sizing: border-box;
+    height: 150px;
+    width: 150px;
+    border: solid 3px black;
+  }
+  .link{
+    color: $black;
+    font-size: 20px;
+    &:hover, &:active{
+      color: $black;
+    }
+  }
+
+}
+.input{
+  border: none;
+  border-bottom: solid 1px black;
+  height: 30px;
+  padding-bottom: 0px;
+  transition: .2s ease-in;
+  &::placeholder{
+    position: relative;
+    color: $black;
+    top: 5px;
+    transition: .2s ease-out;
+  }
+  &:focus::placeholder{
+    top: -10px;
+    transition: .2s ease-out;
+    opacity: 0;
+  }
+  // input:focus::-webkit-input-placeholder { color:transparent; }
+ &:focus{
+    border: none;
+    outline: none;
+    border-bottom: solid 1px red;
+  }
+  &:valid{
+    border-color: $black;
+  }
+}
+.input-message{
+  margin-top: 15px;
+  border: none;
+  border-bottom: solid 1px black;
+  width: 100%;
+  &:focus{
+     border: none;
+     outline: none;
+     border-bottom: solid 1px black;
+   }
+   &::placeholder{
+     position: relative;
+     color: $black;
+     top: 5px;
+     transition: .2s ease-out;
+   }
+   &:focus::placeholder{
+     top: -10px;
+     transition: .2s ease-out;
+     opacity: 0;
+   }
+}
+.btn-send{
+  display: block;
+margin-left: auto;
+margin-top: 25px;
+width: 100px;
+height: 35px;
+border: solid;
+border-color: black;
+background-color: white;
+border-width: 2px;
+cursor: pointer;
+
+}
