@@ -50,8 +50,7 @@
     animation: tab-open-menu-brand-logo .5s;
     width: 300px;
     top: 50%;
-    right: calc(50% + 40px);
-    left: unset;
+    left: calc(50% - 340px);
     transform: translateY(-50%);
   }
   .close-menu-brand-icon{
@@ -59,7 +58,6 @@
     width: 175px;
     padding-top: 15px;
     right: unset;
-    top: 0;
     left: 45px;
   }
 }
