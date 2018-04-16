@@ -1,6 +1,17 @@
 .contact{
-  margin-top: 50px;
-
+  // font-family: 'LubalinGraphRegular', sans-serif;
+  margin-top: 30px;
+  .hr{
+    border-top: solid .5px black;
+    width: 30%;
+    position: fixed;
+    left: 0;
+    top: 45%;
+    transform: rotate(90deg);
+  }
+  .wrapper{
+    margin-left: 25px;
+  }
   &__left-side{
     margin-top: 25px;
   }
@@ -8,17 +19,32 @@
     margin-top: 25px;
   }
   .contact-type{
-    text-align: center;
+    position: relative;
+    padding-bottom: 25px;
+    .left{
+      position: absolute;
+      right: calc(50% + 40px);
+    }
+    .right{
+      position: absolute;
+      left: calc(50% + 40px);
+    }
 
     &__link{
       color: $black;
-      font-size: 20px;
+      font-size: 24px;
       border: solid 1px black;
       padding: 5px 15px;
       width: auto;
-
     }
     @media only screen and (max-width: 576px) {
+        .left{
+          right: calc(50% + 20px);
+        }
+        .right{
+          left: calc(50% + 20px);
+        }
+
          &__link {
           padding: 5px;
           font-size: 18px;
@@ -30,23 +56,22 @@
     }
   }
   .contact-details{
-    font-size: 20px;
+    font-size: 24px;
   }
   .h1{
     text-align: center;
+    padding: 15px 0;
     .link{
-      font-size: 30px;
+      font-size: 24px;
     }
   }
   .contact-info li{
     margin-bottom: 15px;
   }
-  .contact-info li:first-child{
-    margin-top: 15px;
-  }
+
   &__social{
     .link{
-      font-size: 18px !important;
+      font-size: 24px !important;
       // transition: all .5s;
       // transform: scale(1);
       // &:hover{
@@ -65,7 +90,7 @@
   }
   .link{
     color: $black;
-    font-size: 20px;
+    font-size: 24px;
     &:hover, &:active{
       color: $black;
     }
@@ -79,10 +104,11 @@
   height: 30px;
   padding-bottom: 0px;
   transition: .2s ease-in;
+  font-size: 24px;
   &::placeholder{
     position: relative;
     color: $black;
-    top: 5px;
+    top: 0px;
     transition: .2s ease-out;
   }
   &:focus::placeholder{
@@ -105,6 +131,7 @@
   border: none;
   border-bottom: solid 1px black;
   width: 100%;
+  font-size: 24px;
   &:focus{
      border: none;
      outline: none;
@@ -124,16 +151,16 @@
 }
 .btn-send{
   display: block;
-margin-left: auto;
-margin-top: 25px;
-width: 100px;
-height: 35px;
-border: solid;
-border-color: black;
-background-color: white;
-border-width: 2px;
-cursor: pointer;
-
+  margin-left: auto;
+  margin-top: 25px;
+  width: 125px;
+  height: 45px;
+  border: solid;
+  border-color: black;
+  background-color: white;
+  border-width: 2px;
+  cursor: pointer;
+  font-size: 24px;
 }
 .error{
   color: red;

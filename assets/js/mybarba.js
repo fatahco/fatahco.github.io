@@ -2,8 +2,7 @@ function currentUrl() {
 
   if ((location.pathname.split("/")[1]) !== ""){
     $('.barba-container a[href^="/' + location.pathname.split("/")[1] + '"]').click(function (e) {
-      e.preventDefault();
-      console.log(location.pathname);
+         e.preventDefault();
     });
   }
 }
