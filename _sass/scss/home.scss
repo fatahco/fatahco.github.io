@@ -4,24 +4,30 @@
   }
   .tag-line{
     font-size: 65px;
-    font-family: 'clarenbd', sans-serif;
+    font-family: 'LubalinGraphRegular', sans-serif;
     line-height: 1.5;
     letter-spacing: 5px;
     text-transform: capitalize;
     color: black;
     text-align: left;
     transition: all .5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     &__link, &__link:hover{
       transition: all .5s;
       position: relative;
       color: $menu-link-hov-col;
+      font-family: 'LubalinGraphRegular', sans-serif;
+
     }
     &__hover{
       width: 100%;
-      height: 5px;
+      height: 8px;
       background: $menu-link-hov-col;
       position: absolute;
       bottom: 0;
+      font-family: 'LubalinGraphRegular', sans-serif;
       transition: all .5s;
     }
   }
@@ -29,27 +35,15 @@
 .tag-line__link:hover .tag-line__hover{
   bottom: 70%;
 }
-.underline--magical {
-  background-image: linear-gradient(120deg, #000 0%, #000 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.1em;
-  background-position: 0 100%;
-  transition: background-size 0.25s ease-in;
-  transition: all .5s;
 
-}
-.underline--magical:hover {
-  background-size: 100% 100%;
-}
-.underline--magical:hover .tag-line__link{
-  color: white;
-  transition: all .5s;
-}
 @media only screen and (min-width: 768px) and (max-width: 991px){
   .home-hero{
 
     .tag-line{
       font-size: 40px;
+      &__hover{
+        height: 6px;
+      }
     }
   }
 }
@@ -57,7 +51,10 @@
   .home-hero{
 
     .tag-line{
-      font-size: 30px;
+      font-size: 28px;
+      &__hover{
+        height: 4px;
+      }
     }
   }
 
