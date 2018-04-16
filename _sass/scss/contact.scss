@@ -39,14 +39,14 @@
     }
     @media only screen and (max-width: 576px) {
         .left{
-          right: calc(50% + 20px);
+          right: calc(50% + 0px);
         }
         .right{
-          left: calc(50% + 20px);
+          left: calc(50% + 40px);
         }
 
          &__link {
-          padding: 5px;
+          padding: 10px;
           font-size: 18px;
         }
     }
@@ -68,10 +68,20 @@
   .contact-info li{
     margin-bottom: 15px;
   }
-
+    @media only screen and (max-width: 767px) {
+    .contact-info li:first-child{
+      margin-top: 15px;
+    }
+    .contact-details{
+      font-size: 20px;
+      .link{
+        font-size: 20px;
+      }
+    }
+  }
   &__social{
     .link{
-      font-size: 24px !important;
+      font-size: 24px ;
       // transition: all .5s;
       // transform: scale(1);
       // &:hover{
@@ -126,6 +136,12 @@
     border-color: $black;
   }
 }
+@media only screen and (max-width: 767px) {
+  .input{
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
 .input-message{
   margin-top: 15px;
   border: none;
@@ -148,6 +164,11 @@
      transition: .2s ease-out;
      opacity: 0;
    }
+}
+@media only screen and (max-width: 767px) {
+  .input-message{
+    font-size: 20px;
+  }
 }
 .btn-send{
   display: block;
