@@ -176,10 +176,3 @@ $(document).ready(function() {
   contactFormValidation();
   removeHref();
 });
-
-
-
-
-
-
-// document.getElementsByTagName("input").setCustomValidity('Your custom validation message comes here');

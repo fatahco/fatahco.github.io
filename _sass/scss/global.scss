@@ -12,7 +12,6 @@ src: url("/assets/fonts/Lubalin_Graph_Regular.ttf");
 *{
   margin: 0;
   padding: 0;
-	font-family: 'Roboto Mono', sans-serif !important;
 }
 html {
 	font-size: 62.5%;
@@ -39,8 +38,9 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto Mono', sans-serif ;
+	color: #000;
 	border: 0;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
