@@ -1,3 +1,18 @@
+@keyframes input-box-hover {
+  0%{
+    height: 25px;
+    width: 25px;
+    top: 0;
+    left: 0;
+  }
+  100%{
+    top: -8.75px;
+    left: -8.75px;
+    height: 42px;
+    width: 42px;
+  }
+}
+
 @keyframes open-menu-brand-logo {
   0%{
     width: 175px;
