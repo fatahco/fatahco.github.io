@@ -10,7 +10,7 @@
 
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
-
+//
 ( function( window ) {
 
 'use strict';
@@ -250,10 +250,98 @@ function removeHref() {
     $('.h1 .link').removeAttr('href');
   }
 }
+function projectChkBox() {
+
+  $('.project-form__service #chk-1').hover(
+    function (){
+    $('#chk-1 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-1 .check_border').remove('check_border_expand');
+      $('#chk-1 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-1 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-2').hover(
+    function (){
+    $('#chk-2 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-2 .check_border').remove('check_border_expand');
+      $('#chk-2 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-2 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-3').hover(
+    function (){
+    $('#chk-3 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-3 .check_border').remove('check_border_expand');
+      $('#chk-3 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-3 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-4').hover(
+    function (){
+    $('#chk-4 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-4 .check_border').remove('check_border_expand');
+      $('#chk-4 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-4 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-5').hover(
+    function (){
+    $('#chk-5 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-5 .check_border').remove('check_border_expand');
+      $('#chk-5 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-5 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-6').hover(
+    function (){
+      $('#chk-6 .check_border').addClass('check_border_expand');
+      // $('.check_border').css({ 'opacity': 0});
+      // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-6 .check_border').remove('check_border_expand');
+      $('#chk-6 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-6 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+}
 $(document).ready(function() {
   $(".menu-bar").bind( "click", menuBarClick );
   currentUrl();
   menuLinkClick();
   contactFormValidation();
   removeHref();
+  projectChkBox();
 });
