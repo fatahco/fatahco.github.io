@@ -336,7 +336,151 @@ function projectChkBox() {
       }, 300);
       // $('#chk-2').addClass('check_border');
   });
+  $('#tearm').hover(
+    function (){
+      $('#tearm .check_border').addClass('check_border_expand');
+      // $('.check_border').css({ 'opacity': 0});
+      // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#tearm .check_border').remove('check_border_expand');
+      $('#tearm .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#tearm .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#Front-End-Developer').hover(
+    function (){
+      $('#Front-End-Developer .check_border').addClass('check_border_expand');
+      // $('.check_border').css({ 'opacity': 0});
+      // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Front-End-Developer .check_border').remove('check_border_expand');
+      $('#Front-End-Developer .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Front-End-Developer .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+
+
+
+  $('#Back-End-Developer').hover(
+    function (){
+    $('#Back-End-Developer .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Back-End-Developer .check_border').remove('check_border_expand');
+      $('#Back-End-Developer .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Back-End-Developer .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#Graphics').hover(
+    function (){
+    $('#Graphics .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Graphics .check_border').remove('check_border_expand');
+      $('#Graphics .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Graphics .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#Digital-Marketing-Ninja').hover(
+    function (){
+    $('#Digital-Marketing-Ninja .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Digital-Marketing-Ninja .check_border').remove('check_border_expand');
+      $('#Digital-Marketing-Ninja .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Digital-Marketing-Ninja .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#Copy-writer').hover(
+    function (){
+    $('#Copy-writer .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Copy-writer .check_border').remove('check_border_expand');
+      $('#Copy-writer .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Copy-writer .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#BDE').hover(
+    function (){
+    $('#BDE .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#BDE .check_border').remove('check_border_expand');
+      $('#BDE .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#BDE .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#Project-Manager').hover(
+    function (){
+    $('#Project-Manager .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#Project-Manager .check_border').remove('check_border_expand');
+      $('#Project-Manager .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#Project-Manager .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#PA').hover(
+    function (){
+    $('#PA .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#PA .check_border').remove('check_border_expand');
+      $('#PA .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#PA .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('#aaaaaaaaaaa').hover(
+    function (){
+    $('#aaaaaaaaaaa .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#aaaaaaaaaaa .check_border').remove('check_border_expand');
+      $('#aaaaaaaaaaa .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#aaaaaaaaaaa .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
 }
+
 $(document).ready(function() {
   $(".menu-bar").bind( "click", menuBarClick );
   currentUrl();
