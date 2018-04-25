@@ -12,7 +12,7 @@ title: Fatah Digital | Career
         </div>
       </div>
     </div>
-    <form action="https://mailthis.to/fatahdigitalhr" method="POST" id="career-form" encType="multipart/form-data">
+    <form action="https://mailthis.to/fatahdigitalhr" method="POST" encType="multipart/form-data">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
@@ -51,19 +51,19 @@ title: Fatah Digital | Career
             <p>Gender:</p>
             <div class="radio-items">
               <div class="row">
-                <div class="col col-xs-12">
+                <div class="col-md-4 col-sm-12">
                   <span class="male">
-                    <input type="radio" id="Male" name="Gender" value="Male" required >
+                    <input type="radio" id="Male" name="Gender" value="Male" required checked >
                     <label for="Male">Male</label>
                   </span>
                 </div>
-                <div class="col col-xs-12">
+                <div class="col-md-4 col-sm-12">
                   <span class="female">
                     <input type="radio" id="Female" value="Female" name="Gender" required>
                     <label for="Female">Female</label>
                   </span>
                 </div>
-                <div class="col col-xs-12">
+                <div class="col-md-4 col-sm-12">
                   <span class="other">
                     <input type="radio" id="other" name="Gender" value="Other"  required>
                     <label for="other">Other</label>
@@ -176,13 +176,46 @@ title: Fatah Digital | Career
             </div>
           </div>
         </div>
-        <hr>
+        <div class="col-sm-12">
+
+          <hr>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <span class="location">
+            <!-- <p>Gender:</p> -->
+            <div class="radio-items">
+              <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                  <span class="">
+                    <input type="radio" id="location-porbandar" name="location" value="Work from porbandar" required checked >
+                    <label for="location-porbandar">Work from porbandar</label>
+                  </span>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <span class="">
+                    <input type="radio" id="location-Remote" value="Work from Remote" name="location" required>
+                    <label for="location-Remote">Work from Remote</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </span>
+          <hr>
+        </div>
 
         <div class="col-sm-12">
           <textarea name="Achievements" id="message" rows="6" placeholder="Any other achievements you would like us to know?" class="input-message"  required></textarea>
         </div>
         <div class="col-sm-12">
           <textarea name="Cover Letter" id="message" rows="6" placeholder="Why do you think you are a good fit for the selected position?" class="input-message" required></textarea>
+        </div>
+        <div class="col-sm-12">
+          <div class="box file">
+            <label for="" class="resume">Upload Your Resume</label>
+            <input type="file" name="file-2[]" id="file" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple="" required>
+            <label for="file"><i class="fa fa-paperclip"></i><span>Select</span></label>
+          </div>
+          <hr>
         </div>
         <div class="col-sm-12">
           <p class="condition">
@@ -192,21 +225,22 @@ title: Fatah Digital | Career
             Employment Term: 15 months employment contract
           </p>
           <div class="c-checkbox" id="tearm">
-            <input type="checkbox" name="checkbox" id="agree" value="I Agree"  required>
+            <input type="checkbox" name="checkbox" id="agree" value="I Agree" >
             <label for="agree">I Agree</label>
             <span class="check_mark"></span>
             <span class="check_border" id="chk"></span>
           </div>
         </div>
-        <input type="hidden" name="Source" value="job-application-website-form">
-        <input type="hidden" name="_subject" id="subject">
+
+
+        <input type="hidden" name="_subject" value="job-application-website-form">
         <!-- Custom email ReplyTo Address -->
-        <input type="hidden" name="_replyto" id="replyto">
+        <input type="hidden" name="_replyto" value="foo@bar.co">
         <!-- Redirect to a page after recaptcha -->
         <input type="hidden" name="_after" value="https://fatah.co/">
         <!-- Honeypot (to catch comment spam bots) -->
         <input type="hidden" name="_honeypot" value="">
-        <input type="file" name="file" placeholder="" required>
+        <!-- <input type="file" name="file" placeholder="" required> -->
 
         <!-- Apply a custom confirmation message on the second step -->
         <input type="hidden" name="_confirmation" value="">
