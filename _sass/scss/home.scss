@@ -1,0 +1,61 @@
+.home-hero{
+  .sapce-wrape{
+    white-space: nowrap;
+  }
+  .tag-line{
+    font-size: 65px;
+    font-family: 'LubalinGraphRegular', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: black;
+    text-align: left;
+    transition: all .5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &__link, &__link:hover{
+      transition: all .5s;
+      position: relative;
+      color: $menu-link-hov-col;
+      font-family: 'LubalinGraphRegular', sans-serif;
+
+    }
+    &__hover{
+      width: 100%;
+      height: 8px;
+      background: $menu-link-hov-col;
+      position: absolute;
+      bottom: 0;
+      font-family: 'LubalinGraphRegular', sans-serif;
+      transition: all .5s;
+    }
+  }
+}
+.tag-line__link:hover .tag-line__hover{
+  bottom: 70%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .home-hero{
+
+    .tag-line{
+      font-size: 40px;
+      &__hover{
+        height: 6px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  .home-hero{
+
+    .tag-line{
+      font-size: 28px;
+      &__hover{
+        height: 4px;
+      }
+    }
+  }
+
+}
