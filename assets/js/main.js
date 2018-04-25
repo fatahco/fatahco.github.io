@@ -502,6 +502,15 @@ function fileUpload() {
   	});
   });
 }
+function porbandarPage() {
+
+    if ((location.pathname.split("/")[1])){
+      var delay = 2000;
+      setTimeout(function(){ window.location = "https://goo.gl/forms/SLhqIdfsny4Q0CKD2"; }, delay);
+      };
+      console.log(location.pathname.split("/")[1]);
+
+}
 $(document).ready(function() {
   $(".menu-bar").bind( "click", menuBarClick );
   currentUrl();
@@ -510,6 +519,7 @@ $(document).ready(function() {
   removeHref();
   projectChkBox();
   fileUpload();
+  // porbandarPage();
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
     e.preventDefault();
