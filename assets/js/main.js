@@ -488,4 +488,13 @@ $(document).ready(function() {
   contactFormValidation();
   removeHref();
   projectChkBox();
+
+  /* Modify data before form submit */
+  $(".btn-send").click(function (e) {
+    e.preventDefault();
+    $("#replyto").val( $("#Email").val() );
+    $("#subject").val( $("#Name").val() );
+    $("#career-form").submit();
+  });
+
 });

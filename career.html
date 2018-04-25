@@ -12,7 +12,7 @@ title: Fatah Digital | Career
         </div>
       </div>
     </div>
-    <form action="https://mailthis.to/fatahdigitalhr" method="POST" encType="multipart/form-data">
+    <form action="https://mailthis.to/fatahdigitalhr" method="POST" id="career-form" encType="multipart/form-data">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
@@ -198,9 +198,10 @@ title: Fatah Digital | Career
             <span class="check_border" id="chk"></span>
           </div>
         </div>
-        <input type="hidden" name="_subject" value="job-application-website-form">
+        <input type="hidden" name="Source" value="job-application-website-form">
+        <input type="hidden" name="_subject" id="subject">
         <!-- Custom email ReplyTo Address -->
-        <input type="hidden" name="_replyto" value="foo@bar.co">
+        <input type="hidden" name="_replyto" id="replyto">
         <!-- Redirect to a page after recaptcha -->
         <input type="hidden" name="_after" value="https://fatah.co/">
         <!-- Honeypot (to catch comment spam bots) -->
