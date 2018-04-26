@@ -47,7 +47,11 @@
   padding: 1.6em 0;
   width: 100%;
 }
-
+@media only screen and (max-width: 767px){
+  .input__label-content{
+    margin-top: -10px;
+  }
+}
 
 .input--fatah {
   margin-top: 50px;
@@ -63,7 +67,11 @@
   transition: opacity 0.3s;
   font-size: 24px;
 }
-
+@media only screen and (max-width: 767px){
+  .input__field--fatah{
+    font-size: 16px;
+  }
+}
 .input__label--fatah {
   position: absolute;
   left: 0;
@@ -73,6 +81,11 @@
   text-align: left;
   pointer-events: none;
   font-size: 24px;
+}
+@media only screen and (max-width: 767px){
+  .input__label--fatah{
+    font-size: 16px;
+  }
 }
 
 .input__label-content--fatah {
@@ -146,6 +159,7 @@
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 .hire-us-section{
+  padding: 200px 0;
   .title{
     text-align: center;
     .h1{
@@ -153,6 +167,12 @@
       font-family: 'LubalinGraphRegular', sans-serif;
       padding: 25px 0;
     }
+    @media only screen and (max-width: 767px){
+      .h1{
+        font-size: 22px;
+      }
+    }
+
   }
   .project-form{
     &__service-box{
@@ -161,10 +181,20 @@
         font-size: 24px;
         margin-left: 35px;
       }
+      @media only screen and (max-width: 767px){
+        .heading{
+          font-size: 16px;
+        }
+      }
     }
     &__service{
       text-align: center;
       padding-top: 30px;
+    }
+    @media only screen and (max-width: 767px){
+      &__service{
+        font-size: 16px;
+      }
     }
   }
   .c-checkbox{
@@ -240,6 +270,13 @@
       }
     }
   }
+  @media only screen and (max-width: 767px){
+    .c-checkbox{
+      left: 30px;
+      transform: translateY(0);
+    }
+  }
+
   .check_mark{
     visibility: hidden;
     height: 25px;
@@ -306,6 +343,14 @@
       width: 42px;
     }
   }
+  @media only screen and (max-width: 767px){
+    label{
+      font-size: 16px;
+    }
+  }
+  .btn-send{
+    margin-left: 0;
+  }
   hr{
     border-top: 1px solid #000 ;
     width: 100%;
@@ -314,23 +359,198 @@
     margin-left: 30px;
   }
 }
+.budget{
+  margin-top: 30px;
+  font-size: 24px;
+  border: 0;
+  width: 100%;
+  border-radius: 0;
+  background: none;
+  border-bottom: solid 1px #000;
+  cursor: pointer;
+  &:focus, &:active {
+    outline: 0;
+  }
+  .items{
+    margin-left: 20px;
+    // &:hover , &:focus, &:visited{
+    //   background-color: #000;
+    //   color: #fff;
+    //
+    // }
+  }
+}
+@media only screen and (max-width: 767px){
+  .budget{
+    font-size: 16px;
+  }
+}
 div{
   max-width: 100%;
 }
-// .box {
-//      height: 100px;
-//      width: 100px;
-//      border: solid;
-//      padding:3px;
-//
-//   background:
-//     linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
-//     linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) bottom left no-repeat,
-//     linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
-//     linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%)top right no-repeat;
-//   background-size: 100% 3px, 100% 3px, 3px 100%, 3px 100%;
-//   &:hover{
-//     height: 150px;
-//     width: 150px;
-//   }
-// }
+.budget_details{
+  font-size: 24px;
+  margin-left: 20px;
+}
+@media only screen and (max-width: 767px){
+  .budget_details{
+    font-size: 16px;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* */
+.selected-item {
+  margin: 20px 0;
+}
+/* custom select style */
+.cusSelBlock {
+  height: 50px;
+  min-width: 500px;
+  z-index: 100;
+}
+@media only screen and (max-width: 767px){
+  .cusSelBlock{
+    min-width: 300px;
+  }
+}
+#cusSelectbox {
+  height: 100%;
+  width: 100%;
+}
+.s-hidden {
+  visibility: hidden;
+}
+.cusSelBlock {
+  display: inline-block;
+  position: relative;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+.selectLabel {
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 2px;
+  line-height: 50px;
+  padding: 0 50px 0 20px;
+  text-align: left;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media only screen and (max-width: 767px){
+  .selectLabel{
+    font-size: 16px;
+  }
+}
+.selectLabel:after {
+  content: '\25BC';
+  border-left: 1px solid #333;
+  color: #333;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: 15%;
+  height: 70%;
+  width: 50px;
+}
+.selectLabel:active {
+  // -webkit-transform: rotateX(30deg);
+  // transform: rotateX(30deg);
+}
+.selectLabel:active:after {
+  content: '\25B2';
+}
+.selectLabel.active:after {
+  content: '\25B2';
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.options {
+  position: absolute;
+  top: 50px;
+  height: 1px;
+  width: 100%;
+  font-size: 24px;
+  z-index: 100;
+}
+@media only screen and (max-width: 767px){
+  .options {
+    font-size: 16px;
+  }
+}
+.options li {
+  background-color: #ffffff;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  display: block;
+  line-height: 50px;
+  list-style: none;
+  opacity: 1;
+  padding: 0 50px 0 20px;
+  text-align: left;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 0;
+  height: 50px;
+  width: 100%;
+}
+.options li:hover,
+.options li.active {
+  background-color: #000;
+  color: #fff;
+}
+.options li:nth-child(1) {
+  -webkit-transform: translateY(0px);
+  transform: translateY(px);
+  z-index: 60;
+}
+.options li:nth-child(2) {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  z-index: 50;
+}
+.options li:nth-child(3) {
+  z-index: 40;
+}
+.options li:nth-child(4) {
+  z-index: 30;
+}
+.options li:nth-child(5) {
+  z-index: 20;
+}
+.options li:nth-child(6) {
+  z-index: 10;
+}

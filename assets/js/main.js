@@ -364,9 +364,6 @@ function projectChkBox() {
       }, 300);
       // $('#chk-2').addClass('check_border');
   });
-
-
-
   $('#Back-End-Developer').hover(
     function (){
     $('#Back-End-Developer .check_border').addClass('check_border_expand');
@@ -504,12 +501,105 @@ function fileUpload() {
 }
 function porbandarPage() {
 
-    if ((location.pathname.split("/")[1])){
+    if ((location.pathname.split("/")[1] == 'porbandar')){
       var delay = 2000;
       setTimeout(function(){ window.location = "https://goo.gl/forms/SLhqIdfsny4Q0CKD2"; }, delay);
       };
-      console.log(location.pathname.split("/")[1]);
+      // console.log(location.pathname);
+}
+function dropDownBox() {
 
+  	var defaultselectbox = $('#cusSelectbox');
+  	var numOfOptions = $('#cusSelectbox').children('option').length;
+
+  	// hide select tag
+  	defaultselectbox.addClass('s-hidden');
+
+  	// wrapping default selectbox into custom select block
+  	defaultselectbox.wrap('<div class="cusSelBlock"></div>');
+
+  	// creating custom select div
+  	defaultselectbox.after('<div class="selectLabel"></div>');
+
+  	// getting default select box selected value
+  	$('.selectLabel').text(defaultselectbox.children('option').eq(0).text());
+
+  	// appending options to custom un-ordered list tag
+  	var cusList = $('<ul/>', { 'class': 'options'} ).insertAfter($('.selectLabel'));
+
+  	// generating custom list items
+  	for(var i=0; i< numOfOptions; i++) {
+  		$('<li/>', {
+  		text: defaultselectbox.children('option').eq(i).text(),
+  		rel: defaultselectbox.children('option').eq(i).val()
+  		}).appendTo(cusList);
+  	}
+    $('.options li').first().addClass('active');
+    
+  	// open-list and close-list items functions
+  	function openList() {
+
+  		for(var i=0; i< numOfOptions; i++) {
+  			$('.options').children('li').eq(i).attr('tabindex', i).css(
+  				'transform', 'translateY('+(i*100+100)+'%)').css(
+  				'transition-delay', i*30+'ms');
+  		}
+      // $('.option').children('li').first().addClass('select');
+  	}
+  	function closeList() {
+  		for(var i=0; i< numOfOptions; i++) {
+  			$('.options').children('li').eq(i).css('transform', 'translateY('+i*0+'px)').css('transition-delay', i*0+'ms');
+  		}
+  		$('.options').children('li').eq(1).css('transform', 'translateY('+0+'px)');
+  		$('.options').children('li').eq(2).css('transform', 'translateY('+0+'px)');
+  	}
+  	// click event functions
+  	$('.selectLabel').click(function () {
+      // $('.option').find('li').first().addClass('select');
+
+  		$(this).toggleClass('active');
+  		if( $(this).hasClass('active') ) {
+  			openList();
+  			focusItems();
+        getBudget();
+  		}
+  		else {
+  			closeList();
+  		}
+  	});
+  	$(".options li").on('keypress click', function(e) {
+  		e.preventDefault();
+  		$('.options li').siblings().removeClass();
+  		closeList();
+  		$('.selectLabel').removeClass('active');
+  		$('.selectLabel').text($(this).text());
+  		defaultselectbox.val($(this).text());
+  		$('.selected-item p span').text($('.selectLabel').text());
+  	});
+    function getBudget() {
+      $('.options').on('click', 'li', function(){
+      $this = $(this);
+  		$this.addClass('focus');
+      $('.focus').focus();
+      $('.option li').removeClass('select');
+      });
+    }
+  function focusItems() {
+  	$('.options').on('focus', 'li', function() {
+  		$this = $(this);
+  		$this.addClass('active').siblings().removeClass();
+  	}).on('keydown', 'li', function(e) {
+  		$this = $(this);
+  		if (e.keyCode == 40) {
+  			$this.next().focus();
+  			return false;
+  		} else if (e.keyCode == 38) {
+  			$this.prev().focus();
+  			return false;
+  		}
+  	});
+    // }).find('li').first().addClass('select').focus();
+  }
 }
 $(document).ready(function() {
   $(".menu-bar").bind( "click", menuBarClick );
@@ -519,7 +609,8 @@ $(document).ready(function() {
   removeHref();
   projectChkBox();
   fileUpload();
-  // porbandarPage();
+  porbandarPage();
+  dropDownBox();
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
     e.preventDefault();

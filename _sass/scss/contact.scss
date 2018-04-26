@@ -1,23 +1,10 @@
 .contact{
-  // font-family: 'LubalinGraphRegular', sans-serif;
   margin-top: 30px;
-
-
-  &__left-side{
-    // margin-top: 95px;
-
-  }
-  @media only screen and (max-width: 767px) {
-    &__left-side{
-      // margin-top: 25px;
-    }
-  }
   &__right-side{
     margin-top: 25px;
   }
   .left{
     text-align: right;
-
   }
   @media only screen and (max-width: 576px) {
     .left{
@@ -56,7 +43,6 @@
     }
     &__link:hover, &__link:active{
       color: $black;
-
     }
   }
   .contact-details{
@@ -71,7 +57,6 @@
       font-size: 30px;
     }
   }
-
   .contact-info li{
     margin-bottom: 10px;
   }
@@ -96,15 +81,7 @@
     }
     .link{
       font-size: 24px ;
-      // transition: all .5s;
-      // transform: scale(1);
-      // &:hover{
-      //   transform: scale(1.2);
-      //   transition: all .5s;
-      //   color: red;
-      // }
     }
-
   }
   &__img{
     box-sizing: border-box;
@@ -119,7 +96,6 @@
       color: $black;
     }
   }
-
 }
 .input{
   border: none;
@@ -141,7 +117,6 @@
     transition: .2s ease-out;
     opacity: 0;
   }
-  // input:focus::-webkit-input-placeholder { color:transparent; }
  &:focus{
     border: none;
     outline: none;
@@ -178,7 +153,6 @@
    &:focus::placeholder{
      top: -35px;
      transition: .2s ease-out;
-     // opacity: 0;
    }
 }
 @media only screen and (max-width: 767px) {
@@ -195,13 +169,16 @@
   border: solid;
   border-color: black;
   background-color: white;
-  border-width: 2px;
+  border-width: 1px;
   cursor: pointer;
   font-size: 24px;
+  z-index: -100;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px){
   .btn-send{
     margin-left: 0;
+    font-size: 18px;
+    width: 100px;
   }
 }
 label.error{
