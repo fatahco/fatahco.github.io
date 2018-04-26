@@ -250,92 +250,7 @@ function removeHref() {
     $('.h1 .link').removeAttr('href');
   }
 }
-function projectChkBox() {
-
-  $('.project-form__service #chk-1').hover(
-    function (){
-    $('#chk-1 .check_border').addClass('check_border_expand');
-    // $('.check_border').css({ 'opacity': 0});
-    // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-1 .check_border').remove('check_border_expand');
-      $('#chk-1 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-1 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
-  $('.project-form__service #chk-2').hover(
-    function (){
-    $('#chk-2 .check_border').addClass('check_border_expand');
-    // $('.check_border').css({ 'opacity': 0});
-    // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-2 .check_border').remove('check_border_expand');
-      $('#chk-2 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-2 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
-  $('.project-form__service #chk-3').hover(
-    function (){
-    $('#chk-3 .check_border').addClass('check_border_expand');
-    // $('.check_border').css({ 'opacity': 0});
-    // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-3 .check_border').remove('check_border_expand');
-      $('#chk-3 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-3 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
-  $('.project-form__service #chk-4').hover(
-    function (){
-    $('#chk-4 .check_border').addClass('check_border_expand');
-    // $('.check_border').css({ 'opacity': 0});
-    // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-4 .check_border').remove('check_border_expand');
-      $('#chk-4 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-4 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
-  $('.project-form__service #chk-5').hover(
-    function (){
-    $('#chk-5 .check_border').addClass('check_border_expand');
-    // $('.check_border').css({ 'opacity': 0});
-    // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-5 .check_border').remove('check_border_expand');
-      $('#chk-5 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-5 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
-  $('.project-form__service #chk-6').hover(
-    function (){
-      $('#chk-6 .check_border').addClass('check_border_expand');
-      // $('.check_border').css({ 'opacity': 0});
-      // $('.check_border').removeClass('check_border_collaps');
-    },function () {
-      $('#chk-6 .check_border').remove('check_border_expand');
-      $('#chk-6 .check_border').addClass('check_border_collaps');
-      // $('#chk-2').remove('check_border');
-      setTimeout(function () {
-        $('#chk-6 .check_border').removeClass('check_border_collaps');
-      }, 300);
-      // $('#chk-2').addClass('check_border');
-  });
+function careerChkBox() {
   $('#tearm').hover(
     function (){
       $('#tearm .check_border').addClass('check_border_expand');
@@ -462,6 +377,132 @@ function projectChkBox() {
       }, 300);
       // $('#chk-2').addClass('check_border');
   });
+  $('#Front-End').focusin(
+    function (){
+    $('#Front-End-Developer .check_border').addClass('check_border_expand');
+  });
+  $('#Back-End').focusin(
+    function (){
+    $('#Back-End-Developer .check_border').addClass('check_border_expand');
+  });
+  $('#Web-Designer').focusin(
+    function (){
+    $('#Graphics .check_border').addClass('check_border_expand');
+  });
+  $('#Digital-Marketing').focusin(
+    function (){
+    $('#Digital-Marketing-Ninja .check_border').addClass('check_border_expand');
+  });
+  $('#Copywriter').focusin(
+    function (){
+    $('#Copy-writer .check_border').addClass('check_border_expand');
+  });
+  $('#bde').focusin(
+    function (){
+    $('#BDE .check_border').addClass('check_border_expand');
+  });
+  $('#ProjectManager').focusin(
+    function (){
+    $('#Project-Manager .check_border').addClass('check_border_expand');
+  });
+  $('#pa').focusin(
+    function (){
+    $('#PA .check_border').addClass('check_border_expand');
+  });
+  $('#agree').focusin(
+    function (){
+    $('#tearm .check_border').addClass('check_border_expand');
+  });
+}
+
+function projectChkBox() {
+
+  $('.project-form__service #chk-1').hover(
+    function (){
+    $('#chk-1 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-1 .check_border').remove('check_border_expand');
+      $('#chk-1 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-1 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-2').hover(
+    function (){
+    $('#chk-2 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-2 .check_border').remove('check_border_expand');
+      $('#chk-2 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-2 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-3').hover(
+    function (){
+    $('#chk-3 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-3 .check_border').remove('check_border_expand');
+      $('#chk-3 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-3 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-4').hover(
+    function (){
+    $('#chk-4 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-4 .check_border').remove('check_border_expand');
+      $('#chk-4 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-4 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-5').hover(
+    function (){
+    $('#chk-5 .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-5 .check_border').remove('check_border_expand');
+      $('#chk-5 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-5 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+  $('.project-form__service #chk-6').hover(
+    function (){
+      $('#chk-6 .check_border').addClass('check_border_expand');
+      // $('.check_border').css({ 'opacity': 0});
+      // $('.check_border').removeClass('check_border_collaps');
+    },function () {
+      $('#chk-6 .check_border').remove('check_border_expand');
+      $('#chk-6 .check_border').addClass('check_border_collaps');
+      // $('#chk-2').remove('check_border');
+      setTimeout(function () {
+        $('#chk-6 .check_border').removeClass('check_border_collaps');
+      }, 300);
+      // $('#chk-2').addClass('check_border');
+  });
+
+
   $('#aaaaaaaaaaa').hover(
     function (){
     $('#aaaaaaaaaaa .check_border').addClass('check_border_expand');
@@ -535,7 +576,7 @@ function dropDownBox() {
   		}).appendTo(cusList);
   	}
     $('.options li').first().addClass('active');
-    
+
   	// open-list and close-list items functions
   	function openList() {
 
@@ -601,6 +642,20 @@ function dropDownBox() {
     // }).find('li').first().addClass('select').focus();
   }
 }
+function careerRadioBtn() {
+  $('#Male').focusin(function () {
+     $('#Male').attr('checked',true);
+  });
+  $('#Male').focusout(function () {
+    $('#Male').attr('checked',false);
+  });
+  $('#Female').focusin(function () {
+    $('#Female').attr('checked',true);
+  });
+  $('#Female').focusout(function () {
+    $('#Female').attr('checked',false);
+  });
+}
 $(document).ready(function() {
   $(".menu-bar").bind( "click", menuBarClick );
   currentUrl();
@@ -608,9 +663,11 @@ $(document).ready(function() {
   contactFormValidation();
   removeHref();
   projectChkBox();
+  careerChkBox();
   fileUpload();
   porbandarPage();
   dropDownBox();
+  // careerRadioBtn();
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
     e.preventDefault();

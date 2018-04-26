@@ -25,7 +25,7 @@
   }
   .btn-send{
     margin-left: 0;
-  
+
   }
   @media only screen and (max-width: 767px){
     .btn-send{
@@ -170,7 +170,7 @@
       width: 25px;
       margin: 0;
       cursor: pointer;
-      &:hover ~.check_border_expand {
+      &:hover ~.check_border_expand, &:focus ~.check_border_expand {
         animation: input-box-hover .2s;
         top: -8.75px;
         left: -8.75px;
