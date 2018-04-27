@@ -254,14 +254,18 @@ function careerFormValidation() {
     rules: {
       Name: "required",
       Phone: "required",
-      Dob: "required",
+      DOB: "required",
       // Gender: "required",
       Degree: "required",
       location: "required",
-      file: "required",
+      Resume: "required",
       agree: "required",
       message: "required",
-      Gender:{ required:true },
+      // Gender:{ required:true },
+      Position: {
+                    required: true,
+                    minlength: 1
+            },
       email: {
         required: true,
         email: true
@@ -270,18 +274,19 @@ function careerFormValidation() {
     messages: {
       Name: "Please enter your Name",
       Phone: "Please enter your Phone Number",
-      Dob: "Please enter your Date of birth",
-      Gender: "Please Select Your Gender",
+      DOB: "Please enter your Date of birth",
+      // Gender: "Please Select Your Gender",
       Degree: "Please Select Your Qulification",
-      location: "Please enter your messgae",
-      file: "Upload Your Resume",
+      Location: "Please enter your messgae",
+      Resume: "Upload Your Resume",
       agree: "Please enter your messgae",
-      message: "Please enter your messgae",
-      Email: "Please enter a valid email address"
+      CoverLetter: "Please enter your Answer",
+      Email: "Please enter a valid email address",
+      Position: "Please select at least one position "
 
     },
     errorElement: 'p',
-    
+
     submitHandler: function(form) {
       form.submit();
     }
@@ -732,7 +737,11 @@ $(document).ready(function() {
     e.preventDefault();
     $("#replyto").val( $("#Email").val() );
     $("#subject").val( $("#Name").val() );
+    // if($(".position input:checked").length == 0){
+    //   alert('please checked atleast one');
+    // }
+    // else {
+    // }
     $("#career-form").submit();
   });
-
 });

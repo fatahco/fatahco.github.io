@@ -14,6 +14,7 @@ permalink: /career/
     </div>
     <form action="https://mailthis.to/fatahdigitalhr" method="POST" encType="multipart/form-data" id="career-form" name="careerForm">
       <div class="row">
+        <!-- Name -->
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
             <span class="myerror"></span>
@@ -23,6 +24,7 @@ permalink: /career/
             </label>
           </span>
         </div>
+        <!-- Email -->
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
             <input class="input__field input__field--fatah" type="email" id="Email" name="Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required/>
@@ -31,6 +33,7 @@ permalink: /career/
             </label>
           </span>
         </div>
+        <!-- Phone -->
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
             <input class="input__field input__field--fatah" type="number" id="Phone" name="Phone" required/>
@@ -39,14 +42,16 @@ permalink: /career/
             </label>
           </span>
         </div>
+        <!-- DOB -->
         <div class="col-sm-6 col-xs-12">
           <span class="inputt input--fatah">
-            <input class="input__field input__field--fatah" type="text" id="DOB" name="Dob" required/>
+            <input class="input__field input__field--fatah" type="text" id="DOB" name="DOB" required/>
             <label class="input__label input__label--fatah" for="DOB">
               <span class="input__label-content input__label-content--fatah">DOB</span>
             </label>
           </span>
         </div>
+        <!-- Gender -->
         <div class="col-sm-6 col-xs-12">
           <span class="gender">
             <p>Gender:</p>
@@ -55,7 +60,7 @@ permalink: /career/
                 <!-- <p class="p"></p> -->
                 <div class="col-md-4 col-sm-12">
                   <span class="male radio-btn">
-                    <input type="radio" id="Male" name="Gender" value="Male" tabindex="0" >
+                    <input type="radio" id="Male" name="Gender" value="Male" tabindex="0" checked>
                     <label for="Male">Male</label>
                   </span>
                 </div>
@@ -76,32 +81,32 @@ permalink: /career/
           </span>
           <hr>
         </div>
-
+        <!-- Qulification -->
         <div class="col-sm-6 col-xs-12">
-          <select id="selectbox" data-selected="" class="degree" name="Degree" required>
-            <option value="" selected="selected" disabled="disabled">Education / Qulification</option>
-            <option value="MCA" class="items">MCA</option>
-            <option value="Msc.IT" class="items">Msc.IT</option>
-            <option value="MBA" class="items">MBA</option>
-            <option value="BE" class="items">BE</option>
-            <option value="BCA" class="items">BCA</option>
-            <option value="BBA" class="items">BBA</option>
-            <option value="PGDCA" class="items">PGDCA</option>
-            <option value="B.com" class="items">B.com</option>
-            <option value="Other" class="items">Other</option>
-          </select>
-          <hr>
+          <div class="qulificationBox">
+            <select id="selectbox" data-selected="" class="degree" name="Qulification" required>
+              <option value="" selected="selected" disabled="disabled">Education / Qulification</option>
+              <option value="MCA" class="items">MCA</option>
+              <option value="MSc. IT" class="items">MSc. IT</option>
+              <option value="MBA" class="items">MBA</option>
+              <option value="BE" class="items">BE</option>
+              <option value="BCA" class="items">BCA</option>
+              <option value="BBA" class="items">BBA</option>
+              <option value="PGDCA" class="items">PGDCA</option>
+              <option value="B. Com." class="items">B. Com.</option>
+              <option value="Other" class="items">Other</option>
+            </select>
+            <hr>
+          </div>
         </div>
-
-
+        <!-- position -->
         <div class="col-sm-12">
           <span class="heading">Which position(s) are you interested in?</span>
         </div>
-
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Front-End-Developer">
-              <input type="checkbox" name="position" id="Front-End" value="Front-End Developer(HTML, CSS, JS, AngularJS, ReactJS)">
+              <input type="checkbox" name="Position" id="Front-End" value="Front-End Developer(HTML, CSS, JS, AngularJS, ReactJS)">
               <label for="Front-End" class="chk_lable">Front-End Developer(HTML, CSS, JS, AngularJS, ReactJS)</label>
               <span class="check_mark"></span>
               <span class="check_border" id="chk"></span>
@@ -109,9 +114,9 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Back-End-Developer">
-              <input type="checkbox" name="position" id="Back-End" value="Back-End Developer(RoR, NodeJS, PHP Frameworks)" >
+              <input type="checkbox" name="Position" id="Back-End" value="Back-End Developer(RoR, NodeJS, PHP Frameworks)" >
               <label for="Back-End" class="chk_lable">Back-End Developer(RoR, NodeJS, PHP Frameworks)</label>
               <span class="check_mark"></span>
               <span class="check_border" id="chk"></span>
@@ -119,9 +124,9 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Graphics">
-              <input type="checkbox" name="position" id="Web-Designer" value="Graphics, UiUx, Web Designer">
+              <input type="checkbox" name="Position" id="Web-Designer" value="Graphics, UiUx, Web Designer">
               <label for="Web-Designer" class="chk_lable">Graphics, UiUx, Web Designer</label>
               <span class="check_mark"></span>
               <span class="check_border" id="chk"></span>
@@ -129,9 +134,9 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Digital-Marketing-Ninja">
-              <input type="checkbox" name="position" id="Digital-Marketing" value="Digital Marketing Ninja">
+              <input type="checkbox" name="Position" id="Digital-Marketing" value="Digital Marketing Ninja">
               <label for="Digital-Marketing" class="chk_lable">Digital Marketing Ninja</label>
               <span class="check_mark"></span>
               <span class="check_border" id="chk"></span>
@@ -139,7 +144,7 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Copy-writer">
               <input type="checkbox" name="position" id="Copywriter" value="Copywriter">
               <label for="Copywriter" class="chk_lable">Copywriter</label>
@@ -149,7 +154,7 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="BDE">
               <input type="checkbox" name="position" id="bde" value="Business Development Executive">
               <label for="bde" class="chk_lable">Business Development Executive</label>
@@ -159,7 +164,7 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="Project-Manager">
               <input type="checkbox" name="position" id="ProjectManager" value="Project Manager">
               <label for="ProjectManager" class="chk_lable">Project Manager</label>
@@ -169,7 +174,7 @@ permalink: /career/
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="project-form__service">
+          <div class="project-form__service position">
             <div class="c-checkbox" id="PA">
               <input type="checkbox" name="position" id="pa" value="Personal Assistant">
               <label for="pa" class="chk_lable">Personal Assistant</label>
@@ -180,8 +185,9 @@ permalink: /career/
         </div>
         <div class="col-sm-12">
 
-          <hr>
-        </div>
+            <hr>
+          </div>
+        <!-- Location -->
         <div class="col-sm-12 col-xs-12">
           <p class="title">Job Location Preferences:</p>
           <span class="location">
@@ -190,13 +196,13 @@ permalink: /career/
                 <div class="col-sm-6 col-xs-12">
 
                   <span class="radio-btn">
-                    <input type="radio" id="location-porbandar" name="location" value="Porbandar Office"  checked >
+                    <input type="radio" id="location-porbandar" name="Location" value="Porbandar Office" checked>
                     <label for="location-porbandar">Porbandar Office</label>
                   </span>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                   <span class="radio-btn">
-                    <input type="radio" id="location-Remote" value="Work from Anywhere (Remotely)" name="location" >
+                    <input type="radio" id="location-Remote" value="Work from Anywhere (Remotely)" name="Location" >
                     <label for="location-Remote">Work from Anywhere (Remotely)</label>
                   </span>
                 </div>
@@ -205,21 +211,26 @@ permalink: /career/
           </span>
           <hr>
         </div>
-
+        <!-- Achivment -->
         <div class="col-sm-12">
-          <textarea name="Achievements" id="message" rows="6" placeholder="Any other achievements you would like us to know?" class="input-message"></textarea>
+          <textarea name="Achievements" id="message" rows="6" placeholder="" class="input-message"></textarea>
+          <p class="placeholder">Any other achievements you would like us to know?</p>
         </div>
+        <!-- Cover Letter -->
         <div class="col-sm-12">
-          <textarea name="Cover Letter" id="message" rows="6" placeholder="Why do you think you are a good fit for the selected position?" class="input-message" required></textarea>
+          <textarea name="CoverLetter" id="message" rows="6" placeholder="" class="input-message" required></textarea>
+          <p class="placeholder">Why do you think you are a good fit for the selected position?</p>
         </div>
+        <!-- Resume -->
         <div class="col-sm-12">
           <label for="" class="resume">Upload Your Resume:</label>
           <div class="box file">
-            <input type="file" name="file-2[]" id="file" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple="" required>
+            <input type="file" name="Resume" id="file" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple="" required>
             <label for="file"><i class="fa fa-paperclip"></i><span>Select</span></label>
           </div>
           <hr>
         </div>
+        <!-- condition -->
         <div class="col-sm-12">
           <p class="condition">
             Salary Range: 96000 to 180000 per Annum (8000 to 15000 per month) INR <br><br>
@@ -228,7 +239,7 @@ permalink: /career/
             Employment Term: 15 months employment contract
           </p>
           <div class="c-checkbox" id="tearm">
-            <input type="checkbox" name="checkbox" id="agree" value="I Agree" >
+            <input type="checkbox" name="Conditions" id="agree" value="I Agree" >
             <label for="agree" class="chk_lable">I Agree</label>
             <span class="check_mark"></span>
             <span class="check_border" id="chk"></span>

@@ -20,7 +20,7 @@
   @media only screen and (max-width: 767px){
     .condition{
       margin-top: 15px;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .btn-send{
@@ -30,7 +30,7 @@
   @media only screen and (max-width: 767px){
     .btn-send{
       margin-left: 0;
-      font-size: 18px;
+      font-size: 16px;
       width: 100px;
     }
   }
@@ -47,7 +47,7 @@
   }
   @media only screen and (max-width: 767px){
     .gender{
-      font-size: 18px;
+      font-size: 16px;
     }
     p{
       margin-top: 20px;
@@ -69,7 +69,7 @@
   @media only screen and (max-width: 767px){
     .degree{
       margin-top: 15px;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .heading{
@@ -218,7 +218,7 @@
   }
   @media only screen and (max-width: 767px){
     .title{
-      font-size: 18px;
+      font-size: 16px;
       margin-left: 0;
     }
     .radio-btn{
@@ -271,9 +271,7 @@
     top: 0;
     content: "";
   }
-  .chk_lable{
-    margin-left: 15px;
-  }
+
   label{
     font-size: 24px;
     line-height: 2.6rem;
@@ -296,7 +294,7 @@
   }
   @media only screen and (max-width: 767px){
     label{
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .inputfile {
@@ -323,7 +321,7 @@
   @media only screen and (max-width: 767px){
 
     .inputfile + label{
-      font-size: 18px;
+      font-size: 16px;
       padding: 2px 5px;
     }
   }
@@ -369,6 +367,24 @@
     left: 35px;
     color: red;
   }
+  .qulificationBox{
+    p.error{
+      font-size: 10px;
+      height: 0;
+      position: relative;
+      top: 30px;
+      left: 35px;
+      color: red;
+    }
+  }
+  .file{
+    position: relative;
+    p.error{
+      position: absolute;
+      top: 55px;
+    }
+  }
+
   // #DOB-error{
   //   font-size: 12px;
   // }
@@ -393,4 +409,18 @@
   // #Gender-error{
   //   font-size: 12px;
   // }
+}
+.chk_lable{
+  margin-left: 15px;
+}
+.placeholder{
+  font-size: 24px;
+  position: relative;
+  top: -145px;
+  transition: all .5s;
+}
+.input-message:focus + .placeholder{
+  font-size: 16px;
+  top: -175px;
+  transition: all .5s;
 }
