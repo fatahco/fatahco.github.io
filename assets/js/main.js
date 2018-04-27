@@ -244,12 +244,70 @@ function contactFormValidation() {
     }
   });
 }
+
+
+
+
+///////////////////////////////////////////////////
+function careerFormValidation() {
+  $("form[name='careerForm']").validate({
+    rules: {
+      Name: "required",
+      Phone: "required",
+      Dob: "required",
+      // Gender: "required",
+      Degree: "required",
+      location: "required",
+      file: "required",
+      agree: "required",
+      message: "required",
+      Gender:{ required:true },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      Name: "Please enter your Name",
+      Phone: "Please enter your Phone Number",
+      Dob: "Please enter your Date of birth",
+      Gender: "Please Select Your Gender",
+      Degree: "Please Select Your Qulification",
+      location: "Please enter your messgae",
+      file: "Upload Your Resume",
+      agree: "Please enter your messgae",
+      message: "Please enter your messgae",
+      Email: "Please enter a valid email address"
+
+    },
+    errorElement: 'p',
+    
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+}
+
+
+
+
+///////////////////////////////////////////////////
+
+
+
+
 function removeHref() {
   if (window.matchMedia('(min-width: 992px)').matches) {
     $('.contact-info .link').removeAttr('href');
     $('.h1 .link').removeAttr('href');
   }
 }
+
+
+///////////////////////////////////////////////////
+
+
+
 function careerChkBox() {
   $('#tearm').hover(
     function (){
@@ -661,6 +719,7 @@ $(document).ready(function() {
   currentUrl();
   menuLinkClick();
   contactFormValidation();
+  careerFormValidation();
   removeHref();
   projectChkBox();
   careerChkBox();

@@ -271,10 +271,13 @@
     top: 0;
     content: "";
   }
+  .chk_lable{
+    margin-left: 15px;
+  }
   label{
     font-size: 24px;
     line-height: 2.6rem;
-    margin-left: 15px;
+    // margin-left: 15px;
     cursor: pointer;
     &:hover ~ .check_border_expand{
       animation: input-box-hover .2s;
@@ -358,4 +361,36 @@
   .file{
     margin-top: 25px;
   }
+  p.error{
+    font-size: 10px;
+    height: 0;
+    position: relative;
+    top: 3px;
+    left: 35px;
+    color: red;
+  }
+  // #DOB-error{
+  //   font-size: 12px;
+  // }
+  // #Name-error{
+  //   font-size: 12px;
+  // }
+  // #Email-error{
+  //   font-size: 12px;
+  // }
+  // #Phone-error{
+  //   font-size: 12px;
+  // }
+  // #selectbox-error{
+  //   font-size: 12px;
+  // }
+  // #message-error{
+  //   font-size: 12px;
+  // }
+  // #file-error{
+  //   font-size: 12px;
+  // }
+  // #Gender-error{
+  //   font-size: 12px;
+  // }
 }

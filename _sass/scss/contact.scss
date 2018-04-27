@@ -111,11 +111,13 @@
     color: $black;
     top: 0px;
     transition: .2s ease-out;
+    visibility: visible;
   }
   &:focus::placeholder{
     top: -10px;
     transition: .2s ease-out;
-    opacity: 0;
+    opacity: 1;
+    visibility: visible;
   }
  &:focus{
     border: none;
@@ -149,10 +151,12 @@
      color: $black;
      top: 5px;
      transition: .2s ease-out;
+     visibility: visible;
    }
    &:focus::placeholder{
      top: -35px;
      transition: .2s ease-out;
+     visibility: visible;
    }
 }
 @media only screen and (max-width: 767px) {
@@ -184,4 +188,5 @@
 label.error{
   color: red;
   margin-top: 3px;
+  font-size: 12px;
 }
