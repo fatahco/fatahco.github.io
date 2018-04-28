@@ -48,9 +48,9 @@
   @media only screen and (max-width: 767px){
     .gender{
       font-size: 16px;
-    }
-    p{
-      margin-top: 20px;
+      p{
+        margin-top: 20px;
+      }
     }
   }
     .degree{
@@ -144,10 +144,10 @@
     align-items: center;
     position: relative;
     margin-top: 40px;
-    // width: fit-content;
     cursor: pointer;
-    // margin-left: 10px;
     left: 35px;
+    width: fit-content;
+
     &:hover ~.check_border_expand {
       animation: input-box-hover .20s;
       top: -8.75px;
@@ -211,6 +211,11 @@
     }
 
   }
+  @media only screen and (max-width: 767px){
+    .c-checkbox{
+      left: 0;
+    }
+  }
   .title{
     font-size: 24px;
     text-align: left;
@@ -219,7 +224,7 @@
   @media only screen and (max-width: 767px){
     .title{
       font-size: 16px;
-      margin-left: 0;
+      margin: 0;
     }
     .radio-btn{
       margin-bottom: 15px;
@@ -274,7 +279,7 @@
 
   label{
     font-size: 24px;
-    line-height: 2.6rem;
+    // line-height: 2.6rem;
     // margin-left: 15px;
     cursor: pointer;
     &:hover ~ .check_border_expand{
@@ -291,6 +296,12 @@
       height: 42px;
       width: 42px;
     }
+  }
+  #Front-End-Developer label{
+    margin-left: 25px;
+  }
+  #Back-End-Developer label{
+    margin-left: 20px;
   }
   @media only screen and (max-width: 767px){
     label{
@@ -367,6 +378,10 @@
     left: 35px;
     color: red;
   }
+  #Position-error{
+    position: absolute;
+    top: -25px;
+  }
   .qulificationBox{
     p.error{
       font-size: 10px;
@@ -409,6 +424,20 @@
   // #Gender-error{
   //   font-size: 12px;
   // }
+  .cusSelBlock {
+    position: relative;
+    top: 100px;
+  }
+  @media only screen and (max-width: 767px){
+    .cusSelBlock{
+      // min-width: 300px;
+      top: 10px;
+    }
+  }
+  .location-title{
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
 }
 .chk_lable{
   margin-left: 15px;

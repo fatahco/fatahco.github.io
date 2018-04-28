@@ -84,7 +84,7 @@ permalink: /career/
         <!-- Qulification -->
         <div class="col-sm-6 col-xs-12">
           <div class="qulificationBox">
-            <select id="selectbox" data-selected="" class="degree" name="Qulification" required>
+            <select id="cusSelectbox" data-selected="" class="degree" name="Qulification" required>
               <option value="" selected="selected" disabled="disabled">Education / Qulification</option>
               <option value="MCA" class="items">MCA</option>
               <option value="MSc. IT" class="items">MSc. IT</option>
@@ -107,7 +107,7 @@ permalink: /career/
           <div class="project-form__service position">
             <div class="c-checkbox" id="Front-End-Developer">
               <input type="checkbox" name="Position" id="Front-End" value="Front-End Developer(HTML, CSS, JS, AngularJS, ReactJS)">
-              <label for="Front-End" class="chk_lable">Front-End Developer(HTML, CSS, JS, AngularJS, ReactJS)</label>
+              <label for="Front-End" class="chk_lable">Front-End Developer (HTML, CSS, JS, AngularJS, ReactJS)</label>
               <span class="check_mark"></span>
               <span class="check_border" id="chk"></span>
             </div>
@@ -189,12 +189,11 @@ permalink: /career/
           </div>
         <!-- Location -->
         <div class="col-sm-12 col-xs-12">
-          <p class="title">Job Location Preferences:</p>
+          <p class="location-title">Job Location Preferences:</p>
           <span class="location">
             <div class="radio-items">
               <div class="row">
                 <div class="col-sm-6 col-xs-12">
-
                   <span class="radio-btn">
                     <input type="radio" id="location-porbandar" name="Location" value="Porbandar Office" checked>
                     <label for="location-porbandar">Porbandar Office</label>
@@ -213,13 +212,29 @@ permalink: /career/
         </div>
         <!-- Achivment -->
         <div class="col-sm-12">
-          <textarea name="Achievements" id="message" rows="6" placeholder="" class="input-message"></textarea>
-          <p class="placeholder">Any other achievements you would like us to know?</p>
+          <!-- <textarea name="Achievements" id="message" rows="6" placeholder="" class="input-message"></textarea>
+          <p class="placeholder">Any other achievements you would like us to know?</p> -->
+          <span class="inputt input--fatah">
+            <span class="myerror"></span>
+            <textarea class="input__field input__field--fatah" name="Achievements" id="message" rows="6" required/></textarea>
+            <label class="input__label input__label--fatah" for="Name">
+              <span class="input__label-content input__label-content--fatah">Any other achievements you would like us to know?</span>
+            </label>
+          </span>
         </div>
         <!-- Cover Letter -->
         <div class="col-sm-12">
-          <textarea name="CoverLetter" id="message" rows="6" placeholder="" class="input-message" required></textarea>
-          <p class="placeholder">Why do you think you are a good fit for the selected position?</p>
+          <!-- <textarea name="CoverLetter" id="message" rows="6" placeholder="" class="input-message" required></textarea>
+          <p class="placeholder">Why do you think you are a good fit for the selected position?</p> -->
+          <div class="coverLetter">
+            <span class="inputt input--fatah">
+              <span class="myerror"></span>
+              <textarea class="input__field input__field--fatah" name="CoverLetter" id="message" rows="6" required/></textarea>
+              <label class="input__label input__label--fatah" for="Name">
+                <span class="input__label-content input__label-content--fatah">Why do you think you are a good fit for the selected position?</span>
+              </label>
+            </span>
+          </div>
         </div>
         <!-- Resume -->
         <div class="col-sm-12">

@@ -56,7 +56,9 @@
 .input--fatah {
   margin-top: 50px;
 }
-
+.coverLetter .input--fatah{
+  margin-top: 75px;
+}
 .input__field--fatah {
   padding: 0.85em 0.5em;
   width: 100%;
@@ -407,12 +409,13 @@ div{
 /* custom select style */
 .cusSelBlock {
   height: 50px;
-  min-width: 500px;
-  z-index: 100;
+  // min-width: 500px;
+  width: 100%;
+  z-index: 5;
 }
 @media only screen and (max-width: 767px){
   .cusSelBlock{
-    min-width: 300px;
+    // min-width: 300px;
   }
 }
 #cusSelectbox {
