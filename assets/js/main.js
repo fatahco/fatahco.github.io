@@ -11,10 +11,10 @@
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
 //
-( function( window ) {
-
-
-})( window );
+// ( function( window ) {
+//
+//
+// })( window );
 
 function menuOpenClose() {
   if ($ ('.toggle-menu').hasClass('menu-close')) {
@@ -181,6 +181,8 @@ function contactFormValidation() {
       message: "Please enter your messgae",
       email: "Please enter a valid email address"
     },
+    errorElement: 'p',
+
     submitHandler: function(form) {
       form.submit();
     }
@@ -230,17 +232,17 @@ function careerFormValidation() {
   });
 }
 function careerChkBox() {
-  $('#tearm').hover(
+  $('#terms').hover(
     function (){
-      $('#tearm .check_border').addClass('check_border_expand');
+      $('#terms .check_border').addClass('check_border_expand');
       // $('.check_border').css({ 'opacity': 0});
       // $('.check_border').removeClass('check_border_collaps');
     },function () {
-      $('#tearm .check_border').remove('check_border_expand');
-      $('#tearm .check_border').addClass('check_border_collaps');
+      $('#terms .check_border').remove('check_border_expand');
+      $('#terms .check_border').addClass('check_border_collaps');
       // $('#chk-2').remove('check_border');
       setTimeout(function () {
-        $('#tearm .check_border').removeClass('check_border_collaps');
+        $('#terms .check_border').removeClass('check_border_collaps');
       }, 300);
       // $('#chk-2').addClass('check_border');
   });
@@ -390,21 +392,21 @@ function careerChkBox() {
   });
   $('#agree').focusin(
     function (){
-    $('#tearm .check_border').addClass('check_border_expand');
+    $('#terms .check_border').addClass('check_border_expand');
   });
 }
 function careerRadioBtn() {
   $('#Male').focusin(function () {
-     $('#Male').attr('checked',true);
+     $(this).attr('checked',true);
   });
   $('#Male').focusout(function () {
-    $('#Male').attr('checked',false);
+    $(this).attr('checked',false);
   });
   $('#Female').focusin(function () {
-    $('#Female').attr('checked',true);
+    $(this).attr('checked',true);
   });
   $('#Female').focusout(function () {
-    $('#Female').attr('checked',false);
+    $(this).attr('checked',false);
   });
 }
 function projectChkBox() {
@@ -765,7 +767,7 @@ function GenralPage() {
   // menuBarClick();
   removeHref();
   if ($('.menu-bar').click()) {
-    $(".menu-bar").bind( "click", menuBarClick );
+    $('.menu-bar').bind( "click", menuBarClick );
   }
   // InputAnimation();
   // dropDownBox();
@@ -775,7 +777,9 @@ function HomePage() {
 }
 function ContactPage() {
   contactFormValidation();
-  formSubmit();
+  InputAnimation();
+  
+  // formSubmit();
 }
 function HireUsPage() {
   projectChkBox();
@@ -792,6 +796,7 @@ function CareerPage() {
   formSubmit();
 }
 function mainJS() {
+
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -831,8 +836,8 @@ function currentUrl() {
 }
 $('document').ready(function(){
 
-  GenralPage();
 
+  // GenralPage();
   var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -911,4 +916,6 @@ $('document').ready(function(){
   };
   Barba.Prefetch.init();
   Barba.Pjax.start();
+  GenralPage();
+
 });

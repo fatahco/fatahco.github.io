@@ -305,6 +305,9 @@
   #Back-End-Developer label{
     margin-left: 20px;
   }
+  #terms{
+    left: 0;
+  }
   @media only screen and (max-width: 767px){
     label{
       font-size: 16px;
@@ -408,7 +411,14 @@
       margin-left: 60px;
       position: absolute;
     }
+    @media only screen and (max-width: 767px){
+      .fileName{
+        font-size: 16px;
+        margin-left: 20px;
+      }
+    }
   }
+
 
   // #DOB-error{
   //   font-size: 12px;
@@ -438,6 +448,10 @@
     position: relative;
     top: 100px;
   }
+  .location-title{
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
   @media only screen and (max-width: 767px){
     .cusSelBlock{
       // min-width: 300px;
@@ -447,10 +461,6 @@
       margin-bottom: 15px;
       font-size: 16px;
     }
-  }
-  .location-title{
-    margin-bottom: 30px;
-    font-size: 24px;
   }
 }
 .chk_lable{

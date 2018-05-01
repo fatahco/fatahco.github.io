@@ -96,6 +96,15 @@
       color: $black;
     }
   }
+  p.error{
+    color: red;
+    position: absolute;
+    top: 75px;
+  }
+  #message-error{
+    top: unset;
+    bottom: -13px;
+  }
 }
 // .input{
 //   border: none;
@@ -185,8 +194,8 @@
     width: 100px;
   }
 }
-label.error{
-  color: red;
-  margin-top: 3px;
-  font-size: 12px;
-}
+// label.error{
+//   color: red;
+//   margin-top: 3px;
+//   font-size: 12px;
+// }
