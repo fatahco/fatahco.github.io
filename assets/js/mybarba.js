@@ -120,3 +120,34 @@
 // Barba.Prefetch.init();
 // Barba.Pjax.start();
 // });
+
+
+
+$('#terms').hover(
+  function (){
+    $('#terms .check_border').addClass('check_border_expand');
+    // $('.check_border').css({ 'opacity': 0});
+    // $('.check_border').removeClass('check_border_collaps');
+  },function () {
+    $('#terms .check_border').remove('check_border_expand');
+    $('#terms .check_border').addClass('check_border_collaps');
+    // $('#chk-2').remove('check_border');
+    setTimeout(function () {
+      $('#terms .check_border').removeClass('check_border_collaps');
+    }, 300);
+    // $('#chk-2').addClass('check_border');
+});
+
+$(".c-checkbox").hover(
+  function () {
+    var checkboxEl = $(this);
+    checkboxEl.children(".check_border").addClass('check_border_expand');
+  },
+  function () {
+    var checkboxEl = $(this);
+      checkboxEl.children(".check_border").addClass('check_border_collaps');
+      checkboxEl.children(".check_border").removeClass('check_border_expand');
+      setTimeout(function () {
+        $('#terms .check_border').removeClass('check_border_collaps');
+      }, 250);
+  });

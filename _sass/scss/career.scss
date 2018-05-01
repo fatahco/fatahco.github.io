@@ -151,7 +151,7 @@
     width: fit-content;
 
     &:hover ~.check_border_expand {
-      animation: input-box-hover .20s;
+      animation: input-box-hover .2s;
       top: -8.75px;
       left: -8.75px;
       transition: all .2s;
@@ -188,7 +188,7 @@
       }
       &:checked{
         ~.check_mark{
-          transition-delay: .20s;
+          transition-delay: .2s;
           visibility: visible;
           border: 2px solid #000;
           background-color: #000;
