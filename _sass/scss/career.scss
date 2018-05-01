@@ -6,6 +6,8 @@
       font-size: 32px;
       font-family: 'LubalinGraphRegular', sans-serif;
       padding: 25px 0;
+      text-align: center;
+
     }
     @media only screen and (max-width: 767px){
       .h1{
@@ -319,7 +321,7 @@
 
 
 .inputfile + label {
-    max-width: 100%;
+    // max-width: 100%;
     font-size: 24px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -391,12 +393,20 @@
       left: 35px;
       color: red;
     }
+    hr{
+      margin-top: 22px;
+    }
   }
   .file{
     position: relative;
     p.error{
       position: absolute;
       top: 55px;
+    }
+    .fileName{
+      font-size: 24px;
+      margin-left: 60px;
+      position: absolute;
     }
   }
 
@@ -433,10 +443,14 @@
       // min-width: 300px;
       top: 10px;
     }
+    .location-title{
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
   }
   .location-title{
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-bottom: 30px;
+    font-size: 24px;
   }
 }
 .chk_lable{

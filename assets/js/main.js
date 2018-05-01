@@ -13,69 +13,6 @@
 //
 ( function( window ) {
 
-'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
-
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
-
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
-
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
-
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
-
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
 
 })( window );
 
@@ -173,7 +110,6 @@ function menuLinkClick() {
     menuOpenClose();
   });
 }
-
 function menuBarClick() {
   if ( $('.toggle-menu').hasClass('menu-open') ) {
     $('.bar-top').removeClass('top-x');
@@ -220,6 +156,12 @@ function menuBarClick() {
     $('.brand-icon').removeClass('close-menu-brand-icon');
   }
 }
+function removeHref() {
+  if (window.matchMedia('(min-width: 992px)').matches) {
+    $('.contact-info .link').removeAttr('href');
+    $('.h1 .link').removeAttr('href');
+  }
+}
 function contactFormValidation() {
   $("form[name='contact-form']").validate({
     rules: {
@@ -244,11 +186,6 @@ function contactFormValidation() {
     }
   });
 }
-
-
-
-
-///////////////////////////////////////////////////
 function careerFormValidation() {
   $("form[name='careerForm']").validate({
     rules: {
@@ -292,27 +229,6 @@ function careerFormValidation() {
     }
   });
 }
-
-
-
-
-///////////////////////////////////////////////////
-
-
-
-
-function removeHref() {
-  if (window.matchMedia('(min-width: 992px)').matches) {
-    $('.contact-info .link').removeAttr('href');
-    $('.h1 .link').removeAttr('href');
-  }
-}
-
-
-///////////////////////////////////////////////////
-
-
-
 function careerChkBox() {
   $('#tearm').hover(
     function (){
@@ -477,7 +393,20 @@ function careerChkBox() {
     $('#tearm .check_border').addClass('check_border_expand');
   });
 }
-
+function careerRadioBtn() {
+  $('#Male').focusin(function () {
+     $('#Male').attr('checked',true);
+  });
+  $('#Male').focusout(function () {
+    $('#Male').attr('checked',false);
+  });
+  $('#Female').focusin(function () {
+    $('#Female').attr('checked',true);
+  });
+  $('#Female').focusout(function () {
+    $('#Female').attr('checked',false);
+  });
+}
 function projectChkBox() {
 
   $('.project-form__service #chk-1').hover(
@@ -581,36 +510,6 @@ function projectChkBox() {
       // $('#chk-2').addClass('check_border');
   });
 }
-function fileUpload() {
-  var inputs = document.querySelectorAll( '.inputfile' );
-  Array.prototype.forEach.call( inputs, function( input )
-  {
-  	var label	 = input.nextElementSibling,
-  		labelVal = label.innerHTML;
-
-  	input.addEventListener( 'change', function( e )
-  	{
-  		var fileName = '';
-  		if( this.files && this.files.length > 1 )
-  			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-  		else
-  			fileName = e.target.value.split( '\\' ).pop();
-
-  		if( fileName )
-  			label.querySelector( 'span' ).innerHTML = fileName;
-  		else
-  			label.innerHTML = labelVal;
-  	});
-  });
-}
-function porbandarPage() {
-
-    if ((location.pathname.split("/")[1] == 'porbandar')){
-      var delay = 2000;
-      setTimeout(function(){ window.location = "https://goo.gl/forms/SLhqIdfsny4Q0CKD2"; }, delay);
-      };
-      // console.log(location.pathname);
-}
 function dropDownBox() {
 
   	var defaultselectbox = $('#cusSelectbox');
@@ -705,43 +604,311 @@ function dropDownBox() {
     // }).find('li').first().addClass('select').focus();
   }
 }
-function careerRadioBtn() {
-  $('#Male').focusin(function () {
-     $('#Male').attr('checked',true);
-  });
-  $('#Male').focusout(function () {
-    $('#Male').attr('checked',false);
-  });
-  $('#Female').focusin(function () {
-    $('#Female').attr('checked',true);
-  });
-  $('#Female').focusout(function () {
-    $('#Female').attr('checked',false);
+function fileUpload() {
+  var inputs = document.querySelectorAll( '.inputfile' );
+  Array.prototype.forEach.call( inputs, function( input )
+  {
+  	var label	 = input.nextElementSibling,
+  		labelVal = label.innerHTML;
+
+  	input.addEventListener( 'change', function( e )
+  	{
+  		var fileName = '';
+  		if( this.files && this.files.length > 1 )
+  			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+  		else
+  			fileName = e.target.value.split( '\\' ).pop();
+
+  		if( fileName )
+  			label.querySelector( '.fileName' ).innerHTML = fileName;
+  		else
+  			label.innerHTML = labelVal;
+  	});
   });
 }
-$(document).ready(function() {
-  $(".menu-bar").bind( "click", menuBarClick );
-  currentUrl();
-  menuLinkClick();
-  contactFormValidation();
-  careerFormValidation();
-  removeHref();
-  projectChkBox();
-  careerChkBox();
-  fileUpload();
-  porbandarPage();
-  dropDownBox();
-  // careerRadioBtn();
+function porbandarPage() {
+
+    if ((location.pathname.split("/")[1] == 'porbandar')){
+      var delay = 2000;
+      setTimeout(function(){ window.location = "https://goo.gl/forms/SLhqIdfsny4Q0CKD2"; }, delay);
+      };
+      // console.log(location.pathname);
+
+
+
+    }
+
+function formSubmit() {
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
     e.preventDefault();
     $("#replyto").val( $("#Email").val() );
     $("#subject").val( $("#Name").val() );
-    // if($(".position input:checked").length == 0){
-    //   alert('please checked atleast one');
-    // }
-    // else {
-    // }
+
     $("#career-form").submit();
   });
+}
+function InputAnimation() {
+  'use strict';
+
+  // class helper functions from bonzo https://github.com/ded/bonzo
+
+  function classReg( className ) {
+    return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+  }
+
+  // classList support for class management
+  // altho to be fair, the api sucks because it won't accept multiple classes at once
+  var hasClass, addClass, removeClass;
+
+  if ( 'classList' in document.documentElement ) {
+    hasClass = function( elem, c ) {
+      return elem.classList.contains( c );
+    };
+    addClass = function( elem, c ) {
+      elem.classList.add( c );
+    };
+    removeClass = function( elem, c ) {
+      elem.classList.remove( c );
+    };
+  }
+  else {
+    hasClass = function( elem, c ) {
+      return classReg( c ).test( elem.className );
+    };
+    addClass = function( elem, c ) {
+      if ( !hasClass( elem, c ) ) {
+        elem.className = elem.className + ' ' + c;
+      }
+    };
+    removeClass = function( elem, c ) {
+      elem.className = elem.className.replace( classReg( c ), ' ' );
+    };
+  }
+
+  function toggleClass( elem, c ) {
+    var fn = hasClass( elem, c ) ? removeClass : addClass;
+    fn( elem, c );
+  }
+
+  var classie = {
+    // full names
+    hasClass: hasClass,
+    addClass: addClass,
+    removeClass: removeClass,
+    toggleClass: toggleClass,
+    // short names
+    has: hasClass,
+    add: addClass,
+    remove: removeClass,
+    toggle: toggleClass
+  };
+
+  // transport
+  if ( typeof define === 'function' && define.amd ) {
+    // AMD
+    define( classie );
+  } else {
+    // browser global
+    window.classie = classie;
+  }
+
+  // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+  if (!String.prototype.trim) {
+    (function() {
+      // Make sure we trim BOM and NBSP
+      var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+      String.prototype.trim = function() {
+        return this.replace(rtrim, '');
+      };
+    })();
+  }
+  [].slice.call( document.querySelectorAll( 'textarea.input__field' ) ).forEach( function( textareaEl ) {
+    if( textareaEl.value.trim() !== '' ) {
+      classie.add( textareaEl.parentNode, 'input--filled' );
+    }
+    textareaEl.addEventListener( 'focus', onInputFocus );
+    textareaEl.addEventListener( 'blur', onInputBlur );
+  });
+
+  [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+    // in case the input is already filled..
+    // var selectEl = document.querySelectorAll( 'textarea');
+    if( inputEl.value.trim() !== '' ) {
+      classie.add( inputEl.parentNode, 'input--filled' );
+    }
+    // if( selectEl.value.trim() !== '' ) {
+    // 	classie.add( inputEl.parentNode, 'input--filled' );
+    // }
+
+
+    // events:
+    inputEl.addEventListener( 'focus', onInputFocus );
+    inputEl.addEventListener( 'blur', onInputBlur );
+  } );
+
+  function onInputFocus( ev ) {
+    classie.add( ev.target.parentNode, 'input--filled' );
+  }
+
+  function onInputBlur( ev ) {
+    if( ev.target.value.trim() === '' ) {
+      classie.remove( ev.target.parentNode, 'input--filled' );
+    }
+  }
+}
+
+
+function GenralPage() {
+  menuOpenClose();
+  menuLinkClick();
+  // menuBarClick();
+  removeHref();
+  if ($('.menu-bar').click()) {
+    $(".menu-bar").bind( "click", menuBarClick );
+  }
+  // InputAnimation();
+  // dropDownBox();
+}
+function HomePage() {
+
+}
+function ContactPage() {
+  contactFormValidation();
+  formSubmit();
+}
+function HireUsPage() {
+  projectChkBox();
+  dropDownBox();
+  InputAnimation();
+  formSubmit();
+}
+function CareerPage() {
+  dropDownBox();
+  fileUpload();
+  careerChkBox();
+  InputAnimation();
+  careerFormValidation();
+  formSubmit();
+}
+function mainJS() {
+  if (location.pathname == '/porbandar/'){
+    porbandarPage();
+  }
+  else if (location.pathname == '/'){
+    HomePage();
+  }
+  else if (location.pathname == '/career/'){
+    CareerPage();
+  }
+  else if (location.pathname == '/contact-us/'){
+    ContactPage();
+  }
+  else if (location.pathname == '/hire-us/'){
+    HireUsPage();
+  }
+}
+// $(document).ready(function() {
+  // currentUrl();
+  // menuLinkClick();
+  // contactFormValidation();
+  // careerFormValidation();
+  // removeHref();
+  // projectChkBox();
+  // careerChkBox();
+  // fileUpload();
+  // porbandarPage();
+  // dropDownBox();
+
+// });
+function currentUrl() {
+
+  if ((location.pathname.split("/")[1]) !== ""){
+    $('.barba-container a[href^="/' + location.pathname.split("/")[1] + '"]').click(function (e) {
+         e.preventDefault();
+    });
+  }
+}
+$('document').ready(function(){
+
+  GenralPage();
+
+  var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+    /**
+     * This function is automatically called as soon the Transition starts
+     * this.newContainerLoading is a Promise for the loading of the new container
+     * (Barba.js also comes with an handy Promise polyfill!)
+     */
+    // As soon the loading is finished and the old page is faded out, let's fade the new page
+    Promise
+      .all([this.newContainerLoading, this.fadeOut()])
+      .then(this.fadeIn.bind(this));
+  },
+
+  fadeOut: function() {
+    /**
+     * this.oldContainer is the HTMLElement of the old Container
+     */
+     $('.page-loader').addClass('page-loader-start');
+    return $(this.oldContainer).animate().promise();
+  },
+
+  fadeIn: function() {
+    /**
+     * this.newContainer is the HTMLElement of the new Container
+     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+     * Please note, newContainer is available just after newContainerLoading is resolved!
+     */
+
+    var _this = this;
+    var $el = $(this.newContainer);
+
+    $(".fatah-line").attr("width", "0");
+    $(".fatah-line").css("transition", "all 0s");
+
+    $(this.oldContainer).hide();
+
+    $el.css({
+      visibility : 'visible',
+      opacity : 0
+    });
+    // setTimeout(function(){
+    //   $('.page-loader').removeClass('page-loader-start');
+    // }, 500);
+
+    // setTimeout(function () {
+
+      $el.animate({ opacity: 1 }, 0, function() {
+        setTimeout(function () {
+          $(".fatah-line").attr("width", "677.609");
+          $(".fatah-line").css("transition", "all .5s");
+        }, 500);
+        /**
+        * Do not forget to call .done() as soon your transition is finished!
+        * .done() will automatically remove from the DOM the old Container
+        */
+        currentUrl();
+        mainJS();
+        _this.done();
+      });
+    // }, 1500);
+    }
+  });
+
+/**
+ * Next step, you have to tell Barba to use the new Transition
+ */
+  currentUrl();
+  mainJS();
+  Barba.Pjax.getTransition = function() {
+  /**
+   * Here you can use your own logic!
+   * For example you can use different Transition based on the current page or link...
+   */
+
+   return FadeTransition;
+  };
+  Barba.Prefetch.init();
+  Barba.Pjax.start();
 });

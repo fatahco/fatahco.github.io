@@ -11,9 +11,9 @@
     color: black;
     text-align: left;
     transition: all .5s;
-    position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     &__link, &__link:hover{
       transition: all .5s;
       position: relative;
