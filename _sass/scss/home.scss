@@ -10,11 +10,14 @@
     text-transform: capitalize;
     color: black;
     text-align: left;
+    -webkit-transition: all .5s;
     transition: all .5s;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     &__link, &__link:hover{
+      -webkit-transition: all .5s;
       transition: all .5s;
       position: relative;
       color: $menu-link-hov-col;
@@ -28,6 +31,7 @@
       position: absolute;
       bottom: 0;
       font-family: 'LubalinGraphRegular', sans-serif;
+      -webkit-transition: all .5s;
       transition: all .5s;
     }
   }

@@ -19,9 +19,11 @@
       background-color: #000;
       color: #fff;
       right: calc(50% + 40px);
+      -webkit-transition: all .5s;
       transition: all .5s;
       &:hover{
         background-color: #222;
+        -webkit-transition: all .5s;
         transition: all .5s;
         color: #fff;
       }
@@ -82,7 +84,8 @@
     }
   }
   &__img{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 150px;
     width: 150px;
     border: solid 3px black;
