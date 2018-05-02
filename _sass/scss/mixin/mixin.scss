@@ -8,10 +8,17 @@
   font-size: 16px;
 }
 @mixin checkBoxBorderExpand() {
-  animation: input-box-hover .2s;
+  -webkit-animation: input-box-hover .2s;
+          animation: input-box-hover .2s;
   top: -8.75px;
   left: -8.75px;
+  -webkit-transition: all .2s;
   transition: all .2s;
+  background:
+  -webkit-gradient(linear, right top, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) top left no-repeat,
+  -webkit-gradient(linear, right top, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) bottom left no-repeat,
+  -webkit-gradient(linear, left bottom, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) top left no-repeat,
+  -webkit-gradient(linear, left bottom, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent))top right no-repeat;
   background:
   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) bottom left no-repeat,
@@ -22,10 +29,17 @@
   width: 42px;
 }
 @mixin checkBoxBorderCollaps(){
-  animation: input-box-hover-leave .2s ;
+  -webkit-animation: input-box-hover-leave .2s ;
+          animation: input-box-hover-leave .2s ;
+  -webkit-transition: all .2s;
   transition: all .2s;
   height: 25px;
   width: 25px;
+  background:
+  -webkit-gradient(linear, right top, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) top left no-repeat,
+  -webkit-gradient(linear, right top, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) bottom left no-repeat,
+  -webkit-gradient(linear, left bottom, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent)) top left no-repeat,
+  -webkit-gradient(linear, left bottom, left top, color-stop(20%, transparent), color-stop(20%, #000), color-stop(80%, #000), color-stop(80%, transparent))top right no-repeat;
   background:
   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) bottom left no-repeat,

@@ -7,7 +7,6 @@
       font-family: 'LubalinGraphRegular', sans-serif;
       padding: 25px 0;
       text-align: center;
-
     }
     @media only screen and (max-width: 767px){
       .h1{
@@ -27,7 +26,6 @@
   }
   .btn-send{
     margin-left: 0;
-
   }
   @media only screen and (max-width: 767px){
     .btn-send{
@@ -213,7 +211,6 @@
     color: #000;
     border: 2px solid currentColor;
   }
-
   .inputfile:focus + label,
   .inputfile.has-focus + label,
   .inputfile + label:hover {
@@ -268,7 +265,6 @@
       }
     }
   }
-
   .cusSelBlock {
     position: relative;
     top: 100px;
@@ -290,15 +286,4 @@
 }
 .chk_lable{
   margin-left: 15px;
-}
-.placeholder{
-  @include DesktopFontSize();
-  position: relative;
-  top: -145px;
-  transition: all .5s;
-}
-.input-message:focus + .placeholder{
-  @include MobileFontSize();
-  top: -175px;
-  transition: all .5s;
 }
