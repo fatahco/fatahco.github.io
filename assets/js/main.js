@@ -645,15 +645,14 @@ function HireUsPage() {
   formSubmit();
 }
 function CareerPage() {
-  dropDownBox();
   fileUpload();
   ChkBoxAnimation();
   InputAnimation();
+  dropDownBox();
   careerFormValidation();
   formSubmit();
 }
 function mainJS() {
-
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -774,5 +773,4 @@ $('document').ready(function(){
   Barba.Prefetch.init();
   Barba.Pjax.start();
   GenralPage();
-
 });

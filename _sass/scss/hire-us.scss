@@ -46,6 +46,7 @@
   display: block;
   padding: 1.6em 0;
   width: 100%;
+  margin-left: -10px;
 }
 @media only screen and (max-width: 767px){
   .input__label-content{
@@ -207,6 +208,7 @@
     // width: fit-content;
     cursor: pointer;
     // margin-left: 10px;
+    margin-left: 35px;
     // left: 50%;
     // transform: translateX(-50%);
     // width: fit-content;

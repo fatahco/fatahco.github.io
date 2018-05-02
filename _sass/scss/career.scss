@@ -172,20 +172,20 @@
       width: 25px;
       margin: 0;
       cursor: pointer;
-      &:hover ~.check_border_expand, &:focus ~.check_border_expand {
-        animation: input-box-hover .2s;
-        top: -8.75px;
-        left: -8.75px;
-        transition: all .2s;
-        background:
-        linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
-        linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) bottom left no-repeat,
-        linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
-        linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%)top right no-repeat;
-        background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
-        height: 42px;
-        width: 42px;
-      }
+      // &:hover ~.check_border_expand, &:focus ~.check_border_expand {
+      //   animation: input-box-hover .2s;
+      //   top: -8.75px;
+      //   left: -8.75px;
+      //   transition: all .2s;
+      //   background:
+      //   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
+      //   linear-gradient(to left, transparent 20%, #000 20%, #000 80%, transparent 80%) bottom left no-repeat,
+      //   linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%) top left no-repeat,
+      //   linear-gradient(to top, transparent 20%, #000 20%, #000 80%, transparent 80%)top right no-repeat;
+      //   background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
+      //   height: 42px;
+      //   width: 42px;
+      // }
       &:checked{
         ~.check_mark{
           transition-delay: .2s;
