@@ -293,3 +293,8 @@
 .location .radio-btn{
   margin-left: 35px;
 }
+@media only screen and (max-width: 767px){
+  .radio-btn{
+    margin-left: 20px;
+  }
+}

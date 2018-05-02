@@ -1,0 +1,74 @@
+.footer{
+  background-color: #303030;
+  height: 85vh;
+  width: 100%;
+  position: fixed;
+  z-index: -99999;
+  .contact{
+    &__left-side{
+      margin-top: 100px;
+      .title{
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+      .contact-info{
+        li{
+          color: #fff;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__img{
+      border-color: white;
+    }
+    &__details{
+      color: #fff;
+    }
+
+    &__right-side{
+      margin-top: 0;
+      .input__field--fatah:focus + .input__label--fatah
+      .input__label-content--fatah,
+      .input--filled .input__label-content--fatah{
+        padding-bottom: 20px;
+        color: white;
+      }
+      .input__field--fatah{
+        background: #fff;
+        color: #000;
+      }
+      .input__label--fatah::after{
+        background-color: #fff;
+        color: #000;
+      }
+
+      .message_input{
+        padding: 0;
+        color: white;
+      }
+      .input__label-content{
+        color: white;
+      }
+      .input__label--fatah::before {
+        border-top-color: #fff;
+      }
+      .btn-send{
+        border: none;
+      }
+    }
+  }
+}
+.copy_right{
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  .right{
+    p{
+      position: relative;
+      color: #fff;
+    }
+  }
+}
