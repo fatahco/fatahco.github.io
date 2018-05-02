@@ -68,7 +68,47 @@
   .right{
     p{
       position: relative;
+      font-size: 16px;
       color: #fff;
+    }
+  }
+  .info_link{
+    .navigation_link{
+      text-align: center;
+      .items{
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+        a{
+          color: #fff;
+          font-size: 16px;
+        }
+        .box{
+          // display: inline-block;
+          position: absolute;
+          top: 50%;
+          right: -15px;
+          height: 5px;
+          width: 5px;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .social{
+    color: #fff;
+    .social_link{
+      text-align: right;
+      .items{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 15px;
+        i{
+          color: #fff;
+        }
+      }
+
     }
   }
 }
