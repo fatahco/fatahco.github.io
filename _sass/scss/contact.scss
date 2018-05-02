@@ -30,7 +30,7 @@
 
     &__link{
       color: $black;
-      font-size: 24px;
+      @include DesktopFontSize();
       border: solid 1px black;
       padding: 5px 15px;
       width: auto;
@@ -38,7 +38,7 @@
     @media only screen and (max-width: 576px) {
          &__link {
           padding: 10px;
-          font-size: 16px;
+          @include MobileFontSize();
         }
     }
     &__link:hover, &__link:active{
@@ -46,7 +46,7 @@
     }
   }
   .contact-details{
-    font-size: 24px;
+    @include DesktopFontSize();
   }
   .h1{
     text-align: left;
@@ -62,15 +62,15 @@
   }
     @media only screen and (max-width: 767px) {
     .h1{
-      font-size: 24px;
+      @include DesktopFontSize();
     }
     .contact-info li:first-child{
       margin-top: 15px;
     }
     .contact-details{
-      font-size: 16px;
+      @include MobileFontSize();
       .link{
-        font-size: 16px;
+        @include MobileFontSize();
       }
     }
   }
@@ -91,7 +91,7 @@
   }
   .link{
     color: $black;
-    font-size: 24px;
+    @include DesktopFontSize();
     &:hover, &:active{
       color: $black;
     }
@@ -99,7 +99,7 @@
   p.error{
     color: red;
     position: absolute;
-    top: 75px;
+    top: 53px;
   }
   #message-error{
     top: unset;
@@ -113,7 +113,7 @@
 //   height: 30px;
 //   padding-bottom: 0px;
 //   transition: .2s ease-in;
-//   font-size: 24px;
+//   @include DesktopFontSize();
 //   margin-top: 30px;
 //   &::placeholder{
 //     position: relative;
@@ -149,7 +149,7 @@
 //   page-break-after: 15px;
 //   border-bottom: solid 1px black;
 //   width: 100%;
-//   font-size: 24px;
+//   @include DesktopFontSize();
 //   &:focus{
 //      border: none;
 //      outline: none;
@@ -184,13 +184,13 @@
   background-color: white;
   border-width: 1px;
   cursor: pointer;
-  font-size: 24px;
+  @include DesktopFontSize();
   z-index: -100;
 }
 @media only screen and (max-width: 767px){
   .btn-send{
     margin-left: 0;
-    font-size: 16px;
+    @include MobileFontSize();
     width: 100px;
   }
 }

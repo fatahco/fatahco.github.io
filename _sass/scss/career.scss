@@ -11,18 +11,18 @@
     }
     @media only screen and (max-width: 767px){
       .h1{
-        font-size: 24px;
+        @include DesktopFontSize();
       }
     }
   }
   .condition{
-    font-size: 24px;
+    @include DesktopFontSize();
     margin-top: 50px;
   }
   @media only screen and (max-width: 767px){
     .condition{
       margin-top: 15px;
-      font-size: 16px;
+      @include MobileFontSize();
     }
   }
   .btn-send{
@@ -32,12 +32,12 @@
   @media only screen and (max-width: 767px){
     .btn-send{
       margin-left: 0;
-      font-size: 16px;
+      @include MobileFontSize();
       width: 100px;
     }
   }
   .gender{
-    font-size: 24px;
+    @include DesktopFontSize();
     p{
       margin-top: 70px;
       margin-left: 20px;
@@ -49,7 +49,7 @@
   }
   @media only screen and (max-width: 767px){
     .gender{
-      font-size: 16px;
+      @include MobileFontSize();
       p{
         margin-top: 20px;
       }
@@ -57,7 +57,7 @@
   }
     .degree{
       margin-top: 115px;
-      font-size: 24px;
+      @include DesktopFontSize();
       border: 0;
       width: 100%;
       border-radius: 0;
@@ -71,16 +71,16 @@
   @media only screen and (max-width: 767px){
     .degree{
       margin-top: 15px;
-      font-size: 16px;
+      @include MobileFontSize();
     }
   }
   .heading{
-    font-size: 24px;
+    @include DesktopFontSize();
     margin-left: 20px;
   }
   @media only screen and (max-width: 767px){
     .heading{
-      font-size: 22px;
+      @include MobileFontSize();
       margin-left: 0;
     }
   }
@@ -140,117 +140,20 @@
       -webkit-transform: scale(1);
       transform: scale(1);
   }
-  .c-checkbox{
-    text-align: left;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-top: 40px;
-    cursor: pointer;
-    left: 35px;
-    width: fit-content;
 
-    &:hover ~.check_border_expand {
-      @include checkBoxBorderExpand();
-    }
-    input[type=checkbox]{
-      position: relative;
-      opacity: 0;
-      z-index: 1;
-      height: 25px;
-      width: 25px;
-      margin: 0;
-      cursor: pointer;
-      &:hover ~.check_border_expand, &:focus ~.check_border_expand {
-        @include checkBoxBorderExpand();
-      }
-      &:checked{
-        ~.check_mark{
-          transition-delay: .2s;
-          visibility: visible;
-          border: 2px solid #000;
-          background-color: #000;
-        }
-        ~.check_border_collaps{
-          @include checkBoxBorderCollaps();  
-        }
-      }
-    }
-
-  }
-  @media only screen and (max-width: 767px){
-    .c-checkbox{
-      left: 0;
-    }
-  }
   .title{
-    font-size: 24px;
+    @include DesktopFontSize();
     text-align: left;
     margin: 30px 15px;
   }
   @media only screen and (max-width: 767px){
     .title{
-      font-size: 16px;
+      @include MobileFontSize();
       margin: 0;
     }
     .radio-btn{
       margin-bottom: 15px;
       display: inline-block;
-    }
-  }
-  .check_mark{
-    visibility: hidden;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border: 2px solid #000;
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-  }
-  .check_border_collaps{
-    animation: input-box-hover-leave .2s;
-    transition: all .2s;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    background:
-    linear-gradient(to left, transparent 0%, #000 0%, #000 100%, transparent 100%) top left no-repeat,
-    linear-gradient(to left, transparent 0%, #000 0%, #000 100%, transparent 100%) bottom left no-repeat,
-    linear-gradient(to top, transparent 0%, #000 0%, #000 100%, transparent 100%) top left no-repeat,
-    linear-gradient(to top, transparent 0%, #000 0%, #000 100%, transparent 100%)top right no-repeat;
-    background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-  }
-  .check_border{
-    animation: input-box-hover-leave .2s;
-    transition: all .2s;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    background:
-    linear-gradient(to left, transparent 0%, #000 0%, #000 100%, transparent 100%) top left no-repeat,
-    linear-gradient(to left, transparent 0%, #000 0%, #000 100%, transparent 100%) bottom left no-repeat,
-    linear-gradient(to top, transparent 0%, #000 0%, #000 100%, transparent 100%) top left no-repeat,
-    linear-gradient(to top, transparent 0%, #000 0%, #000 100%, transparent 100%)top right no-repeat;
-    background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-  }
-
-  label{
-    font-size: 24px;
-    // line-height: 2.6rem;
-    // margin-left: 15px;
-    cursor: pointer;
-    &:hover ~ .check_border_expand{
-      @include checkBoxBorderExpand();
     }
   }
   #Front-End-Developer label{
@@ -264,7 +167,7 @@
   }
   @media only screen and (max-width: 767px){
     label{
-      font-size: 16px;
+      @include MobileFontSize();
     }
   }
   .inputfile {
@@ -274,48 +177,41 @@
     overflow: hidden;
     position: absolute;
     z-index: -1;
-}
-
-
-.inputfile + label {
-    // max-width: 100%;
-    font-size: 24px;
+  }
+  .inputfile + label {
+    @include DesktopFontSize();
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
     padding: 0.625rem 25px;
-    /* 10px 20px */
   }
   @media only screen and (max-width: 767px){
-
     .inputfile + label{
-      font-size: 16px;
+      @include MobileFontSize();
       padding: 2px 5px;
     }
   }
   .inputfile:focus + label,
   .inputfile.has-focus + label {
-      outline: 1px dotted #000;
-      outline: -webkit-focus-ring-color auto 5px;
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
   }
-
   .inputfile + label i,
   .inputfile + label svg {
-      width: 1em;
-      height: 1em;
-      vertical-align: middle;
-      fill: currentColor;
-      margin-top: -0.25em;
-      /* 4px */
-      margin-right: 0.25em;
-      /* 4px */
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
   }
-
   .inputfile + label {
-      color: #000;
-      border: 2px solid currentColor;
+    color: #000;
+    border: 2px solid currentColor;
   }
 
   .inputfile:focus + label,
@@ -361,50 +257,25 @@
       top: 55px;
     }
     .fileName{
-      font-size: 24px;
+      @include DesktopFontSize();
       margin-left: 60px;
       position: absolute;
     }
     @media only screen and (max-width: 767px){
       .fileName{
-        font-size: 16px;
+        @include MobileFontSize();
         margin-left: 20px;
       }
     }
   }
 
-
-  // #DOB-error{
-  //   font-size: 12px;
-  // }
-  // #Name-error{
-  //   font-size: 12px;
-  // }
-  // #Email-error{
-  //   font-size: 12px;
-  // }
-  // #Phone-error{
-  //   font-size: 12px;
-  // }
-  // #selectbox-error{
-  //   font-size: 12px;
-  // }
-  // #message-error{
-  //   font-size: 12px;
-  // }
-  // #file-error{
-  //   font-size: 12px;
-  // }
-  // #Gender-error{
-  //   font-size: 12px;
-  // }
   .cusSelBlock {
     position: relative;
     top: 100px;
   }
   .location-title{
     margin-bottom: 30px;
-    font-size: 24px;
+    @include DesktopFontSize();
   }
   @media only screen and (max-width: 767px){
     .cusSelBlock{
@@ -413,7 +284,7 @@
     }
     .location-title{
       margin-bottom: 15px;
-      font-size: 16px;
+      @include MobileFontSize();
     }
   }
 }
@@ -421,13 +292,13 @@
   margin-left: 15px;
 }
 .placeholder{
-  font-size: 24px;
+  @include DesktopFontSize();
   position: relative;
   top: -145px;
   transition: all .5s;
 }
 .input-message:focus + .placeholder{
-  font-size: 16px;
+  @include MobileFontSize();
   top: -175px;
   transition: all .5s;
 }
