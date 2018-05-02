@@ -2,8 +2,19 @@
   background-color: #303030;
   height: 85vh;
   width: 100%;
+  // width: 100%;
+  // height: 200px;
+  // background-color: #000;
+  // text-align: center;
+  // position: fixed;
+  // left: 0;
+  // bottom: 0;
+  // z-index: -1;
   position: fixed;
-  z-index: -99999;
+  left: 0;
+  bottom: 0;
+
+  z-index: -111111;
   .contact{
     &__left-side{
       margin-top: 100px;
@@ -111,4 +122,11 @@
 
     }
   }
+}
+.aa{
+  height: 100px;
+  width: 100%;
+  background: #fff;
+  z-index: 2;
+  margin-bottom: 550px;
 }
