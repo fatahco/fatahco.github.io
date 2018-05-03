@@ -632,6 +632,11 @@ function GenralPage() {
 function HomePage() {
 
 }
+function SkillPage() {
+  InputAnimation();
+  contactFormValidation();
+
+}
 function ContactPage() {
   contactFormValidation();
   InputAnimation();
@@ -667,6 +672,9 @@ function mainJS() {
   }
   else if (location.pathname == '/hire-us/'){
     HireUsPage();
+  }
+  else if (location.pathname == '/skill/'){
+    SkillPage();
   }
 }
 // $(document).ready(function() {

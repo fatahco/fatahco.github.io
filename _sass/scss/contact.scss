@@ -47,6 +47,9 @@
   }
   .contact-details{
     @include DesktopFontSize();
+    @media only screen and (max-width: 991px){
+      margin-top: 20px;
+    }
   }
   .h1{
     text-align: left;
