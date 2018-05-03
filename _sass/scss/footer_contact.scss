@@ -6,6 +6,12 @@
   left: 0;
   bottom: 0;
   z-index: -1;
+  @media only screen and (max-width: 767px){
+    &{
+      height: auto;
+      position: unset;
+    }
+  }
   .contact{
     &__left-side{
       margin-top: 100px;
@@ -15,7 +21,9 @@
         margin-bottom: 25px;
       }
       .contact-info{
+        margin-top: 20px;
         li{
+
           color: #fff;
           font-size: 24px;
           margin-bottom: 10px;
@@ -68,6 +76,14 @@
   width: 100%;
   bottom: 0;
   z-index: -1;
+  @media only screen and (max-width: 767px){
+    &{
+      background-color: #303030;
+      height: auto;
+      position: unset;
+      padding-top: 30px;
+    }
+  }
   .right{
     p{
       position: relative;
