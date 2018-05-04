@@ -22,11 +22,13 @@
       }
       .contact-info{
         margin-top: 20px;
-        li{
-
+        .items{
           color: #fff;
           font-size: 24px;
           margin-bottom: 10px;
+          .link{
+            color: #fff;
+          }
         }
       }
     }
@@ -64,6 +66,20 @@
       .input__label--fatah::before {
         border-top-color: #fff;
       }
+      p.error{
+        color: #fff;
+        position: absolute;
+        top: 78px;
+        @media only screen and (max-width: 767px){
+          top: 53px;
+        }
+      }
+      #message-error{
+        top: 93px;
+        @media only screen and (max-width: 767px){
+          top: 63px;
+        }
+      }
       .btn-send{
         border: none;
       }
@@ -76,14 +92,15 @@
   width: 100%;
   bottom: 0;
   z-index: -1;
+  background-color: #303030;
   @media only screen and (max-width: 767px){
     &{
-      margin-top: -5px;
+      // margin-top: -5px;
       background-color: #303030;
       height: auto;
       position: unset;
       padding-top: 30px;
-      padding-bottom: 100px;
+      padding-bottom: 103px;
     }
   }
   hr{
@@ -147,7 +164,6 @@
     .social_link{
       text-align: right;
       @media only screen and (max-width: 767px){
-
       }
       .items{
         display: inline-block;
@@ -158,7 +174,6 @@
           color: #fff;
         }
       }
-
     }
   }
 }
@@ -167,12 +182,18 @@
   width: 100%;
   background: #fff;
   z-index: 2;
-  margin-bottom: 550px;
+  margin-bottom: 85vh;
   @media only screen and (max-width: 991px){
-    margin-bottom: 870px;
+    margin-bottom: 85vh;
   }
   @media only screen and (max-width: 767px){
     margin-bottom: 0;
   }
-
+}
+.copy_right_scroll{
+  height: 0px;
+  width: 100%;
+  background: #fff;
+  z-index: 2;
+  margin-bottom: 10vh;
 }

@@ -630,11 +630,11 @@ function GenralPage() {
   // dropDownBox();
 }
 function HomePage() {
-
+  $(".copy_right").css('position','absolute');
 }
 function SkillPage() {
-  InputAnimation();
   contactFormValidation();
+  InputAnimation();
 
 }
 function ContactPage() {
@@ -656,6 +656,9 @@ function CareerPage() {
   dropDownBox();
   careerFormValidation();
   formSubmit();
+  // if (window.matchMedia('(mix-width: 767px)').matches) {
+  //   $(".copy_right").css('position','unset');
+  // }
 }
 function mainJS() {
   if (location.pathname == '/porbandar/'){

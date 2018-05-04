@@ -64,15 +64,15 @@
         font-weight: 550;
         color: #555;
         margin-bottom: 10px;
-        // .box{
-        //   height: 5px;
-        //   width: 5px;
-        //   background: #000;
-        //   display: inline-block;
-        //   position: relative;
-        //   top: -3px;
-        //   margin-right: 10px;
-        // }
+        .box{
+          height: 5px;
+          width: 5px;
+          background: #000;
+          display: inline-block;
+          position: relative;
+          top: -3px;
+          margin-right: 10px;
+        }
       }
     }
     @media only screen and (max-width: 767px){
