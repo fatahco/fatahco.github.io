@@ -18,6 +18,7 @@
   .condition{
     @include DesktopFontSize();
     margin-top: 50px;
+    margin-left: 10px;
   }
   @media only screen and (max-width: 767px){
     .condition{
