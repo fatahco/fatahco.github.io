@@ -56,7 +56,7 @@ permalink: /contact-us/
         <div class="wrapper">
           <div class="contact__right-side">
             <h1 class="h1">Say Hello!</h1>
-            <form class="" id="contact-form" name="contact-form">
+            <form class="" id="contact-form"class="" id="contact-form" name="ContactForm"  action="https://mailthis.to/amjadrathod" method="POST" encType="multipart/form-data">
               <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <span class="inputt input--fatah">
@@ -83,6 +83,17 @@ permalink: /contact-us/
                       <span class="input__label-content input__label-content--fatah">Message</span>
                     </label>
                   </span>
+                  <input type="hidden" name="_subject" id="subject">
+                  <input type="hidden" name="Source" value="Contact form">
+
+                  <!-- Custom email ReplyTo Address -->
+                  <input type="hidden" name="_replyto" id="replyto">
+                  <!-- Redirect to a page after recaptcha -->
+                  <input type="hidden" name="_after" value="https://fatah.co/">
+                  <!-- Honeypot (to catch comment spam bots) -->
+                  <input type="hidden" name="_honeypot" value="">
+                  <!-- Apply a custom confirmation message on the second step -->
+                  <input type="hidden" name="_confirmation" value="">
                   <input type="submit" name="" value="SEND" class="btn-send">
 
                 </div>

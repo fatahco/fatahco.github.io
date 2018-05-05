@@ -500,7 +500,7 @@ function porbandarPage() {
 function formSubmit() {
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     $("#replyto").val( $("#Email").val() );
     $("#subject").val( $("#Name").val() );
 
@@ -616,8 +616,19 @@ function InputAnimation() {
     }
   }
 }
-
-
+function ChangeNavColor() {
+  // var top1 = $('.footer').position().top;
+  // $(document).scroll(function() {
+  //   if (top1 < 100 ) {
+  //     $(".brand-icon").css("background", "#303030");
+  //   }
+  // });
+}
+// var top1 = $('.footer').scrollTop();
+// $(document).scroll(function() {
+//   console.log(top1);
+// });
+// var scrollDistance = $(window).scrollTop();
 function GenralPage() {
   menuOpenClose();
   menuLinkClick();
@@ -634,10 +645,14 @@ function HomePage() {
   $(".copy_right hr").css('display','none');
 }
 function SkillPage() {
-  contactFormValidation();
+
   InputAnimation();
+  ChangeNavColor();
+  contactFormValidation();
+  formSubmit();
 }
 function ContactPage() {
+  formSubmit();
   contactFormValidation();
   InputAnimation();
 
@@ -785,3 +800,8 @@ $('document').ready(function(){
   Barba.Pjax.start();
   GenralPage();
 });
+// $(document).scroll( function () {
+//   if ($ ('.footer').scrollTop() > 100) {
+//     $(".brand-icon").css("background", "#303030");
+//   }
+// });
