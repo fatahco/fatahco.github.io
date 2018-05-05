@@ -135,6 +135,15 @@ function menuBarClick() {
     $('.menu-item').removeClass('menu-item-saw');
     $('.brand-icon').addClass('close-menu-brand-icon');
     $('.brand-icon').removeClass('open-menu-brand-icon');
+    $('.brand-icon').css({'background':'#303030', 'transition':'all .2s'});
+    $('svg').css({'fill':'#fff', 'transition':'all .2s'});
+    $('.box-line-top').css({'background':'#fff', 'transition':'all .2s'});
+    $('.box-line-bottom').css({'background':'#fff', 'transition':'all .2s'});
+    $('.box-line-left').css({'background':'#fff', 'transition':'all .2s'});
+    $('.box-line-right').css({'background':'#fff', 'transition':'all .2s'});
+    $('.bar-middle').css({'background':'#fff', 'transition':'all .2s'});
+    $('.bar-top').css({'background':'#fff', 'transition':'all .2s'});
+    $('.bar-bottom').css({'background':'#fff', 'transition':'all .2s'});
   }
   else {
     $('.toggle-menu').addClass('menu-open');
@@ -154,6 +163,15 @@ function menuBarClick() {
     $('.box-line-right').removeClass('right-hover');
     $('.brand-icon').addClass('open-menu-brand-icon');
     $('.brand-icon').removeClass('close-menu-brand-icon');
+    $('.brand-icon').css({'background':'#fff', 'transition':'all 1s'});
+    $('svg').css({'fill':'#000', 'transition':'all 1s'});
+    $('.box-line-top').css({'background':'#000', 'transition':'all .2s'});
+    $('.box-line-bottom').css({'background':'#000', 'transition':'all .2s'});
+    $('.box-line-left').css({'background':'#000', 'transition':'all .2s'});
+    $('.box-line-right').css({'background':'#000', 'transition':'all .2s'});
+    $('.bar-middle').css({'background':'#000', 'transition':'all .2s'});
+    $('.bar-top').css({'background':'#000', 'transition':'all .2s'});
+    $('.bar-bottom').css({'background':'#000', 'transition':'all .2s'});
   }
 }
 function removeHref() {
@@ -617,6 +635,43 @@ function InputAnimation() {
   }
 }
 function ChangeNavColor() {
+  var sections = $('.footer')
+      , nav = $('.header')
+      , nav_height = 60;
+  $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop();
+
+    sections.each(function() {
+      var top = $(this).offset().top - nav_height,
+          bottom = top + $(this).outerHeight();
+
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('.brand-icon').css({'background':'#303030', 'transition':'all .5s'});
+        nav.find('svg').css({'fill':'#fff', 'transition':'all .5s'});
+        nav.find('.box-line-top').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.box-line-bottom').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.box-line-left').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.box-line-right').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.bar-top').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.bar-middle').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.bar-bottom').css({'background':'#fff', 'transition':'all .5s'});
+        nav.find('.menu-bar').css({'background':'#303030', 'transition':'all .5s'});
+      }
+      else {
+        $('.brand-icon').css('background','#fff');
+        $('svg').css({'fill':'#000', 'transition':'all .5s'});
+        $('.menu-bar').css('background','#fff');
+        nav.find('.box-line-top').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.box-line-bottom').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.box-line-left').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.box-line-right').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.bar-top').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.bar-middle').css({'background':'#000', 'transition':'all .5s'});
+        nav.find('.bar-bottom').css({'background':'#000', 'transition':'all .5s'});
+
+      }
+    });
+  });
   // var top1 = $('.footer').position().top;
   // $(document).scroll(function() {
   //   if (top1 < 100 ) {
@@ -637,8 +692,6 @@ function GenralPage() {
   if ($('.menu-bar').click()) {
     $('.menu-bar').bind( "click", menuBarClick );
   }
-  // InputAnimation();
-  // dropDownBox();
 }
 function HomePage() {
   $(".copy_right").css('position','absolute');
