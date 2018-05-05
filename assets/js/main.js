@@ -631,11 +631,11 @@ function GenralPage() {
 }
 function HomePage() {
   $(".copy_right").css('position','absolute');
+  $(".copy_right hr").css('display','none');
 }
 function SkillPage() {
   contactFormValidation();
   InputAnimation();
-
 }
 function ContactPage() {
   contactFormValidation();
