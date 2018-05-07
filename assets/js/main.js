@@ -672,18 +672,7 @@ function ChangeNavColor() {
       }
     });
   });
-  // var top1 = $('.footer').position().top;
-  // $(document).scroll(function() {
-  //   if (top1 < 100 ) {
-  //     $(".brand-icon").css("background", "#303030");
-  //   }
-  // });
 }
-// var top1 = $('.footer').scrollTop();
-// $(document).scroll(function() {
-//   console.log(top1);
-// });
-// var scrollDistance = $(window).scrollTop();
 function GenralPage() {
   menuOpenClose();
   menuLinkClick();
@@ -694,11 +683,15 @@ function GenralPage() {
   }
 }
 function HomePage() {
-  $(".copy_right").css('position','absolute');
+  $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
   $(".copy_right hr").css('display','none');
+  $(".copy_right .social .social_link .items i").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items a").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
+  $(".copy_right .right p").css('color','#000');
 }
 function SkillPage() {
-
+  $(".copy_right hr").css('display','block');
   InputAnimation();
   ChangeNavColor();
   contactFormValidation();

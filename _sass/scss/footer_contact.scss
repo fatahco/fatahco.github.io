@@ -16,6 +16,7 @@
     &__left-side{
       margin-top: 100px;
       .title{
+        font-size: 24px;
         color: #fff;
         font-weight: 700;
         margin-bottom: 25px;
@@ -88,7 +89,7 @@
 }
 .copy_right{
   position: fixed;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   bottom: 0;
   z-index: -1;
@@ -108,6 +109,7 @@
     border-top-color: #fff;
     position: relative;
     top: -2px;
+    display: none;
     @media only screen and (max-width: 767px){
       display: none;
     }

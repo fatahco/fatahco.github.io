@@ -79,13 +79,13 @@
       }
     }
   }
-  &__social{
-    li{
-      margin-left: 25px;
-      list-style-type:square;
-    }
-    .link{
-      font-size: 24px ;
+  .contact-info {
+    .social_link .items{
+      display: inline-block;
+      margin-right: 15px;
+      i{
+        font-size: 30px;
+      }
     }
   }
   &__img{
