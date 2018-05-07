@@ -135,15 +135,15 @@ function menuBarClick() {
     $('.menu-item').removeClass('menu-item-saw');
     $('.brand-icon').addClass('close-menu-brand-icon');
     $('.brand-icon').removeClass('open-menu-brand-icon');
-    $('.brand-icon').css({'background':'#303030', 'transition':'all .2s'});
-    $('svg').css({'fill':'#fff', 'transition':'all .2s'});
-    $('.box-line-top').css({'background':'#fff', 'transition':'all .2s'});
-    $('.box-line-bottom').css({'background':'#fff', 'transition':'all .2s'});
-    $('.box-line-left').css({'background':'#fff', 'transition':'all .2s'});
-    $('.box-line-right').css({'background':'#fff', 'transition':'all .2s'});
-    $('.bar-middle').css({'background':'#fff', 'transition':'all .2s'});
-    $('.bar-top').css({'background':'#fff', 'transition':'all .2s'});
-    $('.bar-bottom').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.brand-icon').css({'background':'#303030', 'transition':'all .2s'});
+    // $('svg').css({'fill':'#fff', 'transition':'all .2s'});
+    // $('.box-line-top').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.box-line-bottom').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.box-line-left').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.box-line-right').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.bar-middle').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.bar-top').css({'background':'#fff', 'transition':'all .2s'});
+    // $('.bar-bottom').css({'background':'#fff', 'transition':'all .2s'});
   }
   else {
     $('.toggle-menu').addClass('menu-open');
@@ -163,15 +163,15 @@ function menuBarClick() {
     $('.box-line-right').removeClass('right-hover');
     $('.brand-icon').addClass('open-menu-brand-icon');
     $('.brand-icon').removeClass('close-menu-brand-icon');
-    $('.brand-icon').css({'background':'#fff', 'transition':'all 1s'});
-    $('svg').css({'fill':'#000', 'transition':'all 1s'});
-    $('.box-line-top').css({'background':'#000', 'transition':'all .2s'});
-    $('.box-line-bottom').css({'background':'#000', 'transition':'all .2s'});
-    $('.box-line-left').css({'background':'#000', 'transition':'all .2s'});
-    $('.box-line-right').css({'background':'#000', 'transition':'all .2s'});
-    $('.bar-middle').css({'background':'#000', 'transition':'all .2s'});
-    $('.bar-top').css({'background':'#000', 'transition':'all .2s'});
-    $('.bar-bottom').css({'background':'#000', 'transition':'all .2s'});
+    // $('.brand-icon').css({'background':'#fff', 'transition':'all 1s'});
+    // $('svg').css({'fill':'#000', 'transition':'all 1s'});
+    // $('.box-line-top').css({'background':'#000', 'transition':'all .2s'});
+    // $('.box-line-bottom').css({'background':'#000', 'transition':'all .2s'});
+    // $('.box-line-left').css({'background':'#000', 'transition':'all .2s'});
+    // $('.box-line-right').css({'background':'#000', 'transition':'all .2s'});
+    // $('.bar-middle').css({'background':'#000', 'transition':'all .2s'});
+    // $('.bar-top').css({'background':'#000', 'transition':'all .2s'});
+    // $('.bar-bottom').css({'background':'#000', 'transition':'all .2s'});
   }
 }
 function removeHref() {
@@ -514,7 +514,14 @@ function porbandarPage() {
 
 
     }
+function menuBarClickOnMobile () {
+  if ( $('.toggle-menu').hasClass('menu-open') ) {
 
+  }
+  else {
+
+  }
+}
 function formSubmit() {
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
@@ -668,8 +675,31 @@ function ChangeNavColor() {
         nav.find('.bar-top').css({'background':'#000', 'transition':'all .5s'});
         nav.find('.bar-middle').css({'background':'#000', 'transition':'all .5s'});
         nav.find('.bar-bottom').css({'background':'#000', 'transition':'all .5s'});
-
       }
+      // if ($('.menu-bar').click()) {
+      //   if (cur_pos >= top && cur_pos <= bottom) {
+      //     $('.brand-icon').css({'background':'#303030', 'transition':'all .2s'});
+      //     $('svg').css({'fill':'#fff', 'transition':'all .2s'});
+      //     $('.box-line-top').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.box-line-bottom').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.box-line-left').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.box-line-right').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.bar-middle').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.bar-top').css({'background':'#fff', 'transition':'all .2s'});
+      //     $('.bar-bottom').css({'background':'#fff', 'transition':'all .2s'});
+      //   }
+      //   else {
+      //     $('.brand-icon').css({'background':'#fff', 'transition':'all 1s'});
+      //     $('svg').css({'fill':'#000', 'transition':'all 1s'});
+      //     $('.box-line-top').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.box-line-bottom').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.box-line-left').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.box-line-right').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.bar-middle').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.bar-top').css({'background':'#000', 'transition':'all .2s'});
+      //     $('.bar-bottom').css({'background':'#000', 'transition':'all .2s'});
+      //   }
+      // }
     });
   });
 }

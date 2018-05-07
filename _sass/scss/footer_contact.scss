@@ -89,7 +89,7 @@
 }
 .copy_right{
   position: fixed;
-  height: 8vh;
+  height: 60px;
   width: 100%;
   bottom: 0;
   z-index: -1;
@@ -118,7 +118,7 @@
     margin-top: 20px;
     @media only screen and (max-width: 767px){
       position: absolute;
-      bottom: -200px;
+      bottom: -155px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -166,7 +166,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      margin-top: 20px;
+      margin-top: 16px;
     }
     .social_link{
       text-align: right;
