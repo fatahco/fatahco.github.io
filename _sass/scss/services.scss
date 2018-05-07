@@ -3,7 +3,6 @@
   background-color: #fff;
   .title{
     margin-top: 30px;
-    color: red;
     text-align: center;
     h1{
       font-weight: 700;
@@ -35,6 +34,23 @@
       h1{
         font-size: 24px;
         font-weight: 400;
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        &:hover .bottom-line{
+          width: 100%;
+          transition: all .5s;
+        }
+        .bottom-line{
+          width: 0px;
+          height: 3px;
+          position: absolute;
+          top: 30px;
+          display: inline-block;
+          background-color: #000;
+          -webkit-transition: all .5s;
+          transition: all .5s;
+        }
       }
       @media only screen and (max-width: 767px){
         h1{
