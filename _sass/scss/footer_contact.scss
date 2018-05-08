@@ -120,7 +120,8 @@
       position: absolute;
       bottom: -155px;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
     }
     p{
       position: relative;
@@ -165,7 +166,8 @@
     @media only screen and (max-width: 767px){
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
       margin-top: 16px;
     }
     .social_link{

@@ -380,18 +380,19 @@ a.active .top-line {
 .menu-footer{
   position: fixed;
   height: 60px;
-  width: 100%;
+  width: calc(100% - 20px);
   bottom: 10px;
   z-index: -1;
-  background-color: #303030;
+  background-color: #000;
   @media only screen and (max-width: 767px){
     &{
-      margin-top: -5px;
+      display: none;
       background-color: #303030;
       height: auto;
-      position: unset;
+      position: fixed;
+      width: calc(100% - 10px);
+      bottom: 0;
       padding-top: 30px;
-      padding-bottom: 103px;
       // display: none;
     }
   }
@@ -401,7 +402,8 @@ a.active .top-line {
       position: absolute;
       bottom: -155px;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
     }
     a{
       position: relative;
@@ -446,7 +448,8 @@ a.active .top-line {
     @media only screen and (max-width: 767px){
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
       margin-top: 16px;
     }
     .social_link{
