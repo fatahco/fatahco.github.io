@@ -765,7 +765,7 @@ function mainJS() {
   else if (location.pathname == '/hire-us/'){
     HireUsPage();
   }
-  else if (location.pathname == '/skill/'){
+  else if (location.pathname == '/skills/'){
     SkillPage();
   }
 }
