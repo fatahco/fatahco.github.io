@@ -435,8 +435,7 @@ function dropDownBox() {
   	}
   	// click event functions
   	$('.selectLabel').click(function () {
-      // $('.option').find('li').first().addClass('select');
-
+      $('.options li').find('.active').focus();
   		$(this).toggleClass('active');
   		if( $(this).hasClass('active') ) {
   			openList();
@@ -447,6 +446,12 @@ function dropDownBox() {
   			closeList();
   		}
   	});
+    $('.options li').focusout( function(){
+  		if( $('.selectLabel').hasClass('active') ) {
+        closeList();
+        $('.selectLabel').removeClass('active');
+  		}
+    });
   	$(".options li").on('keypress click', function(e) {
   		e.preventDefault();
   		$('.options li').siblings().removeClass();
@@ -514,14 +519,7 @@ function porbandarPage() {
 
 
     }
-function menuBarClickOnMobile () {
-  if ( $('.toggle-menu').hasClass('menu-open') ) {
 
-  }
-  else {
-
-  }
-}
 function formSubmit() {
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
@@ -771,25 +769,12 @@ function mainJS() {
     SkillPage();
   }
 }
-// $(document).ready(function() {
-  // currentUrl();
-  // menuLinkClick();
-  // contactFormValidation();
-  // careerFormValidation();
-  // removeHref();
-  // projectChkBox();
-  // careerChkBox();
-  // fileUpload();
-  // porbandarPage();
-  // dropDownBox();
-
-// });
 function currentUrl() {
-
-  if ((location.pathname.split("/")[1]) !== ""){
-    $('.barba-container a[href^="/' + location.pathname.split("/")[1] + '"]').click(function (e) {
+  if ((location.pathname) !== ""){
+    $('.barba-container a[href="' + location.pathname + '"]').click(function (e) {
          e.preventDefault();
     });
+    $('.toggle-menu a[href="' + location.pathname + '"]').addClass('active');
   }
 }
 $('document').ready(function(){
@@ -859,9 +844,9 @@ $('document').ready(function(){
     }
   });
 
-/**
- * Next step, you have to tell Barba to use the new Transition
- */
+  /**
+   * Next step, you have to tell Barba to use the new Transition
+   */
   currentUrl();
   mainJS();
   Barba.Pjax.getTransition = function() {
@@ -876,8 +861,3 @@ $('document').ready(function(){
   Barba.Pjax.start();
   GenralPage();
 });
-// $(document).scroll( function () {
-//   if ($ ('.footer').scrollTop() > 100) {
-//     $(".brand-icon").css("background", "#303030");
-//   }
-// });
