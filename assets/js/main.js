@@ -510,7 +510,7 @@ function fileUpload() {
 }
 function porbandarPage() {
 
-    if ((location.pathname.split("/")[1] == 'porbandar')){
+    if ((location.pathname == '/porbandar/')){
       var delay = 2000;
       setTimeout(function(){ window.location = "https://goo.gl/forms/SLhqIdfsny4Q0CKD2"; }, delay);
       };
