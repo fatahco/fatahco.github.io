@@ -15,7 +15,35 @@
 //
 //
 // })( window );
-
+// function HomePageAnimation() {
+//   function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+//
+// var ms = 3000;
+// var content = ["Web Development", "Apps Development", "BMW"];
+// var func = function () {
+//   setTimeout(function(){
+//     $(".anim").css({"opacity":"1", "transition":".4s"});
+//   }, 400);
+//     var randNumTop = getRandomInt(1, 75);    // Gets random number between 1 and 253
+//     // document.getElementById("element_id").innerHTML = randNum;
+//     var randNumLeft = getRandomInt(1, 80);
+//     $(".anim").css({
+//                     "top":randNumTop,
+//                     "left":randNumLeft + "%",
+//                     // "opacity":1,
+//                     // "transition":".2s",
+//                     // "delay":"1s"
+//                   });
+//     setTimeout(function(){
+//       $(".anim").css({ "delay":".2s" , "opacity":"0" });
+//     }, 1200);
+// };
+//
+// func();
+// setInterval(func, ms);
+// }
 function menuOpenClose() {
   if ($ ('.toggle-menu').hasClass('menu-close')) {
     $('.toggle-menu').addClass('menu-open');
@@ -174,6 +202,18 @@ function menuBarClick() {
     // $('.bar-bottom').css({'background':'#000', 'transition':'all .2s'});
   }
 }
+// function TaglineHoverEffact() {
+//   $(".tag-line__link").hover(
+//     function () {
+//       $("tag-line__hover").css({ "height":200 });
+//       $(this).css({ "font-size":45 });
+//     },
+//     function () {
+//       $("tag-line__hover").css({ "height":8 });
+//       $(this).css({ "font-size":65 });
+//     }
+//   );
+// }
 function removeHref() {
   if (window.matchMedia('(min-width: 992px)').matches) {
     $('.contact-info .link').removeAttr('href');
@@ -519,7 +559,6 @@ function porbandarPage() {
 
 
     }
-
 function formSubmit() {
   /* Modify data before form submit */
   $(".btn-send").click(function (e) {
@@ -717,6 +756,8 @@ function HomePage() {
   $(".copy_right .info_link .navigation_link .items a").css('color','#000');
   $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
   $(".copy_right .right p").css('color','#000');
+  // HomePageAnimation();
+  // TaglineHoverEffact();
 }
 function SkillPage() {
   $(".copy_right hr").css('display','block');

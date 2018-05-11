@@ -1,9 +1,24 @@
 .home-hero{
   background-color: #fff;
-
   .sapce-wrape{
     white-space: nowrap;
   }
+  // .top_space{
+  //   position: relative;
+  //   .anim{
+  //     background-color: #000;
+  //     color: #fff;
+  //     padding: 5px 10px;
+  //     position: absolute;
+  //     font-size: 20px;
+  //     @media only screen and (max-width: 767px){
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
+  // .bottom_space{
+  //
+  // }
   .tag-line-hero{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,7 +54,6 @@
       position: relative;
       color: $menu-link-hov-col;
       font-family: 'LubalinGraphRegular', sans-serif;
-
     }
     &__hover{
       width: 100%;
@@ -50,16 +64,42 @@
       font-family: 'LubalinGraphRegular', sans-serif;
       -webkit-transition: all .5s;
       transition: all .5s;
+      span{
+        color: #fff;
+        font-size: 12px;
+        opacity: 0;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%);
+        transition: all .5s;
+      }
     }
   }
 }
+// .tag-line__link:hover .tag-line__hover{
+//   bottom: 70%;
+// }
+.tag-line__link:hover{
+  // transform: scale(1.2);
+  // transform: scale(0.7);
+  font-size: 55px;
+
+  transition: all .5s;
+}
 .tag-line__link:hover .tag-line__hover{
-  bottom: 70%;
+  content: "this";
+  height: 25px;
+  color: #fff;
+  transition: all .5s;
+  span{
+    opacity: 1;
+    transition: all .5s;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
   .home-hero{
-
     .tag-line{
       font-size: 40px;
       &__hover{
@@ -70,7 +110,6 @@
 }
 @media only screen and (max-width: 767px){
   .home-hero{
-
     .tag-line{
       font-size: 28px;
       &__hover{
@@ -78,5 +117,4 @@
       }
     }
   }
-
 }
