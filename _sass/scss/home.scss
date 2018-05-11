@@ -35,7 +35,6 @@
     @media only screen and (max-width: 767px){
       min-height: 60vh;
     }
-
   }
   .tag-line{
     font-size: 65px;
@@ -60,7 +59,7 @@
       height: 8px;
       background: $menu-link-hov-col;
       position: absolute;
-      bottom: 0;
+      top: 92%;
       font-family: 'LubalinGraphRegular', sans-serif;
       -webkit-transition: all .5s;
       transition: all .5s;
@@ -69,35 +68,33 @@
         font-size: 12px;
         opacity: 0;
         position: absolute;
-        top: 5px;
+        top: 4px;
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+        -webkit-transition: all .5s;
         transition: all .5s;
       }
     }
   }
 }
-// .tag-line__link:hover .tag-line__hover{
-//   bottom: 70%;
-// }
 .tag-line__link:hover{
-  // transform: scale(1.2);
-  // transform: scale(0.7);
   font-size: 55px;
-
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 .tag-line__link:hover .tag-line__hover{
   content: "this";
   height: 25px;
   color: #fff;
+  -webkit-transition: all .5s;
   transition: all .5s;
   span{
     opacity: 1;
+    -webkit-transition: all .5s;
     transition: all .5s;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 991px){
   .home-hero{
     .tag-line{
