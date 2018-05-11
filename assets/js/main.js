@@ -815,6 +815,7 @@ function currentUrl() {
     $('.barba-container a[href="' + location.pathname + '"]').click(function (e) {
          e.preventDefault();
     });
+    $('.toggle-menu a').removeClass('active');
     $('.toggle-menu a[href="' + location.pathname + '"]').addClass('active');
   }
 }
