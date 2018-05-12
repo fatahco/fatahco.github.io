@@ -525,6 +525,14 @@ function dropDownBox() {
   	});
     // }).find('li').first().addClass('select').focus();
   }
+  window.onclick = function(event) {
+    if (!event.target.matches('.selectLabel')) {
+      if( $('.selectLabel').hasClass('active') ) {
+        closeList();
+        $('.selectLabel').removeClass('active');
+      }
+    }
+  }
 }
 function fileUpload() {
   var inputs = document.querySelectorAll( '.inputfile' );
