@@ -59,7 +59,8 @@
       height: 8px;
       background: $menu-link-hov-col;
       position: absolute;
-      top: 92%;
+      // top: 92%;
+      bottom: 0;
       font-family: 'LubalinGraphRegular', sans-serif;
       -webkit-transition: all .5s;
       transition: all .5s;
