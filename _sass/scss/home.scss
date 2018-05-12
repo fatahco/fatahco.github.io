@@ -83,14 +83,13 @@
   }
 }
 .tag-line__link:hover{
-  display: inline-block;
-  -webkit-transform:scale(0.9);
-          transform:scale(0.9);
+  // display: inline-block;
+  // -webkit-transform:scaleY(0.95);
+  //         transform:scaleY(0.95);
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 .tag-line__link:hover .tag-line__hover{
-  content: "this";
   height: 25px;
   color: #fff;
   -webkit-transition: all .5s;
