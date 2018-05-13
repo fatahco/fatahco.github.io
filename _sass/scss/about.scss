@@ -1,0 +1,40 @@
+.about{
+  background-color: #fff;
+  padding-bottom: 100px;
+  .title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'LubalinGraphRegular', sans-serif;
+  }
+  .sub-title{
+      font-size: 32px;
+  }
+  .details{
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 1.3;
+  }
+  .section{
+    margin-top: 50px;
+  }
+  .team_details{
+    margin-top: 30px;
+    .teamMember{
+      .teamImg{
+        margin: 0 auto;
+        display: block;
+      }
+      .name{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 15px;
+      }
+      .position{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+}
