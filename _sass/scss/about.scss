@@ -18,21 +18,45 @@
   .section{
     margin-top: 50px;
   }
+  .ourStory{
+    position: relative;
+    .title{
+      margin-top: 30px;
+      text-align: center;
+      h1{
+        font-size: 24px;
+      }
+    }
+    .info{
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
   .ourProcess{
+    .step{
+      margin-top: 30px;
+      text-align: right;
+      p{
+        font-size: 50px;
+        font-family: 'LubalinGraphRegular', sans-serif;
+        @media only screen and (max-width: 767px){
+          font-size: 40px;
+        }
+      }
+    }
     .Process_icon{
-      margin-left: auto;
       margin-right: auto;
       margin-top: 30px;
-      height: 200px;
-      width: 200px;
+      height: 70px;
+      width: 70px;
       svg{
         width: 100%;
         height: 100%;
       }
     }
     .Process_title{
-      text-align: center;
-      font-size: 16px;
+      text-align: left;
+      font-size: 24px;
       font-weight: 600;
     }
     .read_btn{
@@ -49,6 +73,9 @@
   .team_details{
     margin-top: 30px;
     .teamMember{
+      @media only screen and (max-width: 767px){
+        margin-top: 50px;
+      }
       .teamImg{
         margin: 0 auto;
         display: block;
@@ -63,6 +90,15 @@
         text-align: center;
         margin-top: 15px;
       }
+    }
+  }
+  .client{
+    .client_box{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      width: fit-content;
+
     }
   }
 }
