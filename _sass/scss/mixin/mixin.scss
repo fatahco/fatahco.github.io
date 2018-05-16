@@ -7,6 +7,12 @@
 @mixin MobileFontSize(){
   font-size: 16px;
 }
+@mixin PageTitle(){
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'LubalinGraphRegular', sans-serif;
+}
 @mixin checkBoxBorderExpand() {
   -webkit-animation: input-box-hover .2s;
           animation: input-box-hover .2s;

@@ -2,10 +2,7 @@
   background-color: #fff;
   padding-bottom: 100px;
   .title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-    font-family: 'LubalinGraphRegular', sans-serif;
+    @include PageTitle();
   }
   .sub-title{
       font-size: 32px;
@@ -97,6 +94,8 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 50px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
 
     }

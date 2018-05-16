@@ -1,0 +1,7 @@
+.process{
+  .title{
+    h1{
+      @include PageTitle();
+    }
+  }
+}
