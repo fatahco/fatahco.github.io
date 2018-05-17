@@ -5,9 +5,7 @@
     margin-top: 30px;
     text-align: center;
     h1{
-      font-weight: 700;
-      font-size: 32px;
-      font-family: 'LubalinGraphRegular', sans-serif;
+      @include PageTitle();
     }
     h2{
       margin-top: 10px;

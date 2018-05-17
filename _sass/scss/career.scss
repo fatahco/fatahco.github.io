@@ -4,10 +4,8 @@
   .title{
     text-align: center;
     .h1{
-      font-size: 32px;
-      font-family: 'LubalinGraphRegular', sans-serif;
+      @include PageTitle();
       padding: 25px 0;
-      text-align: center;
     }
     @media only screen and (max-width: 767px){
       .h1{

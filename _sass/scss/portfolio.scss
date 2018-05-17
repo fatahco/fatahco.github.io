@@ -2,10 +2,7 @@
   background-color: #fff;
   padding-bottom: 100px;
   .title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-    font-family: 'LubalinGraphRegular', sans-serif;
+    @include PageTitle();
   }
   .info{
     margin-top: 10px;
