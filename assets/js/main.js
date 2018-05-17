@@ -866,7 +866,6 @@ function CareerPage() {
 }
 function AboutPage() {
   Carousel();
-
 }
 function mainJS() {
   if (location.pathname == '/porbandar/'){

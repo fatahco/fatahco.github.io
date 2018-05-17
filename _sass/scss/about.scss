@@ -27,6 +27,7 @@
     .info{
       margin-top: 20px;
       font-size: 16px;
+      line-height: 1.3;
     }
   }
   .ourProcess{
@@ -70,12 +71,16 @@
   .team_details{
     margin-top: 30px;
     .teamMember{
+
       @media only screen and (max-width: 767px){
         margin-top: 50px;
       }
       .teamImg{
         margin: 0 auto;
         display: block;
+        @media only screen and (max-width: 991px){
+          max-width: 100%;
+        }
       }
       .name{
         font-size: 24px;
@@ -97,12 +102,16 @@
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
+      img{
+        max-width: 100%;
+      }
     }
   }
   .comment{
     #carousel {
+      padding: 50px;
       position: relative;
-      width:80%;
+      width:100%;
       margin:0 auto;
     }
 
@@ -110,61 +119,50 @@
       overflow: hidden;
       position: relative;
       width: 100%;
-      height: 260px;
     }
 
     #slides ul {
       list-style: none;
       width:100%;
-      height:250px;
-      margin: 0;
-      padding: 0;
       position: relative;
     }
 
      #slides li {
       width:100%;
-      height:250px;
       float:left;
       text-align: left;
       position: relative;
-      font-family:lato, sans-serif;
     }
     /* Styling for prev and next buttons */
     .btn-bar{
-      // max-width: 346px;
-      // margin: 0 auto;
-      // display: block;
       position: relative;
-      // top: 40px;
       width: 100%;
     }
 
-     #buttons {
-      // padding:0 0 5px 0;
-      // float:right;
-    }
-
     #buttons a {
-      // text-align:center;
       display:inline-block;
       font-size:50px;
-      // float:left;
       outline:0;
-      // margin:0 60px;
-      // color:#b14943;
       text-decoration:none;
-      // display:block;
       padding:9px;
       width:35px;
       position: absolute;
-      top: 75px;
+      top: 50px;
+      @media only screen and (max-width: 767px){
+        top: 150px;
+      }
     }
     #prev {
-      left: -110px;
+      left: -70px;
+      @media only screen and (max-width: 991px){
+        left: -60px;
+      }
     }
     #next {
-      right: -110px;
+      right: -60px;
+      @media only screen and (max-width: 991px){
+        right: -50px;
+      }
     }
     a#prev:hover, a#next:hover {
       color:#555;
@@ -172,20 +170,14 @@
     }
 
     .quote-phrase, .quote-author, .quote-company {
-      // font-family:sans-serif;
       font-weight:400;
       display: table-cell;
       vertical-align: middle;
       padding: 5px 20px;
-      // font-family:'Lato', Calibri, Arial, sans-serif;
     }
 
     .quote-phrase {
-      height: 200px;
       font-size:24px;
-      // color:#FFF;
-      // font-style:italic;
-      // text-shadow:.5px 0px #b14943;
     }
 
     .quote-marks {
@@ -195,9 +187,7 @@
     }
 
     .quote-author, .quote-company {
-      // font-style:normal;
       font-size:20px;
-      // color:#b14943;
       font-weight:400;
       height: 30px;
       text-align: center;
