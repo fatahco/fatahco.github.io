@@ -1,10 +1,10 @@
 .footer{
   background-color: #303030;
-  height: 85vh;
+  height: 78vh;
   width: 100%;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 60px;
   z-index: -1;
   @media only screen and (max-width: 767px){
     &{
