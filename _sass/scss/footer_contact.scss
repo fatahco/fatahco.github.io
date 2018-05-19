@@ -1,6 +1,6 @@
 .footer{
   background-color: #303030;
-  height: 78vh;
+  height: 75vh;
   width: 100%;
   position: fixed;
   left: 0;
@@ -108,8 +108,7 @@
   hr{
     border-top-color: #fff;
     position: relative;
-    top: -2px;
-    display: none;
+    display: block;
     @media only screen and (max-width: 767px){
       display: none;
     }

@@ -841,6 +841,7 @@ function SkillPage() {
   formSubmit();
 }
 function ContactPage() {
+  $(".copy_right hr").css('display','none');
   formSubmit();
   contactFormValidation();
   InputAnimation();
@@ -848,6 +849,7 @@ function ContactPage() {
   // formSubmit();
 }
 function HireUsPage() {
+  $(".copy_right hr").css('display','none');
   ChkBoxAnimation();
   dropDownBox();
   InputAnimation();
