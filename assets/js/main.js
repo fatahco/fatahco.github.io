@@ -814,9 +814,58 @@ function Carousel() {
       $('#next').click();
     }
 }
+function HomePageAnimation() {
+  $(".tag-line__hover.About").css({height: "25px", color: "#fff"});
+  $(".tag-line__hover.About span").css({opacity: "1"});
+  setTimeout(function () {
+    $(".tag-line__hover.About").css({height: "8px"});
+    $(".tag-line__hover.About span").css({opacity: "0"});
+  }, 700);
+  setTimeout(function () {
+    $(".tag-line__hover.Skills").css({height: "25px", color: "#fff"});
+    $(".tag-line__hover.Skills span").css({opacity: "1"});
+
+    setTimeout(function () {
+      $(".tag-line__hover.Skills").css({height: "8px"});
+      $(".tag-line__hover.Skills span").css({opacity: "0"});
+
+    }, 700);
+  }, 950);
+  setTimeout(function () {
+    $(".tag-line__hover.Process").css({height: "25px", color: "#fff"});
+    $(".tag-line__hover.Process span").css({opacity: "1"});
+
+    setTimeout(function () {
+      $(".tag-line__hover.Process").css({height: "8px"});
+      $(".tag-line__hover.Process span").css({opacity: "0"});
+
+    }, 700);
+  }, 2100);
+  setTimeout(function () {
+    $(".tag-line__hover.Portfolio").css({height: "25px", color: "#fff"});
+    $(".tag-line__hover.Portfolio span").css({opacity: "1"});
+
+    setTimeout(function () {
+      $(".tag-line__hover.Portfolio").css({height: "8px"});
+      $(".tag-line__hover.Portfolio span").css({opacity: "0"});
+
+    }, 700);
+  }, 3000);
+
+  $(".tag-line__link").hover(function () {
+    $(this).find(".tag-line__hover").css({height: "25px", color: "#fff"});
+    $(this).find(".tag-line__hover span").css({opacity: "1"});
+
+  },function () {
+    $(this).find(".tag-line__hover").css({height: "8px", color: "#fff"});
+    $(this).find(".tag-line__hover span").css({opacity: "0"});
+
+  });
+}
 function GenralPage() {
   menuOpenClose();
   menuLinkClick();
+  HomePageAnimation();
   // menuBarClick();
   removeHref();
   if ($('.menu-bar').click()) {
@@ -830,6 +879,7 @@ function HomePage() {
   $(".copy_right .info_link .navigation_link .items a").css('color','#000');
   $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
   $(".copy_right .right p").css('color','#000');
+  HomePageAnimation();
   // HomePageAnimation();
   // TaglineHoverEffact();
 }
