@@ -44,6 +44,7 @@ time, mark, audio, video {
 	font-family: 'Roboto Mono', sans-serif ;
 	color: #000;
 	border: 0;
+	line-height: normal;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -69,7 +70,7 @@ q:before, q:after {
 .thanks{
 	h1{
 		text-align: center;
-		margin-top: 200px;
+		margin-top: 100px;
 		font-size: 72px;
 
 	}
