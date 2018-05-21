@@ -100,9 +100,7 @@
       background-color: #303030;
       height: auto;
       position: unset;
-      padding-top: 30px;
-      padding-bottom: 103px;
-      // display: none;
+      padding-bottom: 65px;
     }
   }
   hr{
@@ -117,7 +115,7 @@
     margin-top: 20px;
     @media only screen and (max-width: 767px){
       position: absolute;
-      bottom: -190px;
+      bottom: -230px;
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
@@ -130,7 +128,6 @@
   }
   .info_link{
     margin-top: 20px;
-
     .navigation_link{
       text-align: center;
       .items{
@@ -167,7 +164,7 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
-      margin-top: 16px;
+      margin-top: 5px;
     }
     .social_link{
       text-align: right;
