@@ -83,6 +83,9 @@
       }
       .btn-send{
         border: none;
+        @media only screen and (max-width: 767px){
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -107,9 +110,6 @@
     border-top-color: #fff;
     position: relative;
     display: block;
-    @media only screen and (max-width: 767px){
-      display: none;
-    }
   }
   .right{
     margin-top: 20px;
