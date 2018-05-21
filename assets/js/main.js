@@ -689,7 +689,7 @@ function InputAnimation() {
 function ChangeNavColor() {
   var sections = $('.footer')
       , nav = $('.header')
-      , nav_height = 60;
+      , nav_height = 70;
   $(window).on('scroll', function () {
     var cur_pos = $(this).scrollTop();
 
@@ -914,6 +914,7 @@ function GenralPage() {
   menuOpenClose();
   menuLinkClick();
   HomePageAnimation();
+  ChangeNavColor();
   // menuBarClick();
   removeHref();
   if ($('.menu-bar').click()) {
@@ -934,7 +935,6 @@ function HomePage() {
 function SkillPage() {
   $(".copy_right hr").css('display','block');
   InputAnimation();
-  ChangeNavColor();
   contactFormValidation();
   formSubmit();
 }
