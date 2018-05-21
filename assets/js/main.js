@@ -979,6 +979,7 @@ function AboutPage() {
   Carousel();
 }
 function mainJS() {
+  ChangeNavColor();
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -1012,7 +1013,8 @@ function currentUrl() {
 }
 $('document').ready(function(){
 
-
+  $(this).scrollTop(0);
+  
   // GenralPage();
   var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
