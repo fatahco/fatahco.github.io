@@ -44,12 +44,8 @@
     text-transform: capitalize;
     color: black;
     text-align: left;
-    -webkit-transition: all .5s;
-    transition: all .5s;
     width: 100%;
     &__link{
-      -webkit-transition: all .5s;
-      transition: all .5s;
       position: relative;
       color: $menu-link-hov-col;
       display: inline-block;
@@ -67,6 +63,9 @@
       font-family: 'LubalinGraphRegular', sans-serif;
       -webkit-transition: all .5s;
       transition: all .5s;
+      @media only screen and (max-width: 767px){
+        height: 4px;
+      }
       span{
         height: 0;
         color: #fff;
@@ -79,6 +78,9 @@
                 transform: translate(-50%);
         -webkit-transition: all .5s;
         transition: all .5s;
+        @media only screen and (max-width: 767px){
+          font-size: 8px;
+        }
       }
     }
   }
@@ -111,7 +113,7 @@
 @media only screen and (max-width: 767px){
   .home-hero{
     .tag-line{
-      font-size: 28px;
+      font-size: 26px;
       &__hover{
         height: 4px;
       }

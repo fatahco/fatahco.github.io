@@ -859,8 +859,56 @@ function HomePageAnimation() {
   },function () {
     $(this).find(".tag-line__hover").css({height: "8px", color: "#fff"});
     $(this).find(".tag-line__hover span").css({opacity: "0"});
-
   });
+  // var mq = window.matchMedia('@media only screen and (max-width: 767px)');
+  var mq = window.matchMedia("(max-width: 700px)");
+  if(mq.matches) {
+    $(".tag-line__hover.About").css({height: "4px", color: "#fff"});
+    $(".tag-line__hover.Skills span").css({opacity: "0"});
+    setTimeout(function () {
+      $(".tag-line__hover.About").css({height: "4px"});
+      $(".tag-line__hover.Skills span").css({opacity: "0"});
+
+    }, 700);
+    setTimeout(function () {
+      $(".tag-line__hover.Skills").css({height: "4px", color: "#fff"});
+      $(".tag-line__hover.Skills span").css({opacity: "0"});
+
+      setTimeout(function () {
+        $(".tag-line__hover.Skills").css({height: "4px"});
+        $(".tag-line__hover.Skills span").css({opacity: "0"});
+
+      }, 700);
+    }, 950);
+    setTimeout(function () {
+      $(".tag-line__hover.Process").css({height: "4px", color: "#fff"});
+      $(".tag-line__hover.Process span").css({opacity: "0"});
+
+      setTimeout(function () {
+        $(".tag-line__hover.Process").css({height: "4px"});
+        $(".tag-line__hover.Process span").css({opacity: "0"});
+
+      }, 700);
+    }, 2100);
+    setTimeout(function () {
+      $(".tag-line__hover.Portfolio").css({height: "4px", color: "#fff"});
+      $(".tag-line__hover.Portfolio span").css({opacity: "0"});
+
+      setTimeout(function () {
+        $(".tag-line__hover.Portfolio").css({height: "4px"});
+        $(".tag-line__hover.Portfolio span").css({opacity: "0"});
+
+      }, 700);
+    }, 3000);
+    $(".tag-line__link").hover(function () {
+      $(this).find(".tag-line__hover").css({height: "4px", color: "#fff"});
+      $(this).find(".tag-line__hover span").css({opacity: "0"});
+
+    },function () {
+      $(this).find(".tag-line__hover").css({height: "4px", color: "#fff"});
+      $(this).find(".tag-line__hover span").css({opacity: "0"});
+    });
+  }
 }
 function GenralPage() {
   menuOpenClose();
