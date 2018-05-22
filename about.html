@@ -5,21 +5,11 @@ permalink: /about/
 ---
 <section class="about">
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-sm-12">
-        <h1 class="title">About Us</h1>
-      </div>
-    </div> -->
     <div class="ourStory section">
       <div class="row">
         <div class="col-sm-12">
           <h1 class="sub-title">About Us</h1>
         </div>
-        <!-- <div class="col-sm-12">
-          <p class="details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div> -->
         <div class="col-sm-4">
           <div class="title">
             <h1>Why</h1>
@@ -182,122 +172,24 @@ permalink: /about/
           <h1 class="sub-title">Goodwill</h1>
         </div>
       <div class="goodWill">
-
         <div class="client_comments">
+          {% for comments in site.data.goodWill %}
           <div class="card">
             <p class="quote">
-              "Fatah Digital is a great company, and these guys are awesome coders and designers. I worked with them a few times and will come back to them whenever I have a new project. Thanks for the great service you are providing. Highly recommended company!"
+              {{ comments.goodwill }}
             </p>
             <div class="authorContainer">
               <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
+                <img  class="" src="{{ comments.Img }}" alt="">
               </div>
               <div class="details">
-                <p class="name">Narine Grigoryan</p>
-                <p class="position">Recruitment Assistant at InnerSquare</p>
+                <p class="name">{{ comments.Name }}</p>
+                <p class="position">{{ comments.Position }}</p>
               </div>
             </div>
           </div>
-          <div class="card">
-            <p class="quote">
-              "Faizan is a solid businessman and Jekyll wizard. He has delivered a great website for me and I really enjoyed working with him. Good communication made our project easy."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Gijs van Klooster</p>
-                <p class="position">Musci Producer at The RedHouse</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "I wanted to convert a Wordpress website to Jekyll and Faizan did a great job. Although the first version he did was a bit different from what I expected, he was a 100% willing to edit things so they fit what I had in mind, and showed a lot of understanding when dealing with specifics which we had better defined at the beginning, but did not."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Tomas Saieg</p>
-                <p class="position">Ciudadluz</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "Praiseworthy qualities of Team Fatah are Patience, Attention, Adaptability, and Clear Communication. They picked up a new technology really quickly and delivered what I had in my mind."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Craig Tong</p>
-                <p class="position">Owner at Sun Web Systems</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "Praiseworthy qualities of Team Fatah are Patience, Attention, Adaptability, and Clear Communication. They picked up a new technology really quickly and delivered what I had in my mind."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Puya Kiani</p>
-                <p class="position">Co-founder at Activus</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "Pleasure working with you guys, knowledgeable and very quick service. They completed my task in a timely manner. Looking forward to keeping you in my contacts."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Max Rogers</p>
-                <p class="position">iOS Dev at YinzCam INC.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "My experience of working with them was outstanding. The project was a little delayed but I am completely satisfied with the final results."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Salim Virani</p>
-                <p class="position">Founder of Source Institute</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <p class="quote">
-              "Really quick in coming up with the solutions. I can rely on Team Fatah if I face any problems on my website in future."
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="http://via.placeholder.com/100x100" alt="">
-              </div>
-              <div class="details">
-                <p class="name">Joshua Rosenberg</p>
-                <p class="position">Prof. at University of Tennesee, Knoxville</p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
-
       </div>
     </div>
     <div class="client section">
@@ -310,26 +202,6 @@ permalink: /about/
             <img src="http://via.placeholder.com/1110x400" alt="">
           </div>
         </div>
-        <!-- <div class="col-sm-3">
-          <div class="client_box">
-            <img  class="teamImg" src="http://via.placeholder.com/150x150" alt="">
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="client_box">
-            <img  class="teamImg" src="http://via.placeholder.com/150x150" alt="">
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="client_box">
-            <img  class="teamImg" src="http://via.placeholder.com/150x150" alt="">
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="client_box">
-            <img  class="teamImg" src="http://via.placeholder.com/150x150" alt="">
-          </div>
-        </div> -->
         <div class="col-sm-12">
           <div class="start_project_btn">
             <a href="/hire-us/" class="">Start a Project</a>
