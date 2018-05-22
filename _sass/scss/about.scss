@@ -137,11 +137,14 @@
       padding: 50px 100px;
       cursor: move; /* fallback if grab cursor is unsupported */
       cursor: grab;
-      cursor: -moz-grab;
       cursor: -webkit-grab;
       color: #000;
       border-radius: 0;
       max-width: 100%;
+      @media only screen and (max-width: 767px){
+        padding: 30px;
+        height: 480px;
+      }
       .quote{
         font-size: 16px;
       }
@@ -160,7 +163,8 @@
           padding-left: 150px;
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
           margin-top: 0;
         }
       }
@@ -168,6 +172,8 @@
     .slick-dots{
       margin-left: auto;
       margin-right: auto;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       li{
         display: inline-block;
@@ -178,6 +184,9 @@
           border: solid 1px #000;
           color: #fff;
           background-color: #fff;
+          &:focus{
+            outline: none;
+          }
         }
       }
     }

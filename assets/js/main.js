@@ -937,7 +937,7 @@ function MyCaousel() {
         settings:{
         centerMode: true,
         centerPadding: "5%",
-        speed:200
+        speed:1000
       }
       }
     ]
