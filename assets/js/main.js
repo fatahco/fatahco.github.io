@@ -920,6 +920,36 @@ function BrowserButton() {
     }
   });
 }
+function MyCaousel() {
+
+  $(".client_comments").slick({
+    cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+    dots: true,
+    dotsClass: 'slick-dots',
+    arrows:false,
+    centerMode: true,
+    centerPadding: "20%",
+    slidesToShow: 1,
+    autoplay: true,
+    responsive : [
+      {
+        breakpoint:768,
+        settings:{
+        centerMode: true,
+        centerPadding: "5%",
+        speed:200
+      }
+      }
+    ]
+  });
+  $(".client_comments").on('afterChange', function(event, slick, direction){
+    $(".client_comments").slick('slickNext').find('.slick-dots li button').css({"background":"#fff", "color":"#fff"});
+    $(".client_comments").slick('slickNext').find('.slick-dots .slick-active button').css({"background":"#000", "color":"#000"});
+  });
+
+
+
+}
 function GenralPage() {
   menuOpenClose();
   menuLinkClick();
@@ -977,11 +1007,12 @@ function CareerPage() {
 }
 function AboutPage() {
   Carousel();
+  MyCaousel();
 }
 function mainJS() {
   ChangeNavColor();
   $(window).scrollTop(0);
-  
+
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
