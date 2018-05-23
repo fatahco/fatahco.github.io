@@ -992,6 +992,7 @@ function HireUsPage() {
   formSubmit();
 }
 function CareerPage() {
+  $(".copy_right hr").css('display','none');
   fileUpload();
   ChkBoxAnimation();
   InputAnimation();
