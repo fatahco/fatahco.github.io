@@ -177,9 +177,17 @@
       border-radius: 0;
       max-width: 100%;
       position: relative;
+      @media only screen and (max-width: 991px){
+        padding: 60px;
+        height: 540px;
+      }
       @media only screen and (max-width: 767px){
         padding: 30px;
         height: 560px;
+      }
+      @media only screen and (max-width: 400px){
+        height: 620px;
+        padding: 10px;
       }
       .quote{
         font-size: 16px;
@@ -202,6 +210,9 @@
           padding-left: 25px;
           position:relative;
           margin-top: 0;
+          @media only screen and (max-width: 991px){
+            padding-left: 115px;
+          }
           @media only screen and (max-width: 767px){
             padding-left: 115px;
           }
@@ -209,6 +220,9 @@
             font-weight: bold;
             position:relative;
             bottom:40px;
+            @media only screen and (max-width: 991px){
+              bottom: 85px;
+            }
             @media only screen and (max-width: 767px){
               bottom: 85px;
             }
@@ -216,6 +230,12 @@
           .position{
             position:relative;
             bottom:40px;
+            @media only screen and (max-width: 991px){
+              bottom: 85px;
+            }
+            @media only screen and (max-width: 767px){
+              bottom: 85px;
+            }
           }
         }
       }
