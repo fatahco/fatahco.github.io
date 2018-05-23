@@ -920,8 +920,8 @@ function BrowserButton() {
     }
   });
 }
-function MyCaousel() {
 
+function MyCaousel() {
   $(".client_comments").slick({
     cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     dots: true,
@@ -946,9 +946,6 @@ function MyCaousel() {
     $(".client_comments").slick('slickNext').find('.slick-dots li button').css({"background":"#fff", "color":"#fff"});
     $(".client_comments").slick('slickNext').find('.slick-dots .slick-active button').css({"background":"#000", "color":"#000"});
   });
-
-
-
 }
 function GenralPage() {
   menuOpenClose();

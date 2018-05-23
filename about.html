@@ -171,26 +171,28 @@ permalink: /about/
         <div class="col-sm-12">
           <h1 class="sub-title">Goodwill</h1>
         </div>
-      <div class="goodWill">
-        <div class="client_comments">
-          {% for comments in site.data.goodWill %}
-          <div class="card">
-            <p class="quote">
-              {{ comments.goodwill }}
-            </p>
-            <div class="authorContainer">
-              <div class="img">
-                <img  class="" src="{{ comments.Img }}" alt="">
+        <div class="col-sm-12">
+          <div class="goodWill">
+            <div class="client_comments">
+              {% for comments in site.data.goodWill %}
+              <div class="card">
+                <p class="quote">
+                  {{ comments.goodwill }}
+                </p>
+                <div class="authorContainer">
+                  <div class="img">
+                    <img  class="" src="{{ comments.Img }}" alt="">
+                  </div>
+                  <div class="details">
+                    <p class="name">{{ comments.Name }}</p>
+                    <p class="position">{{ comments.Position }}</p>
+                  </div>
+                </div>
               </div>
-              <div class="details">
-                <p class="name">{{ comments.Name }}</p>
-                <p class="position">{{ comments.Position }}</p>
-              </div>
+              {% endfor %}
             </div>
           </div>
-          {% endfor %}
         </div>
-      </div>
     </div>
     <div class="client section">
       <div class="row">

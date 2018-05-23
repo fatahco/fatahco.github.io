@@ -164,28 +164,33 @@
     margin-top: 50px;
     .card {
       border: solid 5px #000;
-      height: 390px;
+      height: 420px;
       margin: 20px;
-      padding: 50px 100px;
+      padding-top: 50px;
+      padding-left: 100px;
+      padding-right: 100px;
+
       cursor: move; /* fallback if grab cursor is unsupported */
       cursor: grab;
       cursor: -webkit-grab;
       color: #000;
       border-radius: 0;
       max-width: 100%;
+      position: relative;
       @media only screen and (max-width: 767px){
         padding: 30px;
-        height: 480px;
+        height: 560px;
       }
       .quote{
         font-size: 16px;
       }
       .authorContainer{
         padding: 20px 0;
-        // display: inline-block;
-        position: relative;
+        position: absolute;
+        bottom: 0;
         .img{
-          display: inline;
+          display: inline-block;
+          position: relative;
           img{
             max-width: 100px;
             max-height: 100px;
@@ -194,18 +199,31 @@
         .details{
           display: inline-block;
           font-size: 12px;
-          padding-left: 150px;
-          position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%);
+          padding-left: 25px;
+          position:relative;
           margin-top: 0;
+          @media only screen and (max-width: 767px){
+            padding-left: 115px;
+          }
+          .name{
+            font-weight: bold;
+            position:relative;
+            bottom:40px;
+            @media only screen and (max-width: 767px){
+              bottom: 85px;
+            }
+          }
+          .position{
+            position:relative;
+            bottom:40px;
+          }
         }
       }
     }
     .slick-dots{
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
       margin-top: 30px;
       width: -webkit-fit-content;
       width: -moz-fit-content;
