@@ -76,14 +76,16 @@
   position: fixed;
   right: 0;
   top: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .menu-item{
   position: fixed;
   opacity: 0;
   visibility: hidden;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .brand-icon{
   width: 200px;

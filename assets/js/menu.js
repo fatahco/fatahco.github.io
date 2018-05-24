@@ -1,15 +1,15 @@
+var menuIcon = $('.menu-bar'),
+middleBar = $('.bar-middle'),
+middleTopBar = $('.bar-top'),
+middleBottomBar = $('.bar-bottom'),
+leftBar = $('.box-line-left'),
+rightBar = $('.box-line-right'),
+menuOpen = $('.menuOpen'),
+menuClose = $('.menuClose'),
+menu = $('.toggle-menu'),
+menuLink = $('.menu-item'),
+logo = $('.brand-icon');
 $(document).ready(function(){
-  var menuIcon = $('.menu-bar'),
-      middleBar = $('.bar-middle'),
-      middleTopBar = $('.bar-top'),
-      middleBottomBar = $('.bar-bottom'),
-      leftBar = $('.box-line-left'),
-      rightBar = $('.box-line-right'),
-      menuOpen = $('.menuOpen'),
-      menuClose = $('.menuClose'),
-      menu = $('.toggle-menu'),
-      menuLink = $('.menu-item'),
-      logo = $('.brand-icon');
 
   menuIcon.hover(
    function() {
@@ -40,9 +40,14 @@ $(document).ready(function(){
       TweenLite.to($(middleBar), .2, {left:10,opacity:0});
       TweenLite.to($(menu), .5, {height:'100vh', width:'100%', background:'#fff'});
       TweenLite.to($(menu), 0, {border:'solid 10px #000'});
-      TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left:'calc(50% + 40px)', delay: .4});
-      $ (logo).css({top:'calc(50% - 100px)', width: 475, left:'calc(50% - 515px)', transition:'all .5s'});
-
+      var width = $( window ).width();
+      var myWidth = width / 2 - 515;
+      var MylinkWidth = width / 2 + 40;
+      var height = $( window ).height();
+      var logoHeight = $(logo).height();
+      var myHeight = height / 2 - logoHeight;
+      TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+      TweenLite.to($(logo), .5, {top:myHeight, width:475, left:myWidth});
     }
     else if ($ (this).hasClass('menuOpen')) {
       TweenLite.set(this, {className: '+=menuClose'});
@@ -55,7 +60,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'0', width:'0'});
       TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      $ (logo).css({top:'0', width: 200, left:45, transition:'all .5s'});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
     }
   });
   logo.on('click', function(e){
@@ -70,7 +75,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'0', width:'0'});
       TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      $ (logo).css({top:'0', width: 200, left:45, transition:'all .5s'});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
     }
   });
   $(window).on('popstate', function(event) {
@@ -85,12 +90,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'0', width:'0'});
       TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      $ (logo).css({top:'0', width: 200,transform: 'translateY(0)', left:45, transition:'all .5s'});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
     }
   });
-  // logo.on('click',function () {
-  //   console.log('hi');
-  // });
-
-
 });
