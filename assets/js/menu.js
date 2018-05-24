@@ -41,7 +41,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'100vh', width:'100%', background:'#fff'});
       TweenLite.to($(menu), 0, {border:'solid 10px #000'});
       TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left:'calc(50% + 40px)', delay: .4});
-      $ (logo).css({top:'50%', width: 475,transform: 'translateY(-50%)', left:'calc(50% - 515px)', transition:'all .5s'});
+      $ (logo).css({top:'calc(50% - 100px)', width: 475, left:'calc(50% - 515px)', transition:'all .5s'});
 
     }
     else if ($ (this).hasClass('menuOpen')) {
@@ -55,7 +55,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'0', width:'0'});
       TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      $ (logo).css({top:'0', width: 200,transform: 'translateY(0)', left:45, transition:'all .5s'});
+      $ (logo).css({top:'0', width: 200, left:45, transition:'all .5s'});
     }
   });
   logo.on('click', function(e){
@@ -70,7 +70,7 @@ $(document).ready(function(){
       TweenLite.to($(menu), .5, {height:'0', width:'0'});
       TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      $ (logo).css({top:'0', width: 200,transform: 'translateY(0)', left:45, transition:'all .5s'});
+      $ (logo).css({top:'0', width: 200, left:45, transition:'all .5s'});
     }
   });
   $(window).on('popstate', function(event) {
