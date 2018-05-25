@@ -43,11 +43,13 @@ $(document).ready(function(){
       var MylinkWidth = width / 2 + 40;
       var MyMoblelinkWidth = width / 4 - 15;
       var height = $( window ).height();
-      var logoHeight = $(logo).height();
+      var logoHeight = 108;
       var myHeight = height / 2 - logoHeight;
       TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
       TweenLite.to($(logo), .5, {top:myHeight, width:475, left:myWidth});
       if (window.matchMedia('(max-width: 991px)').matches) {
+        var logoHeight = 70;
+        var myHeight = height / 2 - logoHeight;
         var myWidth = width / 2 - 300;
         TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
         TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
