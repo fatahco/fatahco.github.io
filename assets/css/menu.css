@@ -78,6 +78,11 @@
   top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #fff;
+  height: 0vh;
+  width: 0;
+  border: solid 0px #000;
+  transition: all .5s;
 }
 .menu-item{
   position: fixed;
@@ -94,6 +99,25 @@
   left: 45px;
   padding: 25px;
   z-index: 1000;
+}
+@media only screen and (max-width: 767px){
+  .brand-icon {
+    left: 20px;
+  }
+}
+.menuClose ~ .toggle-menu{
+  background-color: #fff;
+  height: 0vh;
+  width: 0;
+  border: solid 0px #000;
+  transition: all .5s;
+}
+.menuOpen ~ .toggle-menu{
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  border: solid 10px #000;
+  transition: all .5s;
 }
 .menu-item{
   list-style: none;

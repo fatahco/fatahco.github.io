@@ -38,16 +38,24 @@ $(document).ready(function(){
       TweenLite.to($(middleTopBar), .5, {rotation:'-45deg',translate:'-8px, 7px', top:30});
       TweenLite.to($(middleBottomBar), .5, {rotation:'45deg',translate:'-6px, 7px', top:30});
       TweenLite.to($(middleBar), .2, {left:10,opacity:0});
-      TweenLite.to($(menu), .5, {height:'100vh', width:'100%', background:'#fff'});
-      TweenLite.to($(menu), 0, {border:'solid 10px #000'});
       var width = $( window ).width();
-      var myWidth = width / 2 - 515;
+      var myWidth = width / 2 - 475;
       var MylinkWidth = width / 2 + 40;
+      var MyMoblelinkWidth = width / 4 - 15;
       var height = $( window ).height();
       var logoHeight = $(logo).height();
       var myHeight = height / 2 - logoHeight;
       TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
       TweenLite.to($(logo), .5, {top:myHeight, width:475, left:myWidth});
+      if (window.matchMedia('(max-width: 991px)').matches) {
+        var myWidth = width / 2 - 300;
+        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+        TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
+      }
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .4});
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
     }
     else if ($ (this).hasClass('menuOpen')) {
       TweenLite.set(this, {className: '+=menuClose'});
@@ -57,10 +65,11 @@ $(document).ready(function(){
       TweenLite.to($(middleTopBar), .5, {rotation:'0deg', top:20});
       TweenLite.to($(middleBottomBar), .5, {rotation:'0deg', top:40});
       TweenLite.to($(middleBar), .2, {left:16,opacity:1});
-      TweenLite.to($(menu), .5, {height:'0', width:'0'});
-      TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
     }
   });
   logo.on('click', function(e){
@@ -72,10 +81,11 @@ $(document).ready(function(){
       TweenLite.to($(middleTopBar), .5, {rotation:'0deg'});
       TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
       TweenLite.to($(middleBar), .2, {left:16,opacity:1});
-      TweenLite.to($(menu), .5, {height:'0', width:'0'});
-      TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
     }
   });
   $(window).on('popstate', function(event) {
@@ -87,10 +97,11 @@ $(document).ready(function(){
       TweenLite.to($(middleTopBar), .5, {rotation:'0deg'});
       TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
       TweenLite.to($(middleBar), .2, {left:16,opacity:1});
-      TweenLite.to($(menu), .5, {height:'0', width:'0'});
-      TweenLite.to($(menu), 0, {border:'solid 0px #000', delay: .45});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
     }
   });
 });
