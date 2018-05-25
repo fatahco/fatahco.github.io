@@ -1,201 +1,268 @@
-/*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- *
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
-
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
-//
-// ( function( window ) {
-//
-//
-// })( window );
-// function HomePageAnimation() {
-//   function getRandomInt(min, max) {
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// function menuOpenClose() {
+//   if ($ ('.toggle-menu').hasClass('menu-close')) {
+//     $('.toggle-menu').addClass('menu-open');
+//     $('.menu-item').addClass('menu-item-saw');
+//     $('.menu-item').removeClass('menu-item-hide');
+//     $('.menu-trangition').addClass('menu-trangition-open');
+//     $('.menu-trangition').removeClass('menu-trangition-close');
+//     $('.toggle-menu').removeClass('menu-close');
+//     $('.bar-middle').css({ 'opacity' : '0'});
+//     $('.bar-top').addClass('top-x');
+//     $('.bar-bottom').addClass('bottom-x');
+//     $('.bar-top').removeClass('top-hover');
+//     $('.bar-bottom').removeClass('bottom-hover');
+//     $('.box-line-left').removeClass('left-hover');
+//     $('.box-line-left').addClass('left');
+//     $('.box-line-right').addClass('right');
+//     $('.box-line-right').removeClass('right-hover');
+//     $('.brand-icon').addClass('open-menu-brand-icon');
+//     $('.brand-icon').removeClass('close-menu-brand-icon');
+//     setTimeout(function () {
+//       $('page-loader').addClass('open-loader');
+//       setTimeout(function () {
+//         $('page-loader').addClass('close-loader');
+//         $('page-loader').removeClass('open-loader');
+//       }, 500);
+//       setTimeout(function () {
+//         $('page-loader').removeClass('close-loader');
+//       }, 500);
+//     }, 500);
+//   }
+//   else if ($ ('.toggle-menu').hasClass('menu-open')) {
+//     $('.bar-top').removeClass('top-x');
+//     $('.bar-bottom').removeClass('bottom-x');
+//     $('.toggle-menu').removeClass('menu-open');
+//     $('.toggle-menu').addClass('menu-close');
+//     setTimeout(function () {
+//       $('.bar-top').addClass('top-hover');
+//       $('.bar-bottom').addClass('bottom-hover');
+//     }, 500);
+//       $('.box-line-right').removeClass('right');
+//       $('.box-line-left').removeClass('left');
+//       $('.box-line-left').addClass('left-hover');
+//       $('.box-line-right').addClass('right-hover');
+//     $('.bar-middle').css({ 'opacity' : '1'});
+//     $('.menu-trangition').addClass('menu-trangition-close');
+//     $('.menu-trangition').removeClass('menu-trangition-open');
+//     $('.menu-item').addClass('menu-item-hide');
+//     $('.menu-item').removeClass('menu-item-saw');
+//     $('.brand-icon').addClass('close-menu-brand-icon');
+//     $('.brand-icon').removeClass('open-menu-brand-icon');
+//   }
 // }
+// function menuLinkClick() {
 //
-// var ms = 3000;
-// var content = ["Web Development", "Apps Development", "BMW"];
-// var func = function () {
-//   setTimeout(function(){
-//     $(".anim").css({"opacity":"1", "transition":".4s"});
-//   }, 400);
-//     var randNumTop = getRandomInt(1, 75);    // Gets random number between 1 and 253
-//     // document.getElementById("element_id").innerHTML = randNum;
-//     var randNumLeft = getRandomInt(1, 80);
-//     $(".anim").css({
-//                     "top":randNumTop,
-//                     "left":randNumLeft + "%",
-//                     // "opacity":1,
-//                     // "transition":".2s",
-//                     // "delay":"1s"
-//                   });
-//     setTimeout(function(){
-//       $(".anim").css({ "delay":".2s" , "opacity":"0" });
-//     }, 1200);
-// };
-//
-// func();
-// setInterval(func, ms);
-// }
-function menuOpenClose() {
-  if ($ ('.toggle-menu').hasClass('menu-close')) {
-    $('.toggle-menu').addClass('menu-open');
-    $('.menu-item').addClass('menu-item-saw');
-    $('.menu-item').removeClass('menu-item-hide');
-    $('.menu-trangition').addClass('menu-trangition-open');
-    $('.menu-trangition').removeClass('menu-trangition-close');
-    $('.toggle-menu').removeClass('menu-close');
-    $('.bar-middle').css({ 'opacity' : '0'});
-    $('.bar-top').addClass('top-x');
-    $('.bar-bottom').addClass('bottom-x');
-    $('.bar-top').removeClass('top-hover');
-    $('.bar-bottom').removeClass('bottom-hover');
-    $('.box-line-left').removeClass('left-hover');
-    $('.box-line-left').addClass('left');
-    $('.box-line-right').addClass('right');
-    $('.box-line-right').removeClass('right-hover');
-    $('.brand-icon').addClass('open-menu-brand-icon');
-    $('.brand-icon').removeClass('close-menu-brand-icon');
-    setTimeout(function () {
-      $('page-loader').addClass('open-loader');
-      setTimeout(function () {
-        $('page-loader').addClass('close-loader');
-        $('page-loader').removeClass('open-loader');
-      }, 500);
-      setTimeout(function () {
-        $('page-loader').removeClass('close-loader');
-      }, 500);
-    }, 500);
-  }
-  else if ($ ('.toggle-menu').hasClass('menu-open')) {
-    $('.bar-top').removeClass('top-x');
-    $('.bar-bottom').removeClass('bottom-x');
-    $('.toggle-menu').removeClass('menu-open');
-    // $('.toggle-menu').removeClass('menu-open');
-    $('.toggle-menu').addClass('menu-close');
-    setTimeout(function () {
-      // $('.box-line-right').removeClass('right');
-      // $('.box-line-left').removeClass('left');
-      $('.bar-top').addClass('top-hover');
-      $('.bar-bottom').addClass('bottom-hover');
-    }, 500);
-      $('.box-line-right').removeClass('right');
-      $('.box-line-left').removeClass('left');
-      $('.box-line-left').addClass('left-hover');
-      $('.box-line-right').addClass('right-hover');
-    $('.bar-middle').css({ 'opacity' : '1'});
-    $('.menu-trangition').addClass('menu-trangition-close');
-    $('.menu-trangition').removeClass('menu-trangition-open');
-    $('.menu-item').addClass('menu-item-hide');
-    $('.menu-item').removeClass('menu-item-saw');
-    $('.brand-icon').addClass('close-menu-brand-icon');
-    $('.brand-icon').removeClass('open-menu-brand-icon');
-  }
-}
-function menuLinkClick() {
-
-  $('.brand-icon a').click(function (e) {
-    e.preventDefault();
-    $('.header a').removeClass('active');
-    $(this).addClass('active');
-    if ($ ('.toggle-menu').hasClass('menu-open')) {
-      $('.bar-top').removeClass('top-x');
-      $('.bar-bottom').removeClass('bottom-x');
-      $('.toggle-menu').removeClass('menu-open');
-      // $('.toggle-menu').removeClass('menu-open');
-      $('.toggle-menu').addClass('menu-close');
-      setTimeout(function () {
-        // $('.box-line-right').removeClass('right');
-        // $('.box-line-left').removeClass('left');
-        $('.bar-top').addClass('top-hover');
-        $('.bar-bottom').addClass('bottom-hover');
-      }, 500);
-        $('.box-line-right').removeClass('right');
-        $('.box-line-left').removeClass('left');
-        $('.box-line-left').addClass('left-hover');
-        $('.box-line-right').addClass('right-hover');
-      $('.bar-middle').css({ 'opacity' : '1'});
-      $('.menu-trangition').addClass('menu-trangition-close');
-      $('.menu-trangition').removeClass('menu-trangition-open');
-      $('.menu-item').addClass('menu-item-hide');
-      $('.menu-item').removeClass('menu-item-saw');
-      $('.brand-icon').addClass('close-menu-brand-icon');
-      $('.brand-icon').removeClass('open-menu-brand-icon');
-    }
-
-  });
-  $('.menu-item a').click(function (e) {
-    e.preventDefault();
-    $('.header a').removeClass('active');
-    $(this).addClass('active');
-    menuOpenClose();
-  });
-}
-function menuBarClick() {
-  if ( $('.toggle-menu').hasClass('menu-open') ) {
-    $('.bar-top').removeClass('top-x');
-    $('.bar-bottom').removeClass('bottom-x');
-    $('.toggle-menu').removeClass('menu-open');
-    $('.toggle-menu').addClass('menu-close');
-    setTimeout(function () {
-      $('.bar-top').addClass('top-hover');
-      $('.bar-bottom').addClass('bottom-hover');
-    }, 500);
-    $(".menu-bar").one("mouseleave", function() {
-      if ( !$('.toggle-menu').hasClass('menu-open') ) {
-        $('.box-line-right').removeClass('right');
-        $('.box-line-left').removeClass('left');
-        $('.box-line-left').addClass('left-hover');
-        $('.box-line-right').addClass('right-hover');
-      }
-    });
-    $('.bar-middle').css({ 'opacity' : '1'});
-    $('.menu-trangition').addClass('menu-trangition-close');
-    $('.menu-trangition').removeClass('menu-trangition-open');
-    $('.menu-item').addClass('menu-item-hide');
-    $('.menu-item').removeClass('menu-item-saw');
-    $('.brand-icon').addClass('close-menu-brand-icon');
-    $('.brand-icon').removeClass('open-menu-brand-icon');
-  }
-  else {
-    $('.toggle-menu').addClass('menu-open');
-    $('.menu-item').addClass('menu-item-saw');
-    $('.menu-item').removeClass('menu-item-hide');
-    $('.menu-trangition').addClass('menu-trangition-open');
-    $('.menu-trangition').removeClass('menu-trangition-close');
-    $('.toggle-menu').removeClass('menu-close');
-    $('.bar-middle').css({ 'opacity' : '0'});
-    $('.bar-top').addClass('top-x');
-    $('.bar-bottom').addClass('bottom-x');
-    $('.bar-top').removeClass('top-hover');
-    $('.bar-bottom').removeClass('bottom-hover');
-    $('.box-line-left').removeClass('left-hover');
-    $('.box-line-left').addClass('left');
-    $('.box-line-right').addClass('right');
-    $('.box-line-right').removeClass('right-hover');
-    $('.brand-icon').addClass('open-menu-brand-icon');
-    $('.brand-icon').removeClass('close-menu-brand-icon');
-  }
-}
-// function TaglineHoverEffact() {
-//   $(".tag-line__link").hover(
-//     function () {
-//       $("tag-line__hover").css({ "height":200 });
-//       $(this).css({ "font-size":45 });
-//     },
-//     function () {
-//       $("tag-line__hover").css({ "height":8 });
-//       $(this).css({ "font-size":65 });
+//   $('.brand-icon a').click(function (e) {
+//     e.preventDefault();
+//     $('.header a').removeClass('active');
+//     $(this).addClass('active');
+//     if ($ ('.toggle-menu').hasClass('menu-open')) {
+//       $('.bar-top').removeClass('top-x');
+//       $('.bar-bottom').removeClass('bottom-x');
+//       $('.toggle-menu').removeClass('menu-open');
+//       $('.toggle-menu').addClass('menu-close');
+//       setTimeout(function () {
+//         $('.bar-top').addClass('top-hover');
+//         $('.bar-bottom').addClass('bottom-hover');
+//       }, 500);
+//         $('.box-line-right').removeClass('right');
+//         $('.box-line-left').removeClass('left');
+//         $('.box-line-left').addClass('left-hover');
+//         $('.box-line-right').addClass('right-hover');
+//       $('.bar-middle').css({ 'opacity' : '1'});
+//       $('.menu-trangition').addClass('menu-trangition-close');
+//       $('.menu-trangition').removeClass('menu-trangition-open');
+//       $('.menu-item').addClass('menu-item-hide');
+//       $('.menu-item').removeClass('menu-item-saw');
+//       $('.brand-icon').addClass('close-menu-brand-icon');
+//       $('.brand-icon').removeClass('open-menu-brand-icon');
 //     }
-//   );
+//
+//   });
+//   $('.menu-item a').click(function (e) {
+//     e.preventDefault();
+//     $('.header a').removeClass('active');
+//     $(this).addClass('active');
+//     menuOpenClose();
+//   });
 // }
+// function menuBarClick() {
+//   if ( $('.toggle-menu').hasClass('menu-open') ) {
+//     $('.bar-top').removeClass('top-x');
+//     $('.bar-bottom').removeClass('bottom-x');
+//     $('.toggle-menu').removeClass('menu-open');
+//     $('.toggle-menu').addClass('menu-close');
+//     setTimeout(function () {
+//       $('.bar-top').addClass('top-hover');
+//       $('.bar-bottom').addClass('bottom-hover');
+//     }, 500);
+//     $(".menu-bar").one("mouseleave", function() {
+//       if ( !$('.toggle-menu').hasClass('menu-open') ) {
+//         $('.box-line-right').removeClass('right');
+//         $('.box-line-left').removeClass('left');
+//         $('.box-line-left').addClass('left-hover');
+//         $('.box-line-right').addClass('right-hover');
+//       }
+//     });
+//     $('.bar-middle').css({ 'opacity' : '1'});
+//     $('.menu-trangition').addClass('menu-trangition-close');
+//     $('.menu-trangition').removeClass('menu-trangition-open');
+//     $('.menu-item').addClass('menu-item-hide');
+//     $('.menu-item').removeClass('menu-item-saw');
+//     $('.brand-icon').addClass('close-menu-brand-icon');
+//     $('.brand-icon').removeClass('open-menu-brand-icon');
+//   }
+//   else {
+//     $('.toggle-menu').addClass('menu-open');
+//     $('.menu-item').addClass('menu-item-saw');
+//     $('.menu-item').removeClass('menu-item-hide');
+//     $('.menu-trangition').addClass('menu-trangition-open');
+//     $('.menu-trangition').removeClass('menu-trangition-close');
+//     $('.toggle-menu').removeClass('menu-close');
+//     $('.bar-middle').css({ 'opacity' : '0'});
+//     $('.bar-top').addClass('top-x');
+//     $('.bar-bottom').addClass('bottom-x');
+//     $('.bar-top').removeClass('top-hover');
+//     $('.bar-bottom').removeClass('bottom-hover');
+//     $('.box-line-left').removeClass('left-hover');
+//     $('.box-line-left').addClass('left');
+//     $('.box-line-right').addClass('right');
+//     $('.box-line-right').removeClass('right-hover');
+//     $('.brand-icon').addClass('open-menu-brand-icon');
+//     $('.brand-icon').removeClass('close-menu-brand-icon');
+//   }
+// }
+function menuAnimation() {
+  var menuIcon = $('.menu-bar'),
+  middleBar = $('.bar-middle'),
+  middleTopBar = $('.bar-top'),
+  middleBottomBar = $('.bar-bottom'),
+  leftBar = $('.box-line-left'),
+  rightBar = $('.box-line-right'),
+  menuOpen = $('.menuOpen'),
+  menuClose = $('.menuClose'),
+  menu = $('.toggle-menu'),
+  menuLink = $('.menu-item'),
+  logo = $('.brand-icon'),
+  menuFooter = $('.nav .footer'),
+  navigationLink = $('.toggle-menu .link');
+  menuIcon.hover(
+   function() {
+     if ($ (this).hasClass('menuClose')){
+       TweenLite.to($(middleTopBar), .5, {top:20});
+       TweenLite.to($(middleBottomBar), .5, {top:40});
+       TweenLite.to($(leftBar), .5, {height:42});
+       TweenLite.to($(rightBar), .5, {height:42});
+     }
+   },
+   function() {
+     if ($ (this).hasClass('menuClose')){
+       TweenLite.to($(middleTopBar), .5, {top:30});
+       TweenLite.to($(middleBottomBar), .5, {top:30});
+       TweenLite.to($(leftBar), .5, {height:0});
+       TweenLite.to($(rightBar), .5, {height:0});
+     }
+   }
+  );
+  menuIcon.on('click', function(e){
+    if ($ (this).hasClass('menuClose')){
+      TweenLite.set(this, {className: '-=menuClose'});
+      TweenLite.set(this, {className: '+=menuOpen'});
+      TweenLite.to($(leftBar), 0, {height:42});
+      TweenLite.to($(rightBar), 0, {height:42});
+      TweenLite.to($(middleTopBar), .5, {rotation:'-45deg',translate:'-8px, 7px', top:30});
+      TweenLite.to($(middleBottomBar), .5, {rotation:'45deg',translate:'-6px, 7px', top:30});
+      TweenLite.to($(middleBar), .2, {left:10,opacity:0});
+      var width = $( window ).width();
+      var myWidth = width / 2 - 475;
+      var MylinkWidth = width / 2 + 40;
+      var MyMoblelinkWidth = width / 4 - 15;
+      var height = $( window ).height();
+      var logoHeight = 108;
+      var myHeight = height / 2 - logoHeight;
+      TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+      TweenLite.to($(logo), .5, {top:myHeight, width:475, left:myWidth});
+      if (window.matchMedia('(max-width: 991px)').matches) {
+        var logoHeight = 70;
+        var myHeight = height / 2 - logoHeight;
+        var myWidth = width / 2 - 300;
+        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+        TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
+      }
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .4});
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
+      TweenLite.to($(menuFooter), .5, {left:10});
+    }
+    else if ($ (this).hasClass('menuOpen')) {
+      TweenLite.set(this, {className: '+=menuClose'});
+      TweenLite.set(this, {className: '-=menuOpen'});
+      $(rightBar).css("height","42");
+      $(leftBar).css("height","42");
+      TweenLite.to($(middleTopBar), .5, {rotation:'0deg', top:20});
+      TweenLite.to($(middleBottomBar), .5, {rotation:'0deg', top:40});
+      TweenLite.to($(middleBar), .2, {left:16,opacity:1});
+      TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
+      var width = $( window ).width() + 10;
+      TweenLite.to($(menuFooter), .5, {left:width});
+
+    }
+  });
+  logo.on('click', function(e){
+    if ($ (menuIcon).hasClass('menuOpen')) {
+      TweenLite.set(menuIcon, {className: '+=menuClose'});
+      TweenLite.set(menuIcon, {className: '-=menuOpen'});
+      TweenLite.to($(leftBar), .5, {height:0});
+      TweenLite.to($(rightBar), .5, {height:0});
+      TweenLite.to($(middleTopBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBar), .2, {left:16,opacity:1});
+      TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
+    }
+  });
+  navigationLink.on('click', function(e){
+    if ($ (menuIcon).hasClass('menuOpen')) {
+      TweenLite.set(menuIcon, {className: '+=menuClose'});
+      TweenLite.set(menuIcon, {className: '-=menuOpen'});
+      TweenLite.to($(leftBar), .5, {height:0});
+      TweenLite.to($(rightBar), .5, {height:0});
+      TweenLite.to($(middleTopBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBar), .2, {left:16,opacity:1});
+      TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
+    }
+  });
+
+  $(window).on('popstate', function(event) {
+    if ($ (menuIcon).hasClass('menuOpen')) {
+      TweenLite.set(menuIcon, {className: '+=menuClose'});
+      TweenLite.set(menuIcon, {className: '-=menuOpen'});
+      TweenLite.to($(leftBar), .5, {height:0});
+      TweenLite.to($(rightBar), .5, {height:0});
+      TweenLite.to($(middleTopBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
+      TweenLite.to($(middleBar), .2, {left:16,opacity:1});
+      TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
+      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
+      }
+    }
+  });
+}
 function removeHref() {
   if (window.matchMedia('(min-width: 992px)').matches) {
     $('.contact-info .link').removeAttr('href');
@@ -948,16 +1015,18 @@ function MyCaousel() {
   });
 }
 function GenralPage() {
-  menuOpenClose();
-  menuLinkClick();
+  // menuOpenClose();
+  // menuLinkClick();
+  menuAnimation();
   HomePageAnimation();
   ChangeNavColor();
   BrowserButton();
   // menuBarClick();
+
   removeHref();
-  if ($('.menu-bar').click()) {
-    $('.menu-bar').bind( "click", menuBarClick );
-  }
+  // if ($('.menu-bar').click()) {
+  //   $('.menu-bar').bind( "click", menuBarClick );
+  // }
 }
 function HomePage() {
   $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
@@ -1009,6 +1078,11 @@ function AboutPage() {
 }
 function mainJS() {
   ChangeNavColor();
+  if ($ ('.toggle-menu .link').hasClass('active')) {
+    $('.link .top-line').css("width","0");
+    $('.link.active .top-line').css("width","100%");
+  }
+
   $(window).scrollTop(0);
 
   if (location.pathname == '/porbandar/'){
@@ -1115,6 +1189,8 @@ $('document').ready(function(){
    */
   currentUrl();
   mainJS();
+  // menuAnimation();
+
   Barba.Pjax.getTransition = function() {
   /**
    * Here you can use your own logic!
