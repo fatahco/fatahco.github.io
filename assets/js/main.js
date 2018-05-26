@@ -747,7 +747,6 @@ function mainJS() {
   }
 
   $(window).scrollTop(0);
-
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -775,12 +774,14 @@ function currentUrl() {
     $('.barba-container a[href="' + location.pathname + '"]').click(function (e) {
          e.preventDefault();
     });
+    $('.toggle-menu a[href="' + location.pathname + '"]').click(function (e) {
+         e.preventDefault();
+    });
     $('.toggle-menu a').removeClass('active');
     $('.toggle-menu a[href="' + location.pathname + '"]').addClass('active');
   }
 }
 $('document').ready(function(){
-
   $(window).scrollTop(0);
 
   // GeneralPage();
