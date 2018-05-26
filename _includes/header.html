@@ -1,138 +1,70 @@
 
 {% include head.html %}
 
-
 <div id="barba-wrapper">
-<!--
-<header class="header">
-  <nav class="main-nav">
-    <div class="brand-icon">
-      <a href="/"  tabindex="-1">
-        {{ site.data.icon.Fatah }}
-      </a>
-    </div>
-    <div class="menu-bar" >
-      <div class="box-line-top"></div>
-      <div class="box-line-left left-hover"></div>
-      <div class="bar-top top-hover"></div>
-      <div class="bar-middle"></div>
-      <div class="bar-bottom bottom-hover"></div>
-      <div class="box-line-bottom"></div>
-      <div class="box-line-right right-hover"></div>
-    </div>
-    <div class="toggle-menu" id="nav">
-      <ul class="menu-item">
-        <li><a href="/about/" class="link"> <span class="top-line"></span>About</a></li>
-        <li><a href="/skills/" class="link"> <span class="top-line"></span>Skills</a></li>
-        <li><a href="/portfolio/" class="link"> <span class="top-line"></span>Portfolio</a></li>
-        <li><a href="/process/" class="link"> <span class="top-line"></span>Process</a></li>
-        <li><a href="/hire-us/" class="link"> <span class="top-line"></span>Hire Us</a></li>
-        <li><a href="/contact-us/" class="link"> <span class="top-line"></span>Contact Us</a></li>
-      </ul>
-      <section class="menu-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="right">
-                <a href="mailto:hello@fatah.co">hello@fatah.co</a>
+  <header>
+    <nav class="nav">
+      <div class="brand-icon">
+        <a href="/"  tabindex="-1">
+          {{ site.data.icon.Fatah }}
+        </a>
+      </div>
+      <div class="menu-bar menuClose" >
+        <div class="box-line-top"></div>
+        <div class="box-line-left left-hover"></div>
+        <div class="bar-top top-hover"></div>
+        <div class="bar-middle"></div>
+        <div class="bar-bottom bottom-hover"></div>
+        <div class="box-line-bottom"></div>
+        <div class="box-line-right right-hover"></div>
+      </div>
+      <div class="toggle-menu" id="nav">
+        <ul class="menu-item">
+          <li><a href="/about/" class="link"> <span class="top-line"></span>About</a></li>
+          <li><a href="/skills/" class="link"> <span class="top-line"></span>Skills</a></li>
+          <li><a href="/portfolio/" class="link"> <span class="top-line"></span>Portfolio</a></li>
+          <li><a href="/process/" class="link"> <span class="top-line"></span>Process</a></li>
+          <li><a href="/hire-us/" class="link"> <span class="top-line"></span>Hire Us</a></li>
+          <li><a href="/contact-us/" class="link"> <span class="top-line"></span>Contact Us</a></li>
+        </ul>
+        <section class="menu-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="right">
+                  <a href="mailto:hello@fatah.co">hello@fatah.co</a>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="social">
-                <ul class="social_link">
-                  <li class="items">
-                    <a href="https://www.facebook.com/fatahdigital/" target="_blank">
-                      <i class="fab fa-facebook-square fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://www.instagram.com/fatahdigital" target="_blank">
-                      <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://twitter.com/FatahDigital" target="_blank">
-                      <i class="fab fa-twitter-square fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://in.linkedin.com/company/fatahdigital" target="_blank">
-                      <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </nav>
-</header> -->
-<header>
-  <nav class="nav">
-
-    <div class="brand-icon">
-      <a href="/"  tabindex="-1">
-        {{ site.data.icon.Fatah }}
-      </a>
-    </div>
-    <div class="menu-bar menuClose" >
-      <div class="box-line-top"></div>
-      <div class="box-line-left left-hover"></div>
-      <div class="bar-top top-hover"></div>
-      <div class="bar-middle"></div>
-      <div class="bar-bottom bottom-hover"></div>
-      <div class="box-line-bottom"></div>
-      <div class="box-line-right right-hover"></div>
-    </div>
-    <div class="toggle-menu" id="nav">
-      <ul class="menu-item">
-        <li><a href="/about/" class="link"> <span class="top-line"></span>About</a></li>
-        <li><a href="/skills/" class="link"> <span class="top-line"></span>Skills</a></li>
-        <li><a href="/portfolio/" class="link"> <span class="top-line"></span>Portfolio</a></li>
-        <li><a href="/process/" class="link"> <span class="top-line"></span>Process</a></li>
-        <li><a href="/hire-us/" class="link"> <span class="top-line"></span>Hire Us</a></li>
-        <li><a href="/contact-us/" class="link"> <span class="top-line"></span>Contact Us</a></li>
-      </ul>
-      <section class="menu-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="right">
-                <a href="mailto:hello@fatah.co">hello@fatah.co</a>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="social">
-                <ul class="social_link">
-                  <li class="items">
-                    <a href="https://www.facebook.com/fatahdigital/" target="_blank">
-                      <i class="fab fa-facebook-square fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://www.instagram.com/fatahdigital" target="_blank">
-                      <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://twitter.com/FatahDigital" target="_blank">
-                      <i class="fab fa-twitter-square fa-2x"></i>
-                    </a>
-                  </li>
-                  <li class="items">
-                    <a href="https://in.linkedin.com/company/fatahdigital" target="_blank">
-                      <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                  </li>
-                </ul>
+              <div class="col-sm-6">
+                <div class="social">
+                  <ul class="social_link">
+                    <li class="items">
+                      <a href="https://www.facebook.com/fatahdigital/" target="_blank">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                      </a>
+                    </li>
+                    <li class="items">
+                      <a href="https://www.instagram.com/fatahdigital" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                      </a>
+                    </li>
+                    <li class="items">
+                      <a href="https://twitter.com/FatahDigital" target="_blank">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                      </a>
+                    </li>
+                    <li class="items">
+                      <a href="https://in.linkedin.com/company/fatahdigital" target="_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </nav>
-</header>
+        </section>
+      </div>
+    </nav>
+  </header>
 <div class="barba-container">
