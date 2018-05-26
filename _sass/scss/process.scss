@@ -32,8 +32,11 @@
       margin-top: 20px;
       margin-bottom: 50px;
       p{
-        font-size: 16px;
+        @include DesktopFontSize();
         line-height: normal;
+        @media only screen and (max-width: 767px){
+          @include MobileFontSize();
+        }
       }
     }
   }

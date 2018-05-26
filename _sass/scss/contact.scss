@@ -101,6 +101,9 @@
   .link{
     color: $black;
     @include DesktopFontSize();
+    @media only screen and (max-width: 767px){
+      @include MobileFontSize();
+    }
     &:hover, &:active{
       color: $black;
     }

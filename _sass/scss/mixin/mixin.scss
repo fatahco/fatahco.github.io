@@ -1,5 +1,5 @@
 @mixin DesktopFontSize(){
-  font-size: 24px;
+  font-size: 20px;
 }
 @mixin TabletFontSize(){
   @include DesktopFontSize();
@@ -10,7 +10,7 @@
 @mixin PageTitle(){
   text-align: center;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 58px;
   font-family: 'LubalinGraphRegular', sans-serif;
 }
 @mixin checkBoxBorderExpand() {

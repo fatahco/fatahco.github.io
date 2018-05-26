@@ -244,13 +244,11 @@
 /* custom select style */
 .cusSelBlock {
   height: 50px;
-  // min-width: 500px;
   width: 100%;
   z-index: 5;
 }
 @media only screen and (max-width: 767px){
   .cusSelBlock{
-    // min-width: 300px;
   }
 }
 #cusSelectbox {
@@ -318,10 +316,6 @@
   top: 15%;
   height: 70%;
   width: 50px;
-}
-.selectLabel:active {
-  // -webkit-transform: rotateX(30deg);
-  // transform: rotateX(30deg);
 }
 .selectLabel:active:after {
   content: '\25B2';
@@ -438,7 +432,6 @@
       }
     }
   }
-
 }
 @media only screen and (max-width: 767px){
   .c-checkbox{
@@ -461,7 +454,6 @@
   @include checkBoxBorderCollaps();
 }
 .check_border{
-  // animation: input-box-hover-leave .5s;
   -webkit-transition: all .2s;
   transition: all .2s;
   height: 25px;

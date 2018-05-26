@@ -6,10 +6,8 @@
     .h1{
       @include PageTitle();
       padding: 25px 0;
-    }
-    @media only screen and (max-width: 767px){
-      .h1{
-        @include DesktopFontSize();
+      @media only screen and (max-width: 767px){
+        @include MobileFontSize();
       }
     }
   }
@@ -36,6 +34,9 @@
   }
   .gender{
     @include DesktopFontSize();
+    @media only screen and (max-width: 767px){
+      @include MobileFontSize();
+    }
     p{
       margin-top: 70px;
       margin-left: 10px;
@@ -59,6 +60,9 @@
       border: 0;
       width: 100%;
       border-radius: 0;
+      @media only screen and (max-width: 767px){
+        @include MobileFontSize();
+      }
       &:focus, &:active {
         outline: 0;
       }
@@ -278,7 +282,6 @@
   }
   @media only screen and (max-width: 767px){
     .cusSelBlock{
-      // min-width: 300px;
       top: 10px;
     }
     .location-title{

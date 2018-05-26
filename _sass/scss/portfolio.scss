@@ -1,15 +1,19 @@
 .portfolio{
   background-color: #fff;
   padding-bottom: 100px;
+  padding-top: 200px;
   .title{
     @include PageTitle();
   }
   .info{
     margin-top: 10px;
-    font-size: 16px;
+    @include DesktopFontSize();
     text-align: center;
     line-height: 1.3;
     letter-spacing: 1.5px;
+    @media only screen and (max-width: 767px){
+      @include MobileFontSize();
+    }
   }
   .portfolio_items{
     margin-top: 100px;
@@ -23,8 +27,11 @@
         margin-top: 20px;
       }
       .title{
-        font-size: 24px;
+        @include DesktopFontSize();
         text-align: left;
+        @media only screen and (max-width: 767px){
+          @include MobileFontSize();
+        }
       }
       .info{
         text-align: left;
@@ -33,9 +40,12 @@
       .skills_details{
         padding-left: 20px;
         .items{
-          font-size: 16px;
+          @include DesktopFontSize();
           list-style-type: square;
           margin-top: 10px;
+          @media only screen and (max-width: 767px){
+            @include MobileFontSize();
+          }
         }
       }
       .portfolio_btn{
@@ -46,9 +56,12 @@
           display: block;
           width: 120px;
           background-color: #000;
-          font-size: 16px;
+          @include DesktopFontSize();
           padding: 10px 30px;
           color: #fff;
+          @media only screen and (max-width: 767px){
+            @include MobileFontSize();
+          }
         }
       }
     }

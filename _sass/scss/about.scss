@@ -190,7 +190,7 @@
         padding: 10px;
       }
       .quote{
-        font-size: 16px;
+        @include MobileFontSize();
       }
       .authorContainer{
         padding: 20px 0;
