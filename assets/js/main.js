@@ -737,7 +737,6 @@ function CareerPage() {
   formSubmit();
 }
 function AboutPage() {
-  Carousel();
   MyCaousel();
 }
 function mainJS() {
