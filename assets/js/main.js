@@ -134,7 +134,7 @@ function menuAnimation() {
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:200, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(logo), .5, {top:0, width:200, left:20
+        TweenLite.to($(logo), .5, {top:0, width:200, left:20});
       }
     }
   });
