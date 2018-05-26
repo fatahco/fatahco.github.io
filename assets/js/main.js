@@ -733,7 +733,6 @@ function HomePageAnimation() {
     });
   }
 }
-
 function MyCaousel() {
   $(".client_comments").slick({
     cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
@@ -774,8 +773,6 @@ function HomePage() {
   $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
   $(".copy_right .right p").css('color','#000');
   HomePageAnimation();
-  // HomePageAnimation();
-  // TaglineHoverEffact();
 }
 function SkillPage() {
   $(".copy_right hr").css('display','block');
@@ -788,8 +785,6 @@ function ContactPage() {
   formSubmit();
   contactFormValidation();
   InputAnimation();
-
-  // formSubmit();
 }
 function HireUsPage() {
   $(".copy_right hr").css('display','none');
@@ -806,9 +801,6 @@ function CareerPage() {
   dropDownBox();
   careerFormValidation();
   formSubmit();
-  // if (window.matchMedia('(mix-width: 767px)').matches) {
-  //   $(".copy_right").css('position','unset');
-  // }
 }
 function AboutPage() {
   Carousel();
@@ -899,12 +891,6 @@ $('document').ready(function(){
       visibility : 'visible',
       opacity : 0
     });
-    // setTimeout(function(){
-    //   $('.page-loader').removeClass('page-loader-start');
-    // }, 500);
-
-    // setTimeout(function () {
-
       $el.animate({ opacity: 1 }, 0, function() {
         setTimeout(function () {
           $(".fatah-line").attr("width", "677.609");
@@ -918,7 +904,6 @@ $('document').ready(function(){
         mainJS();
         _this.done();
       });
-    // }, 1500);
     }
   });
 
@@ -927,7 +912,6 @@ $('document').ready(function(){
    */
   currentUrl();
   mainJS();
-  // menuAnimation();
 
   Barba.Pjax.getTransition = function() {
   /**
@@ -945,5 +929,4 @@ $('document').ready(function(){
     }
   });
   GenralPage();
-
 });
