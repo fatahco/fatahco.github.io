@@ -165,6 +165,12 @@
       }
     }
   }
+  .info{
+    @include DesktopFontSize();
+    @media only screen and (max-width: 767px){
+      @include MobileFontSize();
+    }
+  }
   .project-form{
     &__service-box{
       margin-top: 50px;
