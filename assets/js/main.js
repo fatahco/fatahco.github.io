@@ -135,7 +135,6 @@ function menuAnimation() {
       TweenLite.to($(logo), .5, {top:0, width:200, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
         TweenLite.to($(logo), .5, {top:0, width:200, left:20});
-
       }
     }
   });
@@ -759,7 +758,7 @@ function MyCaousel() {
     $(".client_comments").slick('slickNext').find('.slick-dots .slick-active button').css({"background":"#000", "color":"#000"});
   });
 }
-function GenralPage() {
+function GeneralPage() {
   menuAnimation();
   HomePageAnimation();
   ChangeNavColor();
@@ -850,7 +849,7 @@ $('document').ready(function(){
 
   $(window).scrollTop(0);
 
-  // GenralPage();
+  // GeneralPage();
   var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -928,5 +927,5 @@ $('document').ready(function(){
       ga('send', 'pageview', location.pathname);
     }
   });
-  GenralPage();
+  GeneralPage();
 });
