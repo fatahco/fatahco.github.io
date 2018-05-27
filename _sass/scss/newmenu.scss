@@ -74,6 +74,7 @@
   height: 0vh;
   width: 0;
   border: solid 0px #000;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 .menu-item{
@@ -102,6 +103,7 @@
   height: 0vh;
   width: 0;
   border: solid 0px #000;
+  -webkit-transition: all .5s;
   transition: all .5s;
   z-index: 100;
 }
@@ -110,6 +112,7 @@
   height: 100vh;
   width: 100%;
   border: solid 10px #000;
+  -webkit-transition: all .5s;
   transition: all .5s;
   z-index: 100;
 }
