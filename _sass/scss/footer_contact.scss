@@ -122,11 +122,8 @@
     }
     p{
       position: relative;
-      @include DesktopFontSize();
+      @include MobileFontSize();
       color: #fff;
-      @media only screen and (max-width: 767px){
-        @include MobileFontSize();
-      }
     }
   }
   .info_link{
@@ -143,10 +140,7 @@
         }
         a{
           color: #fff;
-          @include DesktopFontSize();
-          @media only screen and (max-width: 767px){
-            @include MobileFontSize();
-          }
+          @include MobileFontSize();          
         }
         .box{
           position: absolute;
