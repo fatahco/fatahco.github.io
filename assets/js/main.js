@@ -56,17 +56,20 @@ function menuAnimation() {
       var height = $( window ).height();
       var logoHeight = 108;
       var myHeight = height / 2 - logoHeight;
-      TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+      $(menuLink).css({left:MylinkWidth});
+      TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .3});
       TweenLite.to($(logo), .5, {top:myHeight, width:475, left:myWidth});
       if (window.matchMedia('(max-width: 991px)').matches) {
         var logoHeight = 70;
         var myHeight = height / 2 - logoHeight;
         var myWidth = width / 2 - 300;
-        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .4});
+        $(menuLink).css({left:MylinkWidth});
+        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: MylinkWidth, delay: .3});
         TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
       }
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(menuLink), 0, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .4});
+        $(menuLink).css({left:MyMoblelinkWidth});
+        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .3});
         TweenLite.to($(logo), .5, {top:0, width:200, left:20});
       }
       TweenLite.to($(menuFooter), .5, {left:10});
@@ -115,7 +118,9 @@ function menuAnimation() {
       TweenLite.to($(middleBottomBar), .5, {rotation:'0deg'});
       TweenLite.to($(middleBar), .2, {left:16,opacity:1});
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
-      TweenLite.to($(logo), .5, {top:0, width:200, left:45});
+      // TweenLite.to($(logo), .3, {top:0, width:200, left:45});
+      $(logo).css({top:0,width:200,left:45,transition:'all .5s'});
+      // TweenLite.to($(logo), .3, {top:0, width:200, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
         TweenLite.to($(logo), .5, {top:0, width:200, left:20});
       }
