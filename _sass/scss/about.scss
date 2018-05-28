@@ -162,6 +162,11 @@
     position: relative;
     max-width: 100%;
     margin-top: 50px;
+    @media only screen and (max-width: 767px){
+      .Tomas.Saieg{
+        display: none;
+      }
+    }
     .card {
       border: solid 5px #000;
       height: 420px;
@@ -186,7 +191,7 @@
         height: 560px;
       }
       @media only screen and (max-width: 400px){
-        height: 620px;
+        height: 520px;
         padding: 10px;
       }
       .quote{
@@ -195,7 +200,11 @@
       .authorContainer{
         padding: 20px 0;
         position: absolute;
-        bottom: 0;
+        bottom: -50px;
+
+        @media only screen and (max-width: 400px){
+          padding: 0;
+        }
         .img{
           display: inline-block;
           position: relative;

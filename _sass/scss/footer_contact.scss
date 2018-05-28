@@ -103,7 +103,7 @@
       background-color: #303030;
       height: auto;
       position: unset;
-      padding-bottom: 65px;
+      padding-bottom: 66px;
     }
   }
   hr{
@@ -115,7 +115,7 @@
     margin-top: 20px;
     @media only screen and (max-width: 767px){
       position: absolute;
-      bottom: -230px;
+      bottom: -125px;
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
@@ -135,23 +135,20 @@
         display: inline-block;
         margin-left: 20px;
         @media only screen and (max-width: 767px){
-            display: block;
-            margin-bottom: 10px;
+          margin-left: 10px;
+          margin-bottom: 3px;
         }
         a{
           color: #fff;
-          @include MobileFontSize();          
+          @include MobileFontSize();
         }
         .box{
           position: absolute;
           top: 50%;
-          right: -15px;
+          left: -11px;
           height: 5px;
           width: 5px;
           background: #fff;
-          @media only screen and (max-width: 767px){
-            display: none;
-          }
         }
       }
     }
@@ -161,9 +158,9 @@
     color: #fff;
     @media only screen and (max-width: 767px){
       position: absolute;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      left: 42%;
+      -webkit-transform: translateX(-34%);
+              transform: translateX(-34%);
       margin-top: 5px;
     }
     .social_link{
@@ -172,9 +169,9 @@
       }
       .items{
         display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-left: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
         i{
           color: #fff;
         }
