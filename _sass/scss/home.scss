@@ -17,7 +17,8 @@
     margin: 0;
     min-height: 70vh;
     @media only screen and (max-width: 767px){
-      min-height: 60vh;
+      min-height: 40vh;
+      height: 300px;
     }
   }
   .tag-line{
@@ -97,7 +98,7 @@
 @media only screen and (max-width: 767px){
   .home-hero{
     .tag-line{
-      font-size: 26px;
+      font-size: 22px;
       &__hover{
         height: 4px;
       }
