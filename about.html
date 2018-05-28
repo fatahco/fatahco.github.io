@@ -176,7 +176,7 @@ permalink: /about/
           <div class="goodWill">
             <div class="client_comments">
               {% for comments in site.data.goodWill %}
-              <div class="card">
+              <div class="card {{ comments.Name }} ">
                 <p class="quote">
                   {{ comments.goodwill }}
                 </p>
