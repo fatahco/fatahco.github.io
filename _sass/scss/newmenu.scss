@@ -240,12 +240,12 @@
       }
       .social_link{
         text-align: right;
-
         .items{
           display: inline-block;
           margin-left: auto;
           margin-right: auto;
           margin-left: 15px;
+          font-size: 12px;
           @media only screen and (max-width: 767px){
             margin-right: 8px;
             margin-left: 0;
