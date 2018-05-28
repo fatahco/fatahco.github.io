@@ -750,7 +750,13 @@ function mainJS() {
     $('.link .top-line').css("width","0");
     $('.link.active .top-line').css("width","100%");
   }
-
+  $(function() {
+   $('a[href^="mailto:"]').each(function() {
+    this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+    // Remove this line if you don't want to set the email address as link text:
+    // this.innerHTML = this.href.replace('mailto:', '');
+   });
+  });
   $(window).scrollTop(0);
   if (location.pathname == '/porbandar/'){
     porbandarPage();
