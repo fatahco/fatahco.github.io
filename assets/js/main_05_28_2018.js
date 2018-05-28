@@ -743,6 +743,13 @@ function CareerPage() {
 }
 function AboutPage() {
   MyCaousel();
+  InputAnimation();
+}
+function PortfolioPage() {
+  InputAnimation();
+}
+function ProcessPage() {
+  InputAnimation();
 }
 function mainJS() {
   ChangeNavColor();
@@ -766,6 +773,12 @@ function mainJS() {
   }
   else if (location.pathname == '/career/'){
     CareerPage();
+  }
+  else if (location.pathname == '/portfolio/'){
+    PortfolioPage();
+  }
+  else if (location.pathname == '/process/'){
+    ProcessPage();
   }
   else if (location.pathname == '/contact-us/'){
     ContactPage();
