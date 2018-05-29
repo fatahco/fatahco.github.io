@@ -138,6 +138,9 @@
           margin-left: 10px;
           margin-bottom: 3px;
         }
+        &:first-child {
+          margin-left: 0;
+        }
         a{
           color: #fff;
           @include MobileFontSize();
