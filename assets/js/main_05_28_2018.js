@@ -756,6 +756,10 @@ function mainJS() {
     $('.link .top-line').css("width","0");
     $('.link.active .top-line').css("width","100%");
   }
+  $('.brand-icon').on('click', function(e) {
+    $('.link .top-line').css("width","0");
+  });
+
   $(function() {
    $('a[href^="mailto:"]').each(function() {
     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
