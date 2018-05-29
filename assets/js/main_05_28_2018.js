@@ -52,7 +52,6 @@ function menuAnimation() {
       var width = $( window ).width();
       var myWidth = width / 2 - 475;
       var MylinkWidth = width / 2 + 40;
-      var MyMoblelinkWidth = width / 4 - 15;
       var height = $( window ).height();
       var logoHeight = 108;
       var myHeight = height / 2 - logoHeight;
@@ -68,8 +67,8 @@ function menuAnimation() {
         TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
       }
       if (window.matchMedia('(max-width: 767px)').matches) {
-        $(menuLink).css({left:MyMoblelinkWidth});
-        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .3});
+        $(menuLink).css({left:20});
+        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: 20 , delay: .3});
         TweenLite.to($(logo), .5, {top:0, width:150, left:20});
       }
       TweenLite.to($(menuFooter), .5, {left:10});
