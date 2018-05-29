@@ -95,9 +95,12 @@
   left: 45px;
   padding-top: 25px;
   z-index: 1000;
+  background-color: #fff;
 }
 @media only screen and (max-width: 767px){
   .brand-icon {
+    top: 10px;
+    padding-top: 15px;
     left: 20px;
   }
 }
