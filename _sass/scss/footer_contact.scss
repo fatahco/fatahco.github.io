@@ -101,7 +101,7 @@
       background-color: #303030;
       height: auto;
       position: unset;
-      padding-bottom: 66px;
+      // padding-bottom: 66px;
     }
   }
   hr{
@@ -112,17 +112,11 @@
   .right{
     margin-top: 20px;
     @media only screen and (max-width: 767px){
-      position: absolute;
-      bottom: -105px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-    }
-    @media only screen and (max-width: 320px){
-      bottom: -135px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
     }
     p{
-      position: relative;
       @include MobileFontSize();
       color: #fff;
     }
@@ -161,15 +155,12 @@
     margin-top: 20px;
     color: #fff;
     @media only screen and (max-width: 767px){
-      position: absolute;
-      left: 42%;
-      -webkit-transform: translateX(-34%);
-              transform: translateX(-34%);
-      margin-top: 5px;
+      margin-top: 10px;
     }
     .social_link{
       text-align: right;
       @media only screen and (max-width: 767px){
+        text-align: center;
       }
       .items{
         display: inline-block;
