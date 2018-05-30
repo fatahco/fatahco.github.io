@@ -4,12 +4,13 @@
   .title{
     @include PageTitle();
   }
-  .sub-title{
+  .page-title{
     font-family: "LubalinGraphRegular";
     font-size: 72px;
-    padding: 50px 0;
+    padding-top: 200px;
+    padding-bottom: 50px;
     @media only screen and (max-width: 767px){
-      font-size: 48px;
+      font-size: 58px;
     }
   }
   .details{
