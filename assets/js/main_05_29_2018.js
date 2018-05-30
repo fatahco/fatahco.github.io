@@ -777,6 +777,9 @@ function mainJS() {
   else if (location.pathname == '/career/'){
     CareerPage();
   }
+  else if (location.pathname == '/career/sales/'){
+    CareerPage();
+  }
   else if (location.pathname == '/portfolio/'){
     PortfolioPage();
   }
