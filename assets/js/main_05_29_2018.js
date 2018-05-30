@@ -52,7 +52,6 @@ function menuAnimation() {
       var width = $( window ).width();
       var myWidth = width / 2 - 475;
       var MylinkWidth = width / 2 + 40;
-      var MyMoblelinkWidth = width / 4 - 15;
       var height = $( window ).height();
       var logoHeight = 108;
       var myHeight = height / 2 - logoHeight;
@@ -68,9 +67,9 @@ function menuAnimation() {
         TweenLite.to($(logo), .5, {top:myHeight, width:280, left:myWidth});
       }
       if (window.matchMedia('(max-width: 767px)').matches) {
-        $(menuLink).css({left:MyMoblelinkWidth});
-        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: MyMoblelinkWidth , delay: .3});
-        TweenLite.to($(logo), .5, {top:0, width:150, left:20});
+        $(menuLink).css({left:20});
+        TweenLite.to($(menuLink), .7, {opacity:1,visibility: 'visible', left: 20 , delay: .3});
+        TweenLite.to($(logo), .5, {top:10, width:150, left:20});
       }
       TweenLite.to($(menuFooter), .5, {left:10});
     }
@@ -85,7 +84,7 @@ function menuAnimation() {
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:150, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(logo), .5, {top:0, width:150, left:20});
+        TweenLite.to($(logo), .5, {top:10, width:150, left:20});
       }
       var width = $( window ).width() + 10;
       TweenLite.to($(menuFooter), .5, {left:width});
@@ -104,7 +103,7 @@ function menuAnimation() {
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:150, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(logo), .5, {top:0, width:150, left:20});
+        TweenLite.to($(logo), .5, {top:10, width:150, left:20});
       }
     }
   });
@@ -122,7 +121,7 @@ function menuAnimation() {
       // $(logo).css({top:0,width:200,left:45,transition:'all .5s'});
       // TweenLite.to($(logo), .3, {top:0, width:200, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(logo), .5, {top:0, width:150, left:20});
+        TweenLite.to($(logo), .5, {top:10, width:150, left:20});
       }
     }
   });
@@ -139,7 +138,7 @@ function menuAnimation() {
       TweenLite.to($(menuLink), 0, {opacity:0, visibility: 'hidden', right:0});
       TweenLite.to($(logo), .5, {top:0, width:150, left:45});
       if (window.matchMedia('(max-width: 767px)').matches) {
-        TweenLite.to($(logo), .5, {top:0, width:150, left:20});
+        TweenLite.to($(logo), .5, {top:10, width:150, left:20});
       }
     }
   });
@@ -672,7 +671,7 @@ function HomePageAnimation() {
     });
   }
 }
-function MyCaousel() {
+function MyCarousel() {
   $(".client_comments").slick({
     cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     dots: true,
@@ -742,7 +741,7 @@ function CareerPage() {
   formSubmit();
 }
 function AboutPage() {
-  MyCaousel();
+  MyCarousel();
   InputAnimation();
 }
 function PortfolioPage() {
@@ -757,6 +756,10 @@ function mainJS() {
     $('.link .top-line').css("width","0");
     $('.link.active .top-line').css("width","100%");
   }
+  $('.brand-icon').on('click', function(e) {
+    $('.link .top-line').css("width","0");
+  });
+
   $(function() {
    $('a[href^="mailto:"]').each(function() {
     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
@@ -772,6 +775,9 @@ function mainJS() {
     HomePage();
   }
   else if (location.pathname == '/career/'){
+    CareerPage();
+  }
+  else if (location.pathname == '/career/sales/'){
     CareerPage();
   }
   else if (location.pathname == '/portfolio/'){

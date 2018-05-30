@@ -1,0 +1,142 @@
+---
+layout: default
+title: 	Careers | Fatah Digital
+description: Join Team Fatah. We provide you an opportunity to work from our Porbandar(Gujarat) Office.
+permalink: /career/sales/
+---
+<section class="career-section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="title">
+          <h1 class="h1">Apply  To  Become  A  Part  Of  Fatah  Team</h1>
+        </div>
+      </div>
+    </div>
+    <form action="https://mailthis.to/fatahdigitalhr" method="POST" encType="multipart/form-data" id="career-form" name="careerForm">
+      <div class="row">
+        <!-- Name -->
+        <div class="col-sm-6 col-xs-12">
+          <span class="inputt input--fatah">
+            <span class="myerror"></span>
+            <input class="input__field input__field--fatah" type="text" id="Name" name="Name" required/>
+            <label class="input__label input__label--fatah" for="Name">
+              <span class="input__label-content input__label-content--fatah">Name</span>
+            </label>
+          </span>
+        </div>
+        <!-- Email -->
+        <div class="col-sm-6 col-xs-12">
+          <span class="inputt input--fatah">
+            <input class="input__field input__field--fatah" type="email" id="Email" name="Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required/>
+            <label class="input__label input__label--fatah" for="Email">
+              <span class="input__label-content input__label-content--fatah">Email</span>
+            </label>
+          </span>
+        </div>
+        <!-- Phone -->
+        <div class="col-sm-6 col-xs-12">
+          <span class="inputt input--fatah">
+            <input class="input__field input__field--fatah" type="number" id="Phone" name="Phone" required/>
+            <label class="input__label input__label--fatah" for="Phone">
+              <span class="input__label-content input__label-content--fatah">Phone</span>
+            </label>
+          </span>
+        </div>
+        <!-- DOB -->
+        <div class="col-sm-6 col-xs-12">
+          <span class="inputt input--fatah">
+            <input class="input__field input__field--fatah" type="text" id="DOB" name="DOB" required/>
+            <label class="input__label input__label--fatah" for="DOB">
+              <span class="input__label-content input__label-content--fatah">DOB</span>
+            </label>
+          </span>
+        </div>
+        <!-- Gender -->
+        <div class="col-sm-6 col-xs-12">
+          <span class="gender">
+            <p>Gender:</p>
+            <div class="radio-items">
+              <div class="row">
+                <!-- <p class="p"></p> -->
+                <div class="col-md-4 col-sm-12">
+                  <span class="male radio-btn">
+                    <input type="radio" id="Male" name="Gender" value="Male" tabindex="0" checked>
+                    <label for="Male">Male</label>
+                  </span>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <span class="female radio-btn">
+                    <input type="radio" id="Female" name="Gender" value="Female" tabindex="1" >
+                    <label for="Female">Female</label>
+                  </span>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <span class="other radio-btn">
+                    <input type="radio" id="other" name="Gender" value="Other" tabindex="2"  >
+                    <label for="other">Other</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </span>
+          <hr>
+        </div>
+        <!-- Qulification -->
+        <div class="col-sm-6 col-xs-12">
+          <div class="qulificationBox">
+            <select id="cusSelectbox" data-selected="" class="degree" name="Qulification" required>
+              <option value="" selected="selected" disabled="disabled">Education / Qulification</option>
+              <option value="MCA" class="items">MCA</option>
+              <option value="MSc. IT" class="items">MSc. IT</option>
+              <option value="MBA" class="items">MBA</option>
+              <option value="BE" class="items">BE</option>
+              <option value="BCA" class="items">BCA</option>
+              <option value="BBA" class="items">BBA</option>
+              <option value="PGDCA" class="items">PGDCA</option>
+              <option value="B. Com." class="items">B. Com.</option>
+              <option value="Other" class="items">Other</option>
+            </select>
+            <hr>
+          </div>
+        </div>
+
+        <!-- condition -->
+        <div class="col-sm-12">
+          <p class="condition">
+            Salary Range: 96000 to 180000 per Annum (8000 to 15000 per month) INR <br><br>
+            Stipend: 12000 INR at the end of your training <br><br>
+            Commission: Up to 40000 per month <br><br>
+            Training Period: 4 to 6 months(If required) <br><br>
+            Employment Term: 15 months employment contract
+          </p>
+          <div class="c-checkbox" id="terms">
+            <input type="checkbox" name="Conditions" id="agree" value="I Agree" >
+            <label for="agree" class="chk_lable">I Agree</label>
+            <span class="check_mark"></span>
+            <span class="check_border"></span>
+          </div>
+        </div>
+
+
+        <input type="hidden" name="_subject" id="subject">
+        <input type="hidden" name="Source" value="job-application-website-form">
+
+        <!-- Custom email ReplyTo Address -->
+        <input type="hidden" name="_replyto" id="replyto">
+        <!-- Redirect to a page after recaptcha -->
+        <input type="hidden" name="_after" value="https://fatah.co/career/thankyou/">
+        <!-- Honeypot (to catch comment spam bots) -->
+        <input type="hidden" name="_honeypot" value="">
+        <!-- Apply a custom confirmation message on the second step -->
+        <input type="hidden" name="_confirmation" value="">
+        <div class="col-sm-12">
+          <input type="submit" value="SEND" class="btn-send">
+        </div>
+      </div>
+    </form>
+  </div>
+
+</section>
+
+{% include footer_copyright.html %}

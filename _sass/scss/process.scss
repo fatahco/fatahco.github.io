@@ -7,11 +7,9 @@
       font-size: 58px;
       padding-top: 200px;
       padding-bottom: 50px;
-        @media only screen and (max-width: 767px){
-          padding-top: 100px;
-          padding-bottom: 30px;
-          font-size: 42px;
-        }
+      @media only screen and (max-width: 767px){
+        font-size: 58px;
+      }
     }
   }
   .process_icon{
@@ -27,6 +25,15 @@
       margin-top: 50px;
       font-size: 24px;
       font-weight: bold;
+      @media only screen and (max-width: 767px){
+        font-size: 22px;
+      }
+      span{
+        display: none;
+        @media only screen and (max-width: 767px){
+          display: inline-block;
+        }
+      }
     }
     .info {
       margin-top: 20px;

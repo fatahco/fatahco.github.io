@@ -42,11 +42,6 @@
   width: 100%;
   margin-left: -10px;
 }
-@media only screen and (max-width: 767px){
-  .input__label-content{
-    margin-top: -10px;
-  }
-}
 .input--fatah {
   margin-top: 50px;
 }
@@ -155,14 +150,10 @@
   .title{
     text-align: center;
     .h1{
-      font-size: 36px;
+      font-size: 58px;
       font-family: 'LubalinGraphRegular', sans-serif;
-      padding: 25px 0;
-    }
-    @media only screen and (max-width: 767px){
-      .h1{
-        font-size: 22px;
-      }
+      padding-top: 200px;
+      padding-bottom: 50px;
     }
   }
   .info{
