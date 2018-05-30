@@ -671,7 +671,7 @@ function HomePageAnimation() {
     });
   }
 }
-function MyCaousel() {
+function MyCarousel() {
   $(".client_comments").slick({
     cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     dots: true,
@@ -741,7 +741,7 @@ function CareerPage() {
   formSubmit();
 }
 function AboutPage() {
-  MyCaousel();
+  MyCarousel();
   InputAnimation();
 }
 function PortfolioPage() {
