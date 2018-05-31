@@ -851,18 +851,19 @@ $('document').ready(function(){
 
     $(".fatah-line").attr("width", "0");
     $(".fatah-line").css("transition", "all 0s");
-
-    $(this.oldContainer).hide();
+    setTimeout(function () {
+      $(".fatah-line").attr("width", "677.609");
+      $(".fatah-line").css("transition", "all .5s");
+      $(this.oldContainer).hide();
+    }, 500);
 
     $el.css({
       visibility : 'visible',
       opacity : 0
     });
+    setTimeout(function () {
       $el.animate({ opacity: 1 }, 0, function() {
-        setTimeout(function () {
-          $(".fatah-line").attr("width", "677.609");
-          $(".fatah-line").css("transition", "all .5s");
-        }, 500);
+
         /**
         * Do not forget to call .done() as soon your transition is finished!
         * .done() will automatically remove from the DOM the old Container
@@ -871,6 +872,7 @@ $('document').ready(function(){
         mainJS();
         _this.done();
       });
+    }, 700);
     }
   });
 
