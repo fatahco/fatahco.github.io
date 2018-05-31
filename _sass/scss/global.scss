@@ -88,3 +88,9 @@ q:before, q:after {
 		display: block;
 	}
 }
+.Mobile_separator_line{
+	display: none;
+	@media only screen and (max-width: 767px){
+		display: block;
+	}
+}
