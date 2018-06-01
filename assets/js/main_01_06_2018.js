@@ -574,7 +574,14 @@ function ChangeNavColor() {
     });
   });
 }
-
+function HomePageFooter() {
+  $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
+  $(".copy_right hr").css('display','none');
+  $(".copy_right .social .social_link .items i").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items a").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
+  $(".copy_right .right p").css('color','#000');
+}
 function HomePageAnimation() {
   $(".tag-line__hover.About").css({height: "25px", color: "#fff"});
   $(".tag-line__hover.About span").css({opacity: "1"});
@@ -704,12 +711,7 @@ function GeneralPage() {
   removeHref();
 }
 function HomePage() {
-  $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
-  $(".copy_right hr").css('display','none');
-  $(".copy_right .social .social_link .items i").css('color','#000');
-  $(".copy_right .info_link .navigation_link .items a").css('color','#000');
-  $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
-  $(".copy_right .right p").css('color','#000');
+  HomePageFooter();
   HomePageAnimation();
 }
 function SkillPage() {
@@ -720,7 +722,6 @@ function SkillPage() {
 }
 function ContactPage() {
   $(".copy_right hr").css('display','none');
-  formSubmit();
   contactFormValidation();
   InputAnimation();
 }
@@ -756,7 +757,7 @@ function mainJS() {
     $('.link .top-line').css("width","0");
     $('.link.active .top-line').css("width","100%");
   }
-  $('.brand-icon').on('click', function(e) {
+  $('.111brand-icon').on('click', function(e) {
     $('.link .top-line').css("width","0");
   });
 
@@ -768,6 +769,7 @@ function mainJS() {
    });
   });
   $(window).scrollTop(0);
+  formSubmit();
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -797,6 +799,15 @@ function mainJS() {
   }
   else if (location.pathname == '/about/'){
     AboutPage();
+  }
+  else if (location.pathname == '/career/thankyou/'){
+    HomePageFooter();
+  }
+  else if (location.pathname == '/contact-us/thankyou/'){
+    HomePageFooter();
+  }
+  else if (location.pathname == '/hire-us/thankyou/'){
+    HomePageFooter();
   }
 }
 function currentUrl() {
