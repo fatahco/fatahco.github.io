@@ -768,6 +768,8 @@ function mainJS() {
     // this.innerHTML = this.href.replace('mailto:', '');
    });
   });
+  var currentYear = (new Date).getFullYear();
+  $("#year").text( (new Date).getFullYear() );
   $(window).scrollTop(0);
   formSubmit();
   if (location.pathname == '/porbandar/'){
