@@ -1,4 +1,3 @@
-
 function menuAnimation() {
   var menuIcon = $('.menu-bar'),
   middleBar = $('.bar-middle'),
@@ -764,12 +763,8 @@ function mainJS() {
   $(function() {
    $('a[href^="mailto:"]').each(function() {
     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
-    // Remove this line if you don't want to set the email address as link text:
-    // this.innerHTML = this.href.replace('mailto:', '');
    });
   });
-  var currentYear = (new Date).getFullYear();
-  $("#year").text( (new Date).getFullYear() );
   $(window).scrollTop(0);
   formSubmit();
   if (location.pathname == '/porbandar/'){
@@ -830,7 +825,6 @@ function currentUrl() {
 $('document').ready(function(){
   $(window).scrollTop(0);
 
-  // GeneralPage();
   var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -853,6 +847,7 @@ $('document').ready(function(){
   },
 
   fadeIn: function() {
+
     /**
      * this.newContainer is the HTMLElement of the new Container
      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
@@ -865,6 +860,7 @@ $('document').ready(function(){
     $(".fatah-line").attr("width", "0");
     $(".fatah-line").css("transition", "all 0s");
     setTimeout(function () {
+
       $(".fatah-line").attr("width", "677.609");
       $(".fatah-line").css("transition", "all .5s");
       $(this.oldContainer).hide();
@@ -874,6 +870,7 @@ $('document').ready(function(){
       visibility : 'visible',
       opacity : 0
     });
+
     setTimeout(function () {
       $el.animate({ opacity: 1 }, 0, function() {
 
@@ -888,21 +885,22 @@ $('document').ready(function(){
     }, 700);
     }
   });
-
   /**
    * Next step, you have to tell Barba to use the new Transition
    */
   currentUrl();
   mainJS();
-
   Barba.Pjax.getTransition = function() {
   /**
    * Here you can use your own logic!
    * For example you can use different Transition based on the current page or link...
    */
-
    return FadeTransition;
   };
+  Barba.Dispatcher.on('transitionCompleted', function() {
+    var currentYear = (new Date).getFullYear();
+    $("#year").text( (new Date).getFullYear() );
+  });
   Barba.Prefetch.init();
   Barba.Pjax.start();
   Barba.Dispatcher.on('initStateChange', function() {
