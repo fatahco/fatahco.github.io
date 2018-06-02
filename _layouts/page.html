@@ -1,3 +1,20 @@
----
----
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+<body>
+
+  {% include header.html %}
+
+
+  {{ content }}
+
+
+  {% include footer_contact.html %}
+
+  {% include footer_copyright.html %}
+  
+  {% include footer.html %}
+</body>
+
+</html>
