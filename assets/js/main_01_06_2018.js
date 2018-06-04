@@ -1,4 +1,3 @@
-
 function menuAnimation() {
   var menuIcon = $('.menu-bar'),
   middleBar = $('.bar-middle'),
@@ -574,7 +573,14 @@ function ChangeNavColor() {
     });
   });
 }
-
+function HomePageFooter() {
+  $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
+  $(".copy_right hr").css('display','none');
+  $(".copy_right .social .social_link .items i").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items a").css('color','#000');
+  $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
+  $(".copy_right .right p").css('color','#000');
+}
 function HomePageAnimation() {
   $(".tag-line__hover.About").css({height: "25px", color: "#fff"});
   $(".tag-line__hover.About span").css({opacity: "1"});
@@ -704,12 +710,7 @@ function GeneralPage() {
   removeHref();
 }
 function HomePage() {
-  $(".copy_right").css({'position':'absolute', 'background':'#fff', 'color':'#000'});
-  $(".copy_right hr").css('display','none');
-  $(".copy_right .social .social_link .items i").css('color','#000');
-  $(".copy_right .info_link .navigation_link .items a").css('color','#000');
-  $(".copy_right .info_link .navigation_link .items .box").css('background','#000');
-  $(".copy_right .right p").css('color','#000');
+  HomePageFooter();
   HomePageAnimation();
 }
 function SkillPage() {
@@ -720,7 +721,6 @@ function SkillPage() {
 }
 function ContactPage() {
   $(".copy_right hr").css('display','none');
-  formSubmit();
   contactFormValidation();
   InputAnimation();
 }
@@ -756,18 +756,17 @@ function mainJS() {
     $('.link .top-line').css("width","0");
     $('.link.active .top-line').css("width","100%");
   }
-  $('.brand-icon').on('click', function(e) {
+  $('.111brand-icon').on('click', function(e) {
     $('.link .top-line').css("width","0");
   });
 
   $(function() {
    $('a[href^="mailto:"]').each(function() {
     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
-    // Remove this line if you don't want to set the email address as link text:
-    // this.innerHTML = this.href.replace('mailto:', '');
    });
   });
   $(window).scrollTop(0);
+  formSubmit();
   if (location.pathname == '/porbandar/'){
     porbandarPage();
   }
@@ -798,6 +797,15 @@ function mainJS() {
   else if (location.pathname == '/about/'){
     AboutPage();
   }
+  else if (location.pathname == '/career/thankyou/'){
+    HomePageFooter();
+  }
+  else if (location.pathname == '/contact-us/thankyou/'){
+    HomePageFooter();
+  }
+  else if (location.pathname == '/hire-us/thankyou/'){
+    HomePageFooter();
+  }
 }
 function currentUrl() {
   if ((location.pathname) !== ""){
@@ -817,7 +825,6 @@ function currentUrl() {
 $('document').ready(function(){
   $(window).scrollTop(0);
 
-  // GeneralPage();
   var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -840,6 +847,7 @@ $('document').ready(function(){
   },
 
   fadeIn: function() {
+
     /**
      * this.newContainer is the HTMLElement of the new Container
      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
@@ -852,6 +860,7 @@ $('document').ready(function(){
     $(".fatah-line").attr("width", "0");
     $(".fatah-line").css("transition", "all 0s");
     setTimeout(function () {
+
       $(".fatah-line").attr("width", "677.609");
       $(".fatah-line").css("transition", "all .5s");
       $(this.oldContainer).hide();
@@ -861,6 +870,7 @@ $('document').ready(function(){
       visibility : 'visible',
       opacity : 0
     });
+
     setTimeout(function () {
       $el.animate({ opacity: 1 }, 0, function() {
 
@@ -875,21 +885,22 @@ $('document').ready(function(){
     }, 700);
     }
   });
-
   /**
    * Next step, you have to tell Barba to use the new Transition
    */
   currentUrl();
   mainJS();
-
   Barba.Pjax.getTransition = function() {
   /**
    * Here you can use your own logic!
    * For example you can use different Transition based on the current page or link...
    */
-
    return FadeTransition;
   };
+  Barba.Dispatcher.on('transitionCompleted', function() {
+    var currentYear = (new Date).getFullYear();
+    $("#year").text( (new Date).getFullYear() );
+  });
   Barba.Prefetch.init();
   Barba.Pjax.start();
   Barba.Dispatcher.on('initStateChange', function() {

@@ -119,6 +119,9 @@
     p{
       @include MobileFontSize();
       color: #fff;
+      span{
+        color: inherit;
+      }
     }
   }
   .info_link{
